@@ -17,7 +17,7 @@
 
 その他にもqiitaなどにも資料を載せています
 
-https://qiita.com/_Altair_
+[qiita](https://qiita.com/_Altair_)
 
 ### 講習課題
 - **python 課題・答え**  
