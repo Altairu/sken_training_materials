@@ -45,7 +45,23 @@ GitHub リポジトリ [Altairu/sken_training_materials](https://github.com/Alta
 
 ## お問い合わせ
 
-ご不明な点やご質問は、[こちら](https://x.com/Flying___eagle) の DM までお気軽にご連絡ください。
+ご不明な点やご質問は、以下，もしくは[こちら](https://x.com/Flying___eagle) の DM までお気軽にご連絡ください。
+
+<script src="https://giscus.app/client.js"
+        data-repo="Altairu/sken_training_materials"
+        data-repo-id="R_kgDOOUfVlQ"
+        data-category="Q&A"
+        data-category-id="DIC_kwDOOUfVlc4Co0Gf"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="ja"
+        crossorigin="anonymous"
+        async>
+</script>
 
 ---
 
