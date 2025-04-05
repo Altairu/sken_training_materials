@@ -1,0 +1,1987 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../python3/python3%E8%AC%9B%E7%BF%923/">
+      
+      
+        <link rel="next" href="../%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%921%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/">
+      
+      
+      <link rel="icon" href="../../../../images/altair.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>回路講習0 - 電装班 講習資料</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,300i,400,400i,700,700i%7CInconsolata:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans JP";--md-code-font:"Inconsolata"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-kicad-" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="電装班 講習資料" class="md-header__button md-logo" aria-label="電装班 講習資料" data-md-component="logo">
+      
+  <img src="../../../../images/altair.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            電装班 講習資料
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              回路講習0
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="hhttps://github.com/Altairu/training_materials" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Altairu/training_materials
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="電装班 講習資料" class="md-nav__button md-logo" aria-label="電装班 講習資料" data-md-component="logo">
+      
+  <img src="../../../../images/altair.png" alt="logo">
+
+    </a>
+    電装班 講習資料
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="hhttps://github.com/Altairu/training_materials" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Altairu/training_materials
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ホーム画面
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    講習資料
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            講習資料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1%E5%B9%B4%E4%BD%93%E9%A8%93%E5%85%A5%E9%83%A8/S-ken%E4%BD%93%E9%A8%93%E5%85%A5%E9%83%A8%E5%88%B6%E5%BE%A1%E7%8F%ADL%E3%81%A1%E3%81%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1年体験入部
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ROS 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            ROS 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROS%202/ROS2_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2講習1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROS%202/ROS2_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2講習2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROS%202/ROS2_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2講習3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROS%202/ROS2_%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2講習ロボコン1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROS%202/ROS2_%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2講習ロボコン2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    python3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            python3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python3/python3%E8%AC%9B%E7%BF%921/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    講習1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python3/python3%E8%AC%9B%E7%BF%922/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    講習2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python3/python3%E8%AC%9B%E7%BF%923/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    講習3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    回路
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            回路
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    回路講習0
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    回路講習0
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      開発環境
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kicad" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCadの全体構成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KiCadの全体構成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      設計フロー
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kicad_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCadの起動と新規プロジェクトの作成
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ステップ１：回路図入力
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ステップ１：回路図入力">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順１：部品の配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順２：配線をおこなう
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順３：文字の編集
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順４：リファレンス記号に番号をつける
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順５：フットプリントの関連付け
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6erc" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順６：ERC実行
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      ステップ２：パターン設計（PCB）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ステップ２：パターン設計（PCB）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順１：部品を持ってくる
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順２：配置，穴，外形を決める
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順３：電源，グランド配線
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順４：配線
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順5：デザインルールチェック
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      番外編
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="番外編">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      シンボルの作り方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      フットプリントの作り方
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%921%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回路講習1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%922%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回路講習2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%924/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回路講習3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%925/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回路講習4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ubuntu/ubuntu1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ubuntu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    マイコン
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            マイコン
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    マイコン講習1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    マイコン講習2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ライセンス
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pid/pid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E6%9B%B8%E3%81%8D%E6%96%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    マークダウン書き方
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    講習課題
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            講習課題
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%89%B9%E8%A8%93%E8%AA%B2%E9%A1%8C/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python課題
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code/python%E7%AD%94%E3%81%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python課題答え
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%89%B9%E8%A8%93%E8%AA%B2%E9%A1%8C/%E5%9B%9E%E8%B7%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回路課題
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      開発環境
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kicad" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCadの全体構成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KiCadの全体構成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      設計フロー
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kicad_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCadの起動と新規プロジェクトの作成
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ステップ１：回路図入力
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ステップ１：回路図入力">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順１：部品の配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順２：配線をおこなう
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順３：文字の編集
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順４：リファレンス記号に番号をつける
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順５：フットプリントの関連付け
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6erc" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順６：ERC実行
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      ステップ２：パターン設計（PCB）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ステップ２：パターン設計（PCB）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順１：部品を持ってくる
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順２：配置，穴，外形を決める
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順３：電源，グランド配線
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順４：配線
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      手順5：デザインルールチェック
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      番外編
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="番外編">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      シンボルの作り方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      フットプリントの作り方
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="-kicad-"><strong>回路講習</strong> -KiCad編-</h1>
+<h3 id="_1">開発環境</h3>
+<ul>
+<li>KiCad 6.0,KiCad 7.0,KiCad 8.0</li>
+<li>Ubuntu22.04</li>
+</ul>
+<h2 id="kicad">KiCadの全体構成</h2>
+<p>kicadに含まれるプログラムと機能</p>
+<p><img alt="width:40px" src="../images/kicad1.png" /></p>
+<h3 id="_2">設計フロー</h3>
+<ul>
+<li>手順1　回路図を作成する</li>
+<li>手順2　基板レイアウト（PCB）を作成する</li>
+<li>手順3　ガーバデータ、ドリルデータを出力する</li>
+</ul>
+<p>これらの手順により回路を設計する。</p>
+<p>設計フロー図</p>
+<pre><code class="language-mermaid">graph TB
+    A[回路設計開始] --&gt; B[回路図入力]
+    B --&gt; C[アノテーション（リファレンス番号振り）]
+    C --&gt; D[フットプリント関連付け]
+    D --&gt; F{エレクトリカル・ルール・チェックOK？}
+    F --&gt; |no| B
+    F --&gt; |yes| G[回路設計完了]
+
+   H[パターン設計開始] --&gt; I{読み込み時エラー?}
+    I --&gt; |no| J[部品配置 基板外形]
+    I --&gt; |yes| D
+    J --&gt; L[電源・グラウンド優先箇所配線]
+    L --&gt; M[配線]
+    M --&gt; N[修正、仕上げ]
+    N --&gt; O{デザイン・ルール・チェックOK？}
+    O --&gt; |yes| P[基板設計完了]
+    O --&gt; |no| N
+
+    P --&gt; Q[ガーバーデータ出力 ドリル・データ出力 ガーバービューア（ファイル確認）]
+
+</code></pre>
+<p>補足</p>
+<blockquote>
+<p>kiCadにはFreeRoutionという自動配線ツールを使用することができる</p>
+</blockquote>
+<h2 id="kicad_1">KiCadの起動と新規プロジェクトの作成</h2>
+<p><img alt="alt text" src="../images/image.png" /></p>
+<p>左上の[ファイル]から[新規プロジェクト]を選択肢作成する
+ここではファイル名を[hoge00]とする</p>
+<p><img alt="alt text" src="../images/image-1.png" /></p>
+<p>すると以下のようにファイルが2つ作成される</p>
+<p><img alt="alt text" src="../images/image-2.png" /></p>
+<p>それでは早速回路を設計していく</p>
+<h2 id="1">ステップ１：回路図入力</h2>
+<p>[hoge00.kicad_sch]をダブルクリックして開く。</p>
+<p>すると回路図エディタが開かれる
+<img alt="" src="../images/image-3.png" /></p>
+<p>以下の手順で無安定マルチバイブレータを作成していく
+- 手順１：部品の配置
+- 手順２：配線をおこなう
+- 手順３：文字の編集
+- 手順４：リファレンス記号に番号をつける
+- 手順５：フットプリントの関連付け
+- 手順６：ERC実行</p>
+<h3 id="1_1">手順１：部品の配置</h3>
+<p>回路で使用する部品を配置していく</p>
+<p>回路図エディタの右側のツール・バーの上から3 番目に表示されている「シンボルを配置」を選択した状態で、画面の適当な場所でクリックすると、 シンボルを選択」のウィンドウが現れる。2SC1815を入力しOKを押す。</p>
+<p><img alt="alt text" src="../images/image-4.png" /></p>
+<p><img alt="alt text" src="../images/image-5.png" /></p>
+<p>カーソルに2SC1815のシンボルが表示されるので、位置を決めて配置する、クリックすると配置される</p>
+<p><img alt="alt text" src="../images/image-6.png" /></p>
+<p>ベースが向かい合うようにして、もう1つの2SC1815を配置する。
+シンボルを選択した状態で右クリックを押すとメニューバーが出てくる。そこで水平反転を選択し、向きをベースが向かい合うようにする</p>
+<p><img alt="alt text" src="../images/image-7.png" /></p>
+<p><img alt="alt text" src="../images/image-9.png" /></p>
+<p><img alt="alt text" src="../images/image-10.png" /></p>
+<p>配置場所を修正するには、部品の上にカーソル を置いてキーボードの [M] キーを押す 
+コンデンサ[C_Polarized]を選んで配置する.
+シンボルは選択して [Ctrl＋C] キーを 押すと、コピーして [Ctrl＋V] キーで貼り付けができる。また、 [R] キーで回転する。</p>
+<p><img alt="alt text" src="../images/image-11.png" /></p>
+<p>同じように、抵抗とLEDを配置する、抵抗はR, LEDはLEDを使う</p>
+<p><img alt="alt text" src="../images/image-12.png" /></p>
+<p>コネクタを配置する。「Connector_Generic」の 中にある [Conn_01x02]を使う</p>
+<p><img alt="alt text" src="../images/image-13.png" /></p>
+<h3 id="2">手順２：配線をおこなう</h3>
+<p>ワイヤーを追加を選択し、部品同士を配線する。</p>
+<p><img alt="alt text" src="../images/image-14.png" /></p>
+<p>[ESC]キーで取り消し、[Ctrl+Z]キーで一つ前に戻れる。</p>
+<p><img alt="alt text" src="../images/image-15.png" /></p>
+<p>右側のアイコンを押すことで斜めに配線可能になったりする。</p>
+<p><img alt="alt text" src="../images/image-16.png" /></p>
+<p><img alt="alt text" src="../images/image-17.png" /></p>
+<p><img alt="alt text" src="../images/image-18.png" /></p>
+<p>電源シンボルを追加する</p>
+<p><img alt="alt text" src="../images/image-19.png" /></p>
+<p><img alt="alt text" src="../images/image-20.png" /></p>
+<p><img alt="alt text" src="../images/image-21.png" /></p>
+<p><img alt="alt text" src="../images/image-22.png" /></p>
+<h3 id="3">手順３：文字の編集</h3>
+<p>C_Polarizedなどの名前を変更する。</p>
+<p><img alt="alt text" src="../images/image-23.png" /></p>
+<p><img alt="alt text" src="../images/image-24.png" /></p>
+<h3 id="4">手順４：リファレンス記号に番号をつける</h3>
+<p>リファレンス記号に番号をつける。
+アノテーションを押し番号をつける。</p>
+<p><img alt="alt text" src="../images/image-25.png" /></p>
+<p><img alt="alt text" src="../images/image-26.png" /></p>
+<h3 id="5">手順５：フットプリントの関連付け</h3>
+<p>すべての部品にフットプリントを割り当てる必要がある。</p>
+<p><img alt="alt text" src="../images/image-27.png" /></p>
+<p><img alt="alt text" src="../images/image-28.png" /></p>
+<p>Package_TO_SOT_THT:TO-92_Inline以外がフットプリンが割り当てられていない。</p>
+<p>では以下のように設定する。</p>
+<p><img alt="alt text" src="../images/image-29.png" /></p>
+<p>最初から2SC1815にはPackage_TO_SOT_THT:TO-92_Inlineが割り当てられているが間隔が狭いためはんだ付けが難しい</p>
+<p><img alt="alt text" src="../images/image-30.png" /></p>
+<p>そこでPackage_TO_SOT_THT:TO-92_Inline_Wideを使用するとよい</p>
+<p><img alt="alt text" src="../images/image-31.png" /></p>
+<p><img alt="alt text" src="../images/image-32.png" /></p>
+<h3 id="6erc">手順６：ERC実行</h3>
+<p>ercは未配線箇所や出力ピン同士の出力などの確認を自動でおこなう機能。
+<img alt="alt text" src="../images/image-33.png" /></p>
+<p><img alt="alt text" src="../images/image-34.png" /></p>
+<p>しかし、問題ない回路であってもエラーや警告が表示されることがある。
+この場合のエラーは無視できる。</p>
+<blockquote>
+<p>補足
+いかよりCSVでエクスポートすると部品図一覧をエクセルで開くことができる。</p>
+</blockquote>
+<p><img alt="alt text" src="../images/image-35.png" />
+<img alt="alt text" src="../images/image-36.png" /></p>
+<h2 id="2pcb">ステップ２：パターン設計（PCB）</h2>
+<p><img alt="alt text" src="../images/image-37.png" /></p>
+<p>すると，以下のような画面が開く．
+ここで配線図を作成する</p>
+<p><img alt="picture 0" src="../../../images/7351841b43a9f6cf0f96bfbbeb041b1aafcc2f7d46f3f5d8a55c026f8b806ac5.png" />  </p>
+<h3 id="1_2">手順１：部品を持ってくる</h3>
+<p><img alt="alt text" src="../images/image-38.png" /></p>
+<p>回路図で設定したからフットプリントを持ってくる</p>
+<p><img alt="alt text" src="../images/image-39.png" /></p>
+<p>基盤を更新．すると以下のような部品が出現．
+これがフットプリントである．</p>
+<p><img alt="alt text" src="../images/image-40.png" /></p>
+<h3 id="2_1">手順２：配置，穴，外形を決める</h3>
+<p>次に回路全体の大きさを決める．</p>
+<p>その前にピッチを変える
+以下でPCBの点の間隔を変更できる</p>
+<p><img alt="alt text" src="../images/image-41.png" />
+<img alt="alt text" src="../images/image-42.png" /></p>
+<p>今回は１．２７をしようする．</p>
+<p>レイヤーは回路の階層ごとに使用する．</p>
+<ul>
+<li>f.cu:表面</li>
+<li>b.cu:ウラ面</li>
+<li>edge.cuts:外形</li>
+</ul>
+<p><img alt="alt text" src="../images/image-43.png" /></p>
+<p>まずは外形を決める
+レイヤーを[edge.cuts]を選択し，四角のモードを選択．</p>
+<p><img alt="alt text" src="../images/image-44.png" /></p>
+<p>そして以下のように外形を描く</p>
+<p>今回は38.1[mm]×38.1[mm]とする．</p>
+<p><img alt="alt text" src="../images/image-46.png" /></p>
+<p>次に穴を決めていく</p>
+<p><img alt="alt text" src="../images/image-47.png" /></p>
+<p>穴のフットプリントを使用する．
+“MountingHole”ライブラリの“MountingHole_3.2mm_M3”フットプリントを使う</p>
+<p><img alt="alt text" src="../images/image-48.png" /></p>
+<p><img alt="alt text" src="../images/image-49.png" /></p>
+<p>部品を美しく並べていく
+配線がしやすくなるように並べる．</p>
+<p><img alt="alt text" src="../images/image-50.png" /></p>
+<h3 id="3_1">手順３：電源，グランド配線</h3>
+<p>主要である電源とグランドの配線を行う．
+配線するときの線の太さは以下に種類を追加できる．
+予め設定しておこう．</p>
+<p><img alt="alt text" src="../images/image-51.png" /></p>
+<p><img alt="alt text" src="../images/image-52.png" /></p>
+<p><img alt="alt text" src="../images/image-53.png" /></p>
+<p>電源はできるだけ太くする必要がある．
+また，切削基盤のため今回はウラ面に配線する．
+レイヤーを裏側に設定する</p>
+<p><img alt="alt text" src="../images/image-55.png" /></p>
+<p>それでは配線していく
+2mmで配線した．</p>
+<p><img alt="alt text" src="../images/image-56.png" /></p>
+<h3 id="4_1">手順４：配線</h3>
+<p>では他の配線も行う．
+切削基盤の場合，線の幅を1.5mm以上にすることをおすすめする．</p>
+<p><img alt="alt text" src="../images/image-57.png" />
+配線中にかぶってしまって配線できないことがある．そんなときは表配線を使用する．</p>
+<p><img alt="alt text" src="../images/image-58.png" /></p>
+<p>貫通ビアを配置を選択</p>
+<p><img alt="alt text" src="../images/image-59.png" /></p>
+<p><img alt="alt text" src="../images/image-60.png" /></p>
+<p><img alt="alt text" src="../images/image-61.png" /></p>
+<p>するとこのようにまたぐことができる．</p>
+<p><img alt="alt text" src="../images/image-62.png" />
+完成．
+少し汚いが，これで良しとしよう．．．</p>
+<p>ではベタグラウンドについて説明する．
+一番負荷がかかるGNDを大きくしたり，ノイズの影響を受けにくくしたりと便利なのでとりあえずしときましょう．</p>
+<p>塗り潰しゾーンを選択．</p>
+<p><img alt="alt text" src="../images/image-63.png" /></p>
+<p>回路の左上端をクリックして以下のように設定する．
+- B.cuを選択
+- GNDを選択
+- 実線を選択</p>
+<p><img alt="alt text" src="../images/image-64.png" /></p>
+<p>そして四角の端を全て選択すると</p>
+<p><img alt="alt text" src="../images/image-65.png" /></p>
+<p>そして塗りつぶしを行う．</p>
+<p><img alt="alt text" src="../images/image-66.png" /></p>
+<p><img alt="alt text" src="../images/image-67.png" /></p>
+<p>とりあえずこれで完成．</p>
+<h3 id="5_1">手順5：デザインルールチェック</h3>
+<p>Kicadには回路チェックの機能があるのでそれを使用して，配線わすれなどがないか確認する．</p>
+<p><img alt="alt text" src="../images/image-68.png" /></p>
+<p><img alt="alt text" src="../images/image-69.png" /></p>
+<p><img alt="alt text" src="../images/image-70.png" /></p>
+<p>警告よりもエラーを主に見る．
+今回はエラーはなかった．</p>
+<p><img alt="alt text" src="../images/image-71.png" /></p>
+<p>警告文はシルク（表面の文字とか）なので，今回は切削基盤のため無視してOK．</p>
+<p>これにて回路完成です．</p>
+<h2 id="_3">番外編</h2>
+<p>シンボル，フットプリントの作り方．
+以下の２つを使用します．</p>
+<p><img alt="alt text" src="../images2/image-19.png" /></p>
+<p><img alt="alt text" src="../images2/image-18.png" /></p>
+<h3 id="_4">シンボルの作り方</h3>
+<p>シンボルエディターを起動する</p>
+<p><img alt="alt text" src="../images2/image-2.png" /></p>
+<p>ファイルから新規ライブラリを選択．</p>
+<p><img alt="alt text" src="../images2/image-3.png" /></p>
+<p>グローバルで作成</p>
+<p><img alt="alt text" src="../images2/image-4.png" /></p>
+<p>任意の場所に作成</p>
+<p><img alt="alt text" src="../images2/image-5.png" /></p>
+<p><img alt="alt text" src="../images2/image-6.png" /></p>
+<p>作成したライブラリを選択した状態で新規シンボルを作成．</p>
+<p><img alt="alt text" src="../images2/image-7.png" /></p>
+<p>シンボルの名前やリファレンス指定子を決める．
+今回はWi-Fiモジュール ESP32-C3-WROOM-02-N4のシンボルを作成していく．</p>
+<p><img alt="alt text" src="../images2/image-9.png" /></p>
+<p>データシートを見てみると，以下のように記載されている</p>
+<p><img alt="alt text" src="../images2/image-10.png" /></p>
+<p><img alt="alt text" src="../images2/image-11.png" /></p>
+<p>これらのデータをもとに作成していく．</p>
+<p><img alt="alt text" src="../images2/image-13.png" /></p>
+<p><img alt="alt text" src="../images2/image-14.png" /></p>
+<p><img alt="alt text" src="../images2/image-15.png" /></p>
+<p>こんな感じで完成！</p>
+<p><img alt="alt text" src="../images2/image-17.png" /></p>
+<h3 id="_5">フットプリントの作り方</h3>
+<p>新規ライブラリを作成し，新規フットプリントを作成する．</p>
+<p><img alt="alt text" src="../images2/image-21.png" /></p>
+<p><img alt="alt text" src="../images2/image-22.png" /></p>
+<p>SMDは表面実装のこと</p>
+<p><img alt="alt text" src="../images2/image-23.png" /></p>
+<p>以下のデータをもとに作成する</p>
+<p><img alt="alt text" src="../images2/image-20.png" /></p>
+<p><img alt="alt text" src="../images2/image-24.png" /></p>
+<p><img alt="alt text" src="../images2/image-25.png" /></p>
+<p>うまいこと頑張って作ろう！</p>
+<p><img alt="alt text" src="../images2/image-26.png" /></p>
+<p><img alt="alt text" src="../images2/image-27.png" /></p>
+<p>線をダブルクリックで長さをかれます</p>
+<p><img alt="alt text" src="../images2/image-28.png" /></p>
+<p><img alt="alt text" src="../images2/image-29.png" /></p>
+<p>これで良しとしよう</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 -Altair-
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://x.com/Flying___eagle" target="_blank" rel="noopener" title="mebiusbox2 on Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm297.1 84L257.3 234.6 379.4 396h-95.6L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5 78.2-89.5zm-37.8 251.6L153.4 142.9h-28.3l171.8 224.7h26.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Altairu" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4></h4>
+<p></p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
