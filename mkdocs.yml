@@ -79,8 +79,8 @@ extra:
       link: https://github.com/Altairu
 
 copyright: "&copy; 2025 -Altair-"
-repo_url: hhttps://github.com/Altairu/training_materials
-repo_name: Altairu/training_materials
+repo_url: https://github.com/Altairu/sken_training_materials
+repo_name: Altairu/sken_training_materials
 markdown_extensions:
     - pymdownx.highlight
 extra_javascript: 
