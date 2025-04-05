@@ -33,7 +33,7 @@
 
 この Wiki は、電装班のメンバーが中心となって作成・運用されています。  
 資料の追加、修正、誤りの訂正など、皆様からのフィードバックをお待ちしております。  
-GitHub リポジトリ [Altairu/training_materials](https://github.com/Altairu/training_materials) でコントリビューションも受け付けています。
+GitHub リポジトリ [Altairu/sken_training_materials](https://github.com/Altairu/sken_training_materials) でコントリビューションも受け付けています。
 
 
 ## お問い合わせ
