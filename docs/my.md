@@ -1,0 +1,54 @@
+# 自己紹介
+
+
+![alt text](images/altair.png)
+
+こんにちは、**Altair** です。  
+私は高専ロボコンで主に制御と回路の担当として活動してきました。
+
+
+
+## プロフィール
+
+- **年齢・世代:** 2020入学
+- **担当分野:** 制御、回路
+
+### オンライン
+
+- **Qiita:** [https://qiita.com/_Altair_](https://qiita.com/_Altair_)
+- **Twitter:** [https://x.com/home](https://x.com/home)
+- **GitHub:** [https://github.com/Altairu](https://github.com/Altairu)
+
+
+## 活動履歴
+
+### 2022年: C;Gefangener
+- **担当:** 制御、操縦  
+
+### 2023年: 鋼鶴天翔
+- **担当:** チームリーダー、制御、回路、操縦  
+
+### 2024年: アポロ計鶴
+- **担当:** 制御、回路、操縦、選手宣誓  
+
+## メッセージ
+
+私が発信する情報や記事は、日々の活動の中で得た知見や工夫を共有することを目的としています。  
+興味を持っていただけたら、ぜひお気軽に各SNSやGitHubでフォローしてください！
+
+## 写真集
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+  <div style="flex: 0 0 45%; margin-bottom: 20px;">
+    <img src="/images/image.png" alt="活動写真1" style="width:100%;">
+  </div>
+  <div style="flex: 0 0 45%; margin-bottom: 20px;">
+    <img src="/images/image2.png" alt="活動写真2" style="width:100%;">
+  </div>
+  <div style="flex: 0 0 45%; margin-bottom: 20px;">
+    <img src="/images/image3.png" alt="活動写真3" style="width:100%;">
+  </div>
+  <div style="flex: 0 0 45%; margin-bottom: 20px;">
+    <img src="/images/image4.png" alt="活動写真4" style="width:100%;">
+  </div>
+</div>

@@ -3,6 +3,7 @@ site_name: 電気班 講習資料
 
 nav:
   - ホーム画面: index.md 
+  - 自己紹介: my.md 
   - 講習資料:
       - 1年体験入部: training_materials/講習資料/1年体験入部/S-ken体験入部制御班Lちか.md
       - ROS 2:
@@ -51,6 +52,7 @@ theme:
         name: Switch to light mode
   logo: images/altair.png
   favicon: images/altair.png
+  custom_dir: overrides
 extra:
   consent:
     title: Cookie consent
@@ -90,3 +92,19 @@ extra_javascript:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - admonition
+  - pymdownx.details
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - admonition
