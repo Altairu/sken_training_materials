@@ -1,5 +1,5 @@
 # filepath: /home/altair/sken_training_materials/mkdocs.yml
-site_name: 電装班 講習資料
+site_name: 電気班 講習資料
 
 nav:
   - ホーム画面: index.md 
