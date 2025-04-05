@@ -1,0 +1,92 @@
+# filepath: /home/altair/sken_training_materials/mkdocs.yml
+site_name: 電装班 講習資料
+
+nav:
+  - ホーム画面: index.md 
+  - 講習資料:
+      - 1年体験入部: training_materials/講習資料/1年体験入部/S-ken体験入部制御班Lちか.md
+      - ROS 2:
+          - ROS2講習1: training_materials/講習資料/ROS 2/ROS2_1.md
+          - ROS2講習2: training_materials/講習資料/ROS 2/ROS2_2.md
+          - ROS2講習3: training_materials/講習資料/ROS 2/ROS2_3.md
+          - ROS2講習ロボコン1: training_materials/講習資料/ROS 2/ROS2_ロボコン1.md
+          - ROS2講習ロボコン2: training_materials/講習資料/ROS 2/ROS2_ロボコン2.md
+      - python3:
+          - 講習1: training_materials/講習資料/python3/python3講習1.md
+          - 講習2: training_materials/講習資料/python3/python3講習2.md
+          - 講習3: training_materials/講習資料/python3/python3講習3.md
+      - 回路:
+          - 回路講習0: training_materials/講習資料/回路/回路講習0.md
+          - 回路講習1: training_materials/講習資料/回路/回路講習1スライド.md
+          - 回路講習2: training_materials/講習資料/回路/回路講習2スライド.md
+          - 回路講習3: training_materials/講習資料/回路/回路講習4.md
+          - 回路講習4: training_materials/講習資料/回路/回路講習5.md
+      - ubuntu: training_materials/講習資料/ubuntu/ubuntu1.md
+      - マイコン: 
+          - マイコン講習1: training_materials/講習資料/マイコン/マイコン1.md
+          - マイコン講習2: training_materials/講習資料/マイコン/マイコン2.md
+      - ライセンス: training_materials/講習資料/ライセンス/ライセンススライド.md
+      - pid: training_materials/講習資料/pid/pid.md
+      - マークダウン書き方: training_materials/講習資料/マークダウン書き方.md
+  - 講習課題:
+      - python課題: training_materials/特訓課題/python.md
+      - python課題答え: training_materials/講習資料/code/python答え.md
+      - 回路課題: training_materials/特訓課題/回路.md
+
+
+theme:
+  name: material
+  font:
+    text: Noto Sans JP
+    code: Inconsolata
+  palette:
+    - scheme: default
+      primary: blue grey
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  logo: images/altair.png
+  favicon: images/altair.png
+extra:
+  consent:
+    title: Cookie consent
+    description:
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  consent:
+    actions:
+      - accept
+      - manage
+      - reject
+  features:
+    - navigation.top
+    - navigation.sections
+    - navigation.indexes
+  features:
+    - header.autohide
+  generator: false
+  social:
+    - icon: fontawesome/brands/square-x-twitter
+      link: https://x.com/Flying___eagle
+      name: mebiusbox2 on Twitter
+    - icon: fontawesome/brands/github
+      link: https://github.com/Altairu
+
+copyright: "&copy; 2025 -Altair-"
+repo_url: hhttps://github.com/Altairu/training_materials
+repo_name: Altairu/training_materials
+markdown_extensions:
+    - pymdownx.highlight
+extra_javascript: 
+  - js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
