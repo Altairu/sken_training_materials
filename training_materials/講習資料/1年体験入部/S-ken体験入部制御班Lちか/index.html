@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../../..">
+        <link rel="prev" href="../../../../my/">
       
       
         <link rel="next" href="../../ROS%202/ROS2_1/">
@@ -271,6 +271,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../my/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    自己紹介
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -284,10 +306,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -300,8 +322,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             講習資料
           </label>
@@ -388,6 +410,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#void-loop-1led-if-digitalreadbutton1-low-digitalwriteledpin-high-2led-if-digitalreadbutton2-low-for-double-i-0-i-255-i-fadeamount-analogwriteledpin-i-3led-if-digitalreadbutton3-low-digitalwriteledpin-low-serialprintbutton-1-serialprintdigitalreadbutton1-serialprint-button-2-serialprintdigitalreadbutton2-serialprint-button-3-serialprintdigitalreadbutton3" class="md-nav__link">
+    <span class="md-ellipsis">
+      void loop() { // ボタン1が押された場合、LED光る if (digitalRead(button1) == LOW) { digitalWrite(ledPin, HIGH); } // ボタン2が押された場合、LEDの明るさを徐々に上げる if (digitalRead(button2) == LOW) { for (double i = 0; i &lt;= 255; i += fadeAmount) { analogWrite(ledPin, i); } } // ボタン3が押された場合、LEDを消す if (digitalRead(button3) == LOW) { digitalWrite(ledPin, LOW); } // シリアルモニタに各ボタンの状態を表示する Serial.print(&quot;Button 1: &quot;); Serial.print(digitalRead(button1)); Serial.print(&quot; | Button 2: &quot;); Serial.print(digitalRead(button2)); Serial.print(&quot; | Button 3: &quot;); Serial.print(digitalRead(button3)); }
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#if" class="md-nav__link">
     <span class="md-ellipsis">
       if文について
@@ -429,10 +460,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   
@@ -445,8 +476,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             ROS 2
           </label>
@@ -590,10 +621,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   
@@ -606,8 +637,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             python3
           </label>
@@ -705,10 +736,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
   
@@ -721,8 +752,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             回路
           </label>
@@ -889,10 +920,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
             
   
   
@@ -905,8 +936,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             マイコン
           </label>
@@ -1057,10 +1088,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -1073,8 +1104,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             講習課題
           </label>
@@ -1207,6 +1238,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#void-loop-1led-if-digitalreadbutton1-low-digitalwriteledpin-high-2led-if-digitalreadbutton2-low-for-double-i-0-i-255-i-fadeamount-analogwriteledpin-i-3led-if-digitalreadbutton3-low-digitalwriteledpin-low-serialprintbutton-1-serialprintdigitalreadbutton1-serialprint-button-2-serialprintdigitalreadbutton2-serialprint-button-3-serialprintdigitalreadbutton3" class="md-nav__link">
+    <span class="md-ellipsis">
+      void loop() { // ボタン1が押された場合、LED光る if (digitalRead(button1) == LOW) { digitalWrite(ledPin, HIGH); } // ボタン2が押された場合、LEDの明るさを徐々に上げる if (digitalRead(button2) == LOW) { for (double i = 0; i &lt;= 255; i += fadeAmount) { analogWrite(ledPin, i); } } // ボタン3が押された場合、LEDを消す if (digitalRead(button3) == LOW) { digitalWrite(ledPin, LOW); } // シリアルモニタに各ボタンの状態を表示する Serial.print(&quot;Button 1: &quot;); Serial.print(digitalRead(button1)); Serial.print(&quot; | Button 2: &quot;); Serial.print(digitalRead(button2)); Serial.print(&quot; | Button 3: &quot;); Serial.print(digitalRead(button3)); }
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#if" class="md-nav__link">
     <span class="md-ellipsis">
       if文について
@@ -1258,131 +1298,124 @@
 <p>また、各ボタンの状態をシリアルモニタに表示します。</p>
 <h3 id="_2">プログラムのコード解説</h3>
 <ol>
-<li>定数宣言</li>
-</ol>
-<pre><code class="language-cpp">int ledPin = 9;        // LEDピン
-int button1 = 3;       // ボタン1ピン
-int button2 = 4;       // ボタン2ピン
-int button3 = 5;       // ボタン3ピン
-double fadeAmount = 0.001;  // 明るさの増減量
-</code></pre>
-<ul>
+<li>定数宣言
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w">        </span><span class="c1">// LEDピン</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">button1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">       </span><span class="c1">// ボタン1ピン</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">button2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">       </span><span class="c1">// ボタン2ピン</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">button3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">       </span><span class="c1">// ボタン3ピン</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">fadeAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.001</span><span class="p">;</span><span class="w">  </span><span class="c1">// 明るさの増減量</span>
+</code></pre></div></li>
 <li><code>ledPin</code> はLEDが接続されているピン番号です。</li>
 <li><code>button1</code> から <code>button3</code> までの変数に、それぞれボタンが接続されているピン番号を代入します。</li>
 <li>
 <p><code>fadeAmount</code> は、明るさの増減量を制御するための定数です。</p>
 </li>
 <li>
-<p>setup()</p>
+<p>setup()
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"> </span><span class="c1">// LEDのピンを出力モードに設定</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">button1</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="c1">// ボタン１のピンを入力モードに設定</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">button2</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="c1">// ボタン２のピンを入力モードに設定</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">button3</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="c1">// ボタン３のピンを入力モードに設定</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
 </li>
-</ul>
-<pre><code class="language-cpp">void setup() {
-  pinMode(ledPin, OUTPUT); // LEDのピンを出力モードに設定
-  pinMode(button1, INPUT_PULLUP);// ボタン１のピンを入力モードに設定
-  pinMode(button2, INPUT_PULLUP);// ボタン２のピンを入力モードに設定
-  pinMode(button3, INPUT_PULLUP);// ボタン３のピンを入力モードに設定
-  Serial.begin(9600);
-}
-</code></pre>
-<ul>
 <li><code>pinMode()</code> を使って、各ピンの入出力を設定します。</li>
 <li><code>INPUT_PULLUP</code> を使って、ボタンが接続されたピンの内部プルアップ抵抗を有効にします。</li>
 <li><code>Serial.begin()</code> でシリアル通信を初期化します。</li>
-</ul>
+</ol>
 <hr />
 <ol>
 <li>loop()</li>
 <li>メインループ。プログラムが実行される間、このループが繰り返されます。</li>
 </ol>
-<pre><code class="language-cpp">void loop() {
-  // ボタン1が押された場合、LED光る
-  if (digitalRead(button1) == LOW) {
-    digitalWrite(ledPin, HIGH);
-  }
+<h2 id="void-loop-1led-if-digitalreadbutton1-low-digitalwriteledpin-high-2led-if-digitalreadbutton2-low-for-double-i-0-i-255-i-fadeamount-analogwriteledpin-i-3led-if-digitalreadbutton3-low-digitalwriteledpin-low-serialprintbutton-1-serialprintdigitalreadbutton1-serialprint-button-2-serialprintdigitalreadbutton2-serialprint-button-3-serialprintdigitalreadbutton3"><div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ボタン1が押された場合、LED光る</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">button1</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
 
-  // ボタン2が押された場合、LEDの明るさを徐々に上げる
-  if (digitalRead(button2) == LOW) {
-    for (double i = 0; i &lt;= 255; i += fadeAmount) {
-      analogWrite(ledPin, i);
-    }
-  }
-// ボタン3が押された場合、LEDを消す
-if (digitalRead(button3) == LOW) {
-  digitalWrite(ledPin, LOW);
-}
+<span class="w">  </span><span class="c1">// ボタン2が押された場合、LEDの明るさを徐々に上げる</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">button2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">fadeAmount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="c1">// ボタン3が押された場合、LEDを消す</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">button3</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="p">}</span>
 
 
-// シリアルモニタに各ボタンの状態を表示する
-Serial.print(&quot;Button 1: &quot;);
-Serial.print(digitalRead(button1));
-Serial.print(&quot; | Button 2: &quot;);
-Serial.print(digitalRead(button2));
-Serial.print(&quot; | Button 3: &quot;);
-Serial.print(digitalRead(button3));
-}
-</code></pre>
-<hr />
-<p>中身の解説</p>
-<pre><code class="language-cpp">  if (digitalRead(button1) == LOW) {
-    digitalWrite(ledPin, HIGH);
-  }
-</code></pre>
-<p>このif文は、デジタルピンの状態を読み取り、button1が押されたかどうかを確認しています。</p>
+<span class="c1">// シリアルモニタに各ボタンの状態を表示する</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Button 1: &quot;</span><span class="p">);</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">button1</span><span class="p">));</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; | Button 2: &quot;</span><span class="p">);</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">button2</span><span class="p">));</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; | Button 3: &quot;</span><span class="p">);</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">button3</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></h2>
+<p>中身の解説
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">button1</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+このif文は、デジタルピンの状態を読み取り、button1が押されたかどうかを確認しています。</p>
 <ul>
 <li><code>digitalRead()</code>関数は、指定されたピンの状態を読み取り、HIGHまたはLOWの値を返します。</li>
 </ul>
 <p>この場合、button1ピンがLOWになった場合（つまり、押された場合）、LEDが点灯するように、<code>digitalWrite()</code>関数を使用してledPinをHIGHに設定しています。
-ボタン３の処理はこれの反対でledPinをLOWに設定しています。</p>
-<pre><code class="language-cpp">  if (digitalRead(button2) == LOW) {
-    for (double i = 0; i &lt;= 255; i += fadeAmount) {
-      analogWrite(ledPin, i);
-    }
-  }
-</code></pre>
-<ul>
-<li><code>digitalRead()</code> 関数は、引数で指定したピンの状態（HIGHまたはLOW）を読み取ります。ここでは、ボタン2が押されるとそのピンの状態はLOWになります。</li>
-<li>forループで使用する変数<code>i</code> は、0から255までfadeAmountずつ増加し、LEDの明るさを徐々に上げます</li>
-<li><code>analogWrite()</code> 関数は、引数で指定したピンにPWM（パルス幅変調）信号を出力します。PWM信号は、HIGHとLOWの繰り返しで構成される信号で、HIGHとLOWの比率を変えることで平均的な電圧を制御します。ここでは、LEDの明るさを i に設定することで、PWM信号を出力してLEDの明るさを変化させています。</li>
-</ul>
+ボタン３の処理はこれの反対でledPinをLOWに設定しています。
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">button2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">fadeAmount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+* <code>digitalRead()</code> 関数は、引数で指定したピンの状態（HIGHまたはLOW）を読み取ります。ここでは、ボタン2が押されるとそのピンの状態はLOWになります。
+* forループで使用する変数<code>i</code> は、0から255までfadeAmountずつ増加し、LEDの明るさを徐々に上げます
+* <code>analogWrite()</code> 関数は、引数で指定したピンにPWM（パルス幅変調）信号を出力します。PWM信号は、HIGHとLOWの繰り返しで構成される信号で、HIGHとLOWの比率を変えることで平均的な電圧を制御します。ここでは、LEDの明るさを i に設定することで、PWM信号を出力してLEDの明るさを変化させています。</p>
 <hr />
-<pre><code class="language-cpp">Serial.print(&quot;Button 1: &quot;);
-Serial.print(digitalRead(button1));
-Serial.print(&quot; | Button 2: &quot;);
-Serial.print(digitalRead(button2));
-Serial.print(&quot; | Button 3: &quot;);
-Serial.print(digitalRead(button3));
-</code></pre>
-<p>シリアルモニタにボタン1から4までの各ボタンの状態を表示するものです。</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Button 1: &quot;</span><span class="p">);</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">button1</span><span class="p">));</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; | Button 2: &quot;</span><span class="p">);</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">button2</span><span class="p">));</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; | Button 3: &quot;</span><span class="p">);</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">button3</span><span class="p">));</span>
+</code></pre></div>
+シリアルモニタにボタン1から4までの各ボタンの状態を表示するものです。</p>
 <p><code>Serial.print()</code>は、指定したテキストや変数の値をシリアルモニタに出力します。<code>Serial.println()</code>は、指定したテキストや変数の値を出力し、改行を追加します。</p>
 <p>具体的には、まず<code>"Button 1: "</code>のテキストが出力され、その後に<code>digitalRead(button1)</code>が実行され、<code>button1ピンの状態</code>が読み取られます。同様に、<code>"Button 2: "</code>のテキストと<code>button2ピンの状態</code>が出力され、<code>"Button 3: "</code>と<code>button3ピンの状態</code>が出力されます。</p>
 <p>各ボタンの状態は、<code>digitalRead()</code>関数によって読み取られ、ピンの電圧レベルがHIGH（3.3Vまたは5V）かLOW（0V）かによって判断されます。<code>digitalRead()</code>関数は、指定されたピンの状態を返します。この値は、0または1の整数であり、LOWに対応する0、HIGHに対応する1となります。</p>
 <h2 id="if">if文について</h2>
 <p>C言語のif文は、指定した条件に基づいて、プログラムの実行フローを分岐するために使用されます。
 条件式が真の場合、if文のブロック内の文が実行されます。条件式が偽の場合、if文のブロック内の文はスキップされ、次の行が実行されます。</p>
-<p>if文は以下のような構文を持ちます。</p>
-<pre><code class="language-cpp">if (条件式) {
-  // 条件が真の場合に実行される文
-}
-</code></pre>
-<p>ここで、<code>条件式</code>は、真偽値を評価する式であり、<code>{}</code>の中には、条件が真の場合に実行される一連の文が含まれます。また、中括弧は、複数の文をブロックとしてまとめるために使用されます。</p>
+<p>if文は以下のような構文を持ちます。
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">条件式</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// 条件が真の場合に実行される文</span>
+<span class="p">}</span>
+</code></pre></div>
+ここで、<code>条件式</code>は、真偽値を評価する式であり、<code>{}</code>の中には、条件が真の場合に実行される一連の文が含まれます。また、中括弧は、複数の文をブロックとしてまとめるために使用されます。</p>
 <p>if文は、条件式が複雑な場合に、比較演算子（<code>&lt;</code>, <code>&gt;</code>,<code>==</code>など）や論理演算子（<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>など）を組み合わせることができます。</p>
-<p>また、if文は、条件式が偽の場合に実行される文を指定する、else節と組み合わせることができます。else節は、次のように記述されます</p>
-<pre><code class="language-cpp">if (条件式) {
-  // 条件が真の場合に実行される文
-} else {
-  // 条件が偽の場合に実行される文
-}
-</code></pre>
+<p>また、if文は、条件式が偽の場合に実行される文を指定する、else節と組み合わせることができます。else節は、次のように記述されます
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">条件式</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// 条件が真の場合に実行される文</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// 条件が偽の場合に実行される文</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <p>if文は、プログラムの制御フローを制御するために頻繁に使用される構文の一つです。</p>
 <p>条件に応じて、プログラムの実行を変更したい場合に、if文を使用します。</p>
 <h2 id="for">for文について</h2>
 <p>for文は、C言語において繰り返し処理を行うための構文の1つです。for文は、指定された回数または条件に従って、同じ処理を繰り返し実行することができます。
-for文は以下のような構文を持ちます。</p>
-<pre><code class="language-cpp">for ( 初期化文 ; 条件式 ; 更新文 ) {
-    繰り返し実行する処理
-}
-</code></pre>
-<p>for文は、3つの部分で構成されています。
+for文は以下のような構文を持ちます。
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">初期化文</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">条件式</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">更新文</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">繰り返し実行する処理</span>
+<span class="p">}</span>
+</code></pre></div>
+for文は、3つの部分で構成されています。
 1. 初期化文：ループ変数の初期化を行います。この部分で変数を宣言し、初期値を代入します。
 2. 条件式：繰り返し処理を行うための条件を指定します。この条件が真である限り、処理が繰り返し実行されます。
 3. 更新文：ループ変数の更新を行います。この部分で変数に新しい値を代入します。</p>
