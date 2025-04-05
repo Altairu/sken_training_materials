@@ -52,7 +52,7 @@ theme:
         name: Switch to light mode
   logo: images/altair.png
   favicon: images/altair.png
-  custom_dir: overrides
+  
 extra:
   consent:
     title: Cookie consent
