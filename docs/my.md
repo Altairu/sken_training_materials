@@ -16,7 +16,7 @@
 ### オンライン
 
 - **Qiita:** [https://qiita.com/_Altair_](https://qiita.com/_Altair_)
-- **Twitter:** [https://x.com/home](https://x.com/home)
+- **Twitter:** [https://x.com/Flying___eagle](https://x.com/Flying___eagle)
 - **GitHub:** [https://github.com/Altairu](https://github.com/Altairu)
 
 
