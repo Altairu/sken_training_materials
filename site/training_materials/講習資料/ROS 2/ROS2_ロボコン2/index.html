@@ -1812,7 +1812,7 @@ colcon<span class="w"> </span>build
 </tr>
 <tr>
 <td><strong>robot_controller.py</strong></td>
-<td>受信した目標座標に基づいて，速度 ( V_x, V_y, \omega ) を計算</td>
+<td>受信した目標座標に基づいて，速度 <span class="arithmatex">\( V_x, V_y, \omega \)</span> を計算</td>
 </tr>
 <tr>
 <td><strong>serial_read_node.py</strong></td>
@@ -1977,12 +1977,12 @@ colcon<span class="w"> </span>build
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></p>
 <h3 id="robot_controllerpy"><strong>robot_controller.py（制御ノード）</strong></h3>
-<p>自己位置と目標座標を比較し，ロボットの速度 ( V_x, V_y, \omega ) を計算する．</p>
+<p>自己位置と目標座標を比較し，ロボットの速度 <span class="arithmatex">\( V_x, V_y, \omega \)</span> を計算する．</p>
 <h4 id="_9"><strong>📌 やること</strong></h4>
 <ul>
 <li><code>estimated_position</code> から <strong>自己位置</strong> を取得</li>
 <li><code>target_position</code> から <strong>目標座標</strong> を取得</li>
-<li><strong>PID 制御を使用</strong> して ( V_x, V_y, \omega ) を計算</li>
+<li><strong>PID 制御を使用</strong> して <span class="arithmatex">\( V_x, V_y, \omega \)</span> を計算</li>
 <li><code>cmd_vel</code> に速度指令をパブリッシュ</li>
 </ul>
 <h4 id="_10"><strong>📝 コード</strong></h4>

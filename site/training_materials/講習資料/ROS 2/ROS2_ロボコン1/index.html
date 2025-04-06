@@ -3066,27 +3066,27 @@
 <h3 id="_8"><strong>障害物がない場合</strong></h3>
 <p>最も基本的な経路計画は，「現在位置から目標位置までの直線移動」 である．</p>
 <h4 id="_9"><strong>計算方法</strong></h4>
-<p>ロボットの現在位置を ((x_0, y_0))，目標位置を ((x_t, y_t)) とすると，目標方向 (\theta) は以下の式で計算できる</p>
-<p>$$
+<p>ロボットの現在位置を <span class="arithmatex">\((x_0, y_0)\)</span>，目標位置を <span class="arithmatex">\((x_t, y_t)\)</span> とすると，目標方向 <span class="arithmatex">\(\theta\)</span> は以下の式で計算できる</p>
+<div class="arithmatex">\[
 \theta = \tan^{-1}\left( \frac{y_t - y_0}{x_t - x_0} \right)
-$$</p>
-<p>移動距離 (d) は：</p>
-<p>$$
+\]</div>
+<p>移動距離 <span class="arithmatex">\(d\)</span> は：</p>
+<div class="arithmatex">\[
 d = \sqrt{(x_t - x_0)^2 + (y_t - y_0)^2}
-$$</p>
-<p>ロボットの速度 (v) は，最大速度 (v_{max}) を超えないように制限する：</p>
-<p>$$
+\]</div>
+<p>ロボットの速度 <span class="arithmatex">\(v\)</span> は，最大速度 <span class="arithmatex">\(v_{max}\)</span> を超えないように制限する：</p>
+<div class="arithmatex">\[
 v = \min(v_{max}, d / t)
-$$</p>
-<p>ここで (t) は移動にかかる時間である．</p>
+\]</div>
+<p>ここで <span class="arithmatex">\(t\)</span> は移動にかかる時間である．</p>
 <h4 id="_10"><strong>計算例</strong></h4>
-<p>現在位置：((0, 0))，目標位置：((1000, 500)) のとき，</p>
-<p>$$
+<p>現在位置：<span class="arithmatex">\((0, 0)\)</span>，目標位置：<span class="arithmatex">\((1000, 500)\)</span> のとき，</p>
+<div class="arithmatex">\[
 \theta = \tan^{-1} \left( \frac{500}{1000} \right) = 26.57°
-$$</p>
-<p>$$
+\]</div>
+<div class="arithmatex">\[
 d = \sqrt{1000^2 + 500^2} = 1118.03 \text{ mm}
-$$</p>
+\]</div>
 <h3 id="_11"><strong>障害物がある場合</strong></h3>
 <p>障害物がある場合，直線移動では衝突するため，障害物を避けながら目標地点へ移動する必要がある．そのための経路計画アルゴリズムとして以下がある</p>
 <h4 id="1-aa-star"><strong>① A</strong>*（A-star）アルゴリズム**</h4>
@@ -3099,9 +3099,9 @@ $$</p>
 <p>スタート地点から目標地点までのグリッドを生成する．</p>
 </li>
 <li>障害物のあるグリッドを無効にする．</li>
-<li>各グリッドに対して，スタート地点からの移動コスト (g) と，ゴールまでの推定コスト (h) を計算し，評価関数 (f = g + h) を算出する．</li>
+<li>各グリッドに対して，スタート地点からの移動コスト <span class="arithmatex">\(g\)</span> と，ゴールまでの推定コスト <span class="arithmatex">\(h\)</span> を計算し，評価関数 <span class="arithmatex">\(f = g + h\)</span> を算出する．</li>
 <li>
-<p>最小の (f) を持つグリッドを選択し，ゴールに到達するまで繰り返す．</p>
+<p>最小の <span class="arithmatex">\(f\)</span> を持つグリッドを選択し，ゴールに到達するまで繰り返す．</p>
 </li>
 <li>
 <p><strong>短所</strong>：</p>
@@ -3139,10 +3139,10 @@ $$</p>
 <p><strong>手順</strong></p>
 </li>
 <li>
-<p>事前に障害物を回避できる中間地点を定める（例：(P_1, P_2, P_3)）</p>
+<p>事前に障害物を回避できる中間地点を定める（例：<span class="arithmatex">\(P_1, P_2, P_3\)</span>）</p>
 </li>
-<li>現在位置から (P_1) に向かって移動する</li>
-<li>(P_1) に到達したら，次の目的地 (P_2) に移動する</li>
+<li>現在位置から <span class="arithmatex">\(P_1\)</span> に向かって移動する</li>
+<li><span class="arithmatex">\(P_1\)</span> に到達したら，次の目的地 <span class="arithmatex">\(P_2\)</span> に移動する</li>
 <li>
 <p>最終目的地に到達するまで繰り返す</p>
 </li>
@@ -3162,13 +3162,13 @@ $$</p>
 <li><strong>微分（D）制御</strong>：未来の誤差変化を予測し，急激な変化を抑制する</li>
 </ul>
 <p>PID制御の式：</p>
-<p>$$
+<div class="arithmatex">\[
  u(t) = K_p e(t) + K_i \int e(t) dt + K_d \frac{de(t)}{dt}
-$$</p>
-<p>ここで，(e(t)) は現在の偏差，(K_p, K_i, K_d) はPIDゲインである．</p>
+\]</div>
+<p>ここで，<span class="arithmatex">\(e(t)\)</span> は現在の偏差，<span class="arithmatex">\(K_p, K_i, K_d\)</span> はPIDゲインである．</p>
 <p>PID制御は，障害物がない移動（直線移動）や，事前に決めた座標への移動に適用される．
 以下に、位置制御に対するPID制御の実装例を示す。<br />
-このPythonコードでは、現在のロボットの座標((X, Y, \Theta)) と目標座標を入力として、PID制御を適用し、速度(V_x, V_y, \omega) を出力する。</p>
+このPythonコードでは、現在のロボットの座標<span class="arithmatex">\((X, Y, \Theta)\)</span> と目標座標を入力として、PID制御を適用し、速度<span class="arithmatex">\(V_x, V_y, \omega\)</span> を出力する。</p>
 <h3 id="pidpython"><strong>位置制御のためのPID制御（Python実装例）</strong></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -3285,9 +3285,9 @@ $$</p>
 <li>
 <p><strong>エラー（目標との差分）に対してPID計算を適用</strong></p>
 </li>
-<li>直線移動時：(V_x, V_y) を調整して移動</li>
+<li>直線移動時：<span class="arithmatex">\(V_x, V_y\)</span> を調整して移動</li>
 <li>
-<p>回転移動時：(\omega) を調整して向きを合わせる</p>
+<p>回転移動時：<span class="arithmatex">\(\omega\)</span> を調整して向きを合わせる</p>
 </li>
 <li>
 <p><strong>速度制限の適用</strong></p>
@@ -3298,8 +3298,8 @@ $$</p>
 <h3 id="_13"><strong>計算例</strong></h3>
 <h4 id="_14"><strong>初期状態</strong></h4>
 <ul>
-<li>現在位置：((0,0,0))</li>
-<li>目標位置：((1000,500,45))</li>
+<li>現在位置：<span class="arithmatex">\((0,0,0)\)</span></li>
+<li>目標位置：<span class="arithmatex">\((1000,500,45)\)</span></li>
 </ul>
 <h4 id="_15"><strong>実行後の出力例</strong></h4>
 <p><div class="highlight"><pre><span></span><code><span class="n">Vx</span><span class="p">:</span> <span class="mf">250.00</span><span class="p">,</span> <span class="n">Vy</span><span class="p">:</span> <span class="mf">125.00</span><span class="p">,</span> <span class="n">Omega</span><span class="p">:</span> <span class="mf">10.00</span>
@@ -3683,18 +3683,18 @@ IMU（慣性計測装置）と2つの魚眼カメラを組み合わせ，外部�
 <h4 id="_33"><strong>自己位置推定の計算</strong></h4>
 <p>自己位置は，カメラのIMUデータとVSLAMを統合して得られる．座標系は以下のように定義される：</p>
 <ul>
-<li>( x ) 軸：ロボットの右方向（m）</li>
-<li>( y ) 軸：ロボットの前方向（m）</li>
-<li>( \theta ) ：ロボットの回転角度（度）</li>
+<li><span class="arithmatex">\( x \)</span> 軸：ロボットの右方向（m）</li>
+<li><span class="arithmatex">\( y \)</span> 軸：ロボットの前方向（m）</li>
+<li><span class="arithmatex">\( \theta \)</span> ：ロボットの回転角度（度）</li>
 </ul>
-<p>移動距離 ( d ) は，前回の位置 ((x_0, y_0)) と現在位置 ((x_t, y_t)) から次のように計算される：</p>
-<p>$$
+<p>移動距離 <span class="arithmatex">\( d \)</span> は，前回の位置 <span class="arithmatex">\((x_0, y_0)\)</span> と現在位置 <span class="arithmatex">\((x_t, y_t)\)</span> から次のように計算される：</p>
+<div class="arithmatex">\[
 d = \sqrt{(x_t - x_0)^2 + (y_t - y_0)^2}
-$$</p>
-<p>ロボットの進行方向 (\theta) は：</p>
-<p>$$
+\]</div>
+<p>ロボットの進行方向 <span class="arithmatex">\(\theta\)</span> は：</p>
+<div class="arithmatex">\[
 \theta = \tan^{-1} \left( \frac{y_t - y_0}{x_t - x_0} \right)
-$$</p>
+\]</div>
 <h4 id="ros2_3"><strong>ROS2 ノード実装（自己位置推定）</strong></h4>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
@@ -3796,20 +3796,20 @@ YOLO は高速かつ高精度なリアルタイム物体検出が可能であり
 <p>センサデータのノイズを減らし，より安定した値を得るために，以下の手法を用いる．</p>
 <h3 id="_35"><strong>ローパスフィルタ</strong></h3>
 <p>ノイズを除去し，急激な変化を抑えるフィルタ．<br />
-フィルタ適用後のデータ ( X_f ) は以下の式で求められる：</p>
-<p>$$
+フィルタ適用後のデータ <span class="arithmatex">\( X_f \)</span> は以下の式で求められる：</p>
+<div class="arithmatex">\[
 X_f = \alpha X + (1 - \alpha) X_{prev}
-$$</p>
+\]</div>
 <p>Python 実装：
 <div class="highlight"><pre><span></span><code><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span>
 <span class="n">filtered_value</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">new_value</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">)</span> <span class="o">*</span> <span class="n">previous_value</span>
 </code></pre></div></p>
 <h3 id="_36"><strong>重み付き平均</strong></h3>
 <p>RealSenseとマイコンの自己位置データを統合する方法．<br />
-重み ( w_r, w_m ) を用いて，統合した自己位置 ( X ) を求める：</p>
-<p>$$
+重み <span class="arithmatex">\( w_r, w_m \)</span> を用いて，統合した自己位置 <span class="arithmatex">\( X \)</span> を求める：</p>
+<div class="arithmatex">\[
 X = \frac{w_r X_r + w_m X_m}{w_r + w_m}
-$$</p>
+\]</div>
 <p>Python 実装：
 <div class="highlight"><pre><span></span><code><span class="n">w_r</span> <span class="o">=</span> <span class="mf">0.6</span>
 <span class="n">w_m</span> <span class="o">=</span> <span class="mf">0.4</span>
