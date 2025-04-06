@@ -1627,21 +1627,21 @@
 <h3 id="_1">基本式</h3>
 <p>2輪ロボットの運動学は以下のようにモデル化されます：</p>
 <p>左右の車輪の速度（線速度）：</p>
-<p>$$
+<div class="arithmatex">\[
  v_L = \frac{2 \pi r \cdot \text{RPM}_L}{60}
-$$</p>
-<p>$$
+\]</div>
+<div class="arithmatex">\[
 v_R = \frac{2 \pi r \cdot \text{RPM}_R}{60}
-$$</p>
-<p>ここで、 $v_L$  と  $v_R$  はそれぞれ左車輪と右車輪の速度、 $r$  は車輪の半径です。</p>
+\]</div>
+<p>ここで、 <span class="arithmatex">\(v_L\)</span>  と  <span class="arithmatex">\(v_R\)</span>  はそれぞれ左車輪と右車輪の速度、 <span class="arithmatex">\(r\)</span>  は車輪の半径です。</p>
 <p>ロボットの進行速度と回転速度：</p>
-<p>$$
+<div class="arithmatex">\[
 v = \frac{v_L + v_R}{2}
-$$</p>
-<p>$$
+\]</div>
+<div class="arithmatex">\[
 \omega = \frac{v_R - v_L}{b}
-$$</p>
-<p>ここで、 $v$  はロボットの前進速度、 $\omega$  はロボットの回転速度、 $b$  は左右の車輪の間の距離（車輪ベース）です。</p>
+\]</div>
+<p>ここで、 <span class="arithmatex">\(v\)</span>  はロボットの前進速度、 <span class="arithmatex">\(\omega\)</span>  はロボットの回転速度、 <span class="arithmatex">\(b\)</span>  は左右の車輪の間の距離（車輪ベース）です。</p>
 <p>これらの式を使用して、ロボットの動きを制御します。</p>
 <h2 id="2_1">2輪ロボットの運動学と逆運動学を使用した制御プログラム</h2>
 <h2 id="_2">概要</h2>
