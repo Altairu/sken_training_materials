@@ -26,6 +26,7 @@ nav:
       - マイコン: 
           - マイコン講習1: training_materials/講習資料/マイコン/マイコン1.md
           - マイコン講習2: training_materials/講習資料/マイコン/マイコン2.md
+          - マイコン講習3: training_materials/講習資料/マイコン/マイコン3.md
       - ライセンス: training_materials/講習資料/ライセンス/ライセンススライド.md
       - pid: training_materials/講習資料/pid/pid.md
       - マークダウン書き方: training_materials/講習資料/マークダウン書き方.md
