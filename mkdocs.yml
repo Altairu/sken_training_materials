@@ -71,8 +71,8 @@ extra:
     - navigation.top
     - navigation.sections
     - navigation.indexes
-  features:
     - header.autohide
+    - navigation.tracking
   generator: false
   social:
     - icon: fontawesome/brands/square-x-twitter
