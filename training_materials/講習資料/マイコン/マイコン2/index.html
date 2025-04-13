@@ -12,7 +12,7 @@
         <link rel="prev" href="../%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B31/">
       
       
-        <link rel="next" href="../../%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/">
+        <link rel="next" href="../%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B33/">
       
       
       <link rel="icon" href="../../../../images/altair.png">
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2" class="md-skip">
+        <a href="#sken_library" class="md-skip">
           Skip to content
         </a>
       
@@ -888,6 +888,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -920,6 +922,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -928,79 +932,190 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#1-lled" class="md-nav__link">
     <span class="md-ellipsis">
-      2輪ロボットの運動学
+      1. Lチカのやり方（LED点滅）
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2輪ロボットの運動学">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. モーターの回し方
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. エンコーダーの読み方（カウント値・角度・速度）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. エンコーダーの読み方（カウント値・角度・速度）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      基本式
+      基本：カウント値だけ読む
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      2輪ロボットの運動学と逆運動学を使用した制御プログラム
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      概要
+      応用：角度・速度も読む（割り込みを使う）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encoder_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      【補足】構造体Encoder_dataの中身
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. サーボモーターの動かし方
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. リミットスイッチの読み方
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-uart" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. UARTのやり方（シリアル通信）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. UARTのやり方（シリアル通信）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#write" class="md-nav__link">
+    <span class="md-ellipsis">
+      送信（write）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read" class="md-nav__link">
+    <span class="md-ellipsis">
+      受信（read）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cansken_system" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. CAN通信のやり方（sken_system経由）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. CAN通信のやり方（sken_system経由）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cantrancemit" class="md-nav__link">
+    <span class="md-ellipsis">
+      送信（canTrancemit）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addcanreceiveinterruptfunc" class="md-nav__link">
+    <span class="md-ellipsis">
+      受信（addCanReceiveInterruptFunc）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-pid" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. PID制御の使い方
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. PID制御の使い方">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pid" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本：PIDゲインを設定する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pid_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PID制御を実行する（目標値と現在値から）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pid_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      PID制御を実行する（偏差から直接計算）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      使用部品
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      配線
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="配線">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      エンコーダ
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      モータードライバー
+      積分・微分成分をリセットする
     </span>
   </a>
   
@@ -1008,144 +1123,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      プロジェクト構成
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#platformioini" class="md-nav__link">
-    <span class="md-ellipsis">
-      platformio.ini
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      ライブラリファイル
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ライブラリファイル">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#includepidcontrollerh" class="md-nav__link">
-    <span class="md-ellipsis">
-      include/PIDController.h
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#srcpidcontrollercpp" class="md-nav__link">
-    <span class="md-ellipsis">
-      src/PIDController.cpp
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#includemotordriverh" class="md-nav__link">
-    <span class="md-ellipsis">
-      include/MotorDriver.h
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#srcmotordrivercpp" class="md-nav__link">
-    <span class="md-ellipsis">
-      src/MotorDriver.cpp
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#includeencoderh" class="md-nav__link">
-    <span class="md-ellipsis">
-      include/Encoder.h
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#srcencodercpp" class="md-nav__link">
-    <span class="md-ellipsis">
-      src/Encoder.cpp
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#includekinematicsh" class="md-nav__link">
-    <span class="md-ellipsis">
-      include/Kinematics.h
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#srckinematicscpp" class="md-nav__link">
-    <span class="md-ellipsis">
-      src/Kinematics.cpp
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      プログラムファイル
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="プログラムファイル">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#srcmaincpp" class="md-nav__link">
-    <span class="md-ellipsis">
-      src/main.cpp
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      説明
-    </span>
-  </a>
   
 </li>
       
@@ -1153,6 +1130,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B33/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    マイコン講習3
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1373,6 +1373,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1381,79 +1383,190 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#1-lled" class="md-nav__link">
     <span class="md-ellipsis">
-      2輪ロボットの運動学
+      1. Lチカのやり方（LED点滅）
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2輪ロボットの運動学">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. モーターの回し方
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. エンコーダーの読み方（カウント値・角度・速度）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. エンコーダーの読み方（カウント値・角度・速度）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      基本式
+      基本：カウント値だけ読む
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      2輪ロボットの運動学と逆運動学を使用した制御プログラム
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      概要
+      応用：角度・速度も読む（割り込みを使う）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encoder_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      【補足】構造体Encoder_dataの中身
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. サーボモーターの動かし方
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. リミットスイッチの読み方
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-uart" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. UARTのやり方（シリアル通信）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. UARTのやり方（シリアル通信）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#write" class="md-nav__link">
+    <span class="md-ellipsis">
+      送信（write）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read" class="md-nav__link">
+    <span class="md-ellipsis">
+      受信（read）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cansken_system" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. CAN通信のやり方（sken_system経由）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. CAN通信のやり方（sken_system経由）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cantrancemit" class="md-nav__link">
+    <span class="md-ellipsis">
+      送信（canTrancemit）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addcanreceiveinterruptfunc" class="md-nav__link">
+    <span class="md-ellipsis">
+      受信（addCanReceiveInterruptFunc）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-pid" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. PID制御の使い方
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. PID制御の使い方">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pid" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本：PIDゲインを設定する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pid_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PID制御を実行する（目標値と現在値から）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pid_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      PID制御を実行する（偏差から直接計算）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      使用部品
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      配線
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="配線">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      エンコーダ
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      モータードライバー
+      積分・微分成分をリセットする
     </span>
   </a>
   
@@ -1461,144 +1574,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      プロジェクト構成
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#platformioini" class="md-nav__link">
-    <span class="md-ellipsis">
-      platformio.ini
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      ライブラリファイル
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ライブラリファイル">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#includepidcontrollerh" class="md-nav__link">
-    <span class="md-ellipsis">
-      include/PIDController.h
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#srcpidcontrollercpp" class="md-nav__link">
-    <span class="md-ellipsis">
-      src/PIDController.cpp
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#includemotordriverh" class="md-nav__link">
-    <span class="md-ellipsis">
-      include/MotorDriver.h
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#srcmotordrivercpp" class="md-nav__link">
-    <span class="md-ellipsis">
-      src/MotorDriver.cpp
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#includeencoderh" class="md-nav__link">
-    <span class="md-ellipsis">
-      include/Encoder.h
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#srcencodercpp" class="md-nav__link">
-    <span class="md-ellipsis">
-      src/Encoder.cpp
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#includekinematicsh" class="md-nav__link">
-    <span class="md-ellipsis">
-      include/Kinematics.h
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#srckinematicscpp" class="md-nav__link">
-    <span class="md-ellipsis">
-      src/Kinematics.cpp
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      プログラムファイル
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="プログラムファイル">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#srcmaincpp" class="md-nav__link">
-    <span class="md-ellipsis">
-      src/main.cpp
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      説明
-    </span>
-  </a>
   
 </li>
       
@@ -1621,374 +1596,397 @@
   
 
 
-  <h1>マイコン講習2</h1>
+<h1 id="sken_library">sken_library 講習</h1>
+<table>
+<thead>
+<tr>
+<th>やりたいこと</th>
+<th>クラス名</th>
+<th>関数例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LEDを光らせる</td>
+<td><code>Gpio</code></td>
+<td><code>init()</code>, <code>write()</code></td>
+</tr>
+<tr>
+<td>モーターを回す</td>
+<td><code>Motor</code></td>
+<td><code>init()</code>, <code>write()</code>, <code>stop()</code></td>
+</tr>
+<tr>
+<td>エンコーダを読む</td>
+<td><code>Encoder</code></td>
+<td><code>init()</code>, <code>read()</code></td>
+</tr>
+<tr>
+<td>サーボを動かす</td>
+<td><code>RcPwm</code></td>
+<td><code>init()</code>, <code>turn()</code></td>
+</tr>
+<tr>
+<td>スイッチを読む</td>
+<td><code>Gpio</code></td>
+<td><code>init()</code>, <code>read()</code></td>
+</tr>
+<tr>
+<td>シリアル通信する</td>
+<td><code>Uart</code></td>
+<td><code>init()</code>, <code>read()</code>, <code>write()</code></td>
+</tr>
+<tr>
+<td>CAN通信する</td>
+<td><code>SYSTEM</code></td>
+<td><code>startCanCommunicate()</code>, <code>canTrancemit()</code>, <code>addCanRceiveInterruptFunc()</code></td>
+</tr>
+</tbody>
+</table>
+<p>ここでは概要のみ説明するため詳しくは　<strong><a href="https://github.com/SkenHub/sken_library/tree/main/sken_library/readme(markdown)">Skenライブラリreadme</a></strong>　を必ず読むこと</p>
+<p><strong>インクルードは共通</strong>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;stm32f4xx.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sken_library/include.h&quot;</span>
+</code></pre></div></p>
+<p>なお，ピンに関しては以下を参照
+<a href="https://github.com/Altairu/ALTAIR_MDD_V2">ALTAIR_MDD_V2</a></p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/8f2e0aaf-9ab4-401e-84b1-836afa1ff9af" /></p>
+<blockquote>
+<p>encoder
+ * A0 A1 TIMER5
+ * B3 A5 TIMER2
+ * B6 B7 TIMER4
+ * C6 C7 TIMER3</p>
+<p>MD
+ * B14(TIMER8  CH2)     B15(TIMER8  CH3)  もしくは B14(TIMER12 CH1) B15(TIMER12 CH2)
+ * A8(TIMER1  CH1)     A11(TIMER1  CH4)
+ * A6(TIMER13 CH1)     A7(TIMER14 CH1)
+ * B8(TIMER10 CH1)     B9(TIMER11 CH1)</p>
+<p>Serial
+* tx:C10  rx:C11  SERIAL3 
+* tx:A9  rx:A10  SERIAL1</p>
+</blockquote>
+<h2 id="1-lled">1. Lチカのやり方（LED点滅）</h2>
+<div class="highlight"><pre><span></span><code><span class="n">Gpio</span><span class="w"> </span><span class="n">led</span><span class="p">;</span><span class="w">  </span><span class="c1">// Gpioクラスのオブジェクトを作成</span>
 
-<h2 id="2">2輪ロボットの運動学</h2>
-<h3 id="_1">基本式</h3>
-<p>2輪ロボットの運動学は以下のようにモデル化されます：</p>
-<p>左右の車輪の速度（線速度）：</p>
-<div class="arithmatex">\[
- v_L = \frac{2 \pi r \cdot \text{RPM}_L}{60}
-\]</div>
-<div class="arithmatex">\[
-v_R = \frac{2 \pi r \cdot \text{RPM}_R}{60}
-\]</div>
-<p>ここで、 <span class="arithmatex">\(v_L\)</span>  と  <span class="arithmatex">\(v_R\)</span>  はそれぞれ左車輪と右車輪の速度、 <span class="arithmatex">\(r\)</span>  は車輪の半径です。</p>
-<p>ロボットの進行速度と回転速度：</p>
-<div class="arithmatex">\[
-v = \frac{v_L + v_R}{2}
-\]</div>
-<div class="arithmatex">\[
-\omega = \frac{v_R - v_L}{b}
-\]</div>
-<p>ここで、 <span class="arithmatex">\(v\)</span>  はロボットの前進速度、 <span class="arithmatex">\(\omega\)</span>  はロボットの回転速度、 <span class="arithmatex">\(b\)</span>  は左右の車輪の間の距離（車輪ベース）です。</p>
-<p>これらの式を使用して、ロボットの動きを制御します。</p>
-<h2 id="2_1">2輪ロボットの運動学と逆運動学を使用した制御プログラム</h2>
-<h2 id="_2">概要</h2>
-<p>以下のプログラムは、2輪ロボットの運動学と逆運動学を使用して、指定した距離と方向にロボットを移動させるSTM32 Nucleo F446RE用のライブラリとメインプログラムです。エンコーダからのパルス数をカウントし、モーターの速度を調整してロボットを制御します。</p>
-<h2 id="_3">使用部品</h2>
-<ul>
-<li>モータードライバー</li>
-<li>モーター×2</li>
-<li>エンコーダ×2（AMT10E2-V）</li>
-<li>STM32 Nucleo F446RE</li>
-</ul>
-<h2 id="_4">配線</h2>
-<h3 id="_5">エンコーダ</h3>
-<ul>
-<li>エンコーダ1: A0, A1 (TIMER5)</li>
-<li>エンコーダ2: B3, A5 (TIMER2)</li>
-</ul>
-<h3 id="_6">モータードライバー</h3>
-<ul>
-<li>モーター1: B14 (TIMER8 CH2), B15 (TIMER8 CH3)</li>
-<li>モーター2: A8 (TIMER1 CH1), A11 (TIMER1 CH2)</li>
-</ul>
-<h2 id="_7">プロジェクト構成</h2>
-<p>PlatformIOを使用してプロジェクトを構成する場合、以下のようにファイルを配置します。</p>
-<div class="highlight"><pre><span></span><code>project/
-├── include/
-│   ├── MotorDriver.h
-│   ├── Encoder.h
-│   ├── Kinematics.h
-│   └── PIDController.h
-├── src/
-│   ├── MotorDriver.cpp
-│   ├── Encoder.cpp
-│   ├── Kinematics.cpp
-│   ├── PIDController.cpp
-│   └── main.cpp
-├── platformio.ini
-</code></pre></div>
-<h2 id="platformioini">platformio.ini</h2>
-<div class="highlight"><pre><span></span><code><span class="k">[env:nucleo_f446re]</span>
-<span class="na">platform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ststm32</span>
-<span class="na">board</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">nucleo_f446re</span>
-<span class="na">framework</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">arduino</span>
-</code></pre></div>
-<h2 id="_8">ライブラリファイル</h2>
-<h3 id="includepidcontrollerh">include/PIDController.h</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#ifndef PIDController_h</span>
-<span class="cp">#define PIDController_h</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span><span class="w">          </span><span class="c1">// システム初期化</span>
+<span class="w">    </span><span class="n">led</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">A5</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// A5ピンをデジタル出力に設定</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">PIDController</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">PIDController</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">kp</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">ki</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">kd</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="nf">compute</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">setpoint</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">pv</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">reset</span><span class="p">();</span>
-<span class="w">  </span><span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">_kp</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">_ki</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">_kd</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">_previousError</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">_integral</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">led</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">HIGH</span><span class="p">);</span><span class="w">          </span><span class="c1">// A5ピンをHIGH（LED点灯）</span>
+<span class="w">        </span><span class="n">sken_system</span><span class="p">.</span><span class="n">delayMillis</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w">  </span><span class="c1">// 500ミリ秒待機</span>
+<span class="w">        </span><span class="n">led</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">LOW</span><span class="p">);</span><span class="w">           </span><span class="c1">// A5ピンをLOW（LED消灯）</span>
+<span class="w">        </span><span class="n">sken_system</span><span class="p">.</span><span class="n">delayMillis</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w">  </span><span class="c1">// 500ミリ秒待機</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>ポイント</strong><br />
+- <code>Gpio::init()</code>でピンのモードを設定<br />
+- <code>Gpio::write()</code>でピンの状態（HIGH/LOW）を変更<br />
+- <code>delayMillis()</code>で時間待ち</p>
+</blockquote>
+<h2 id="2">2. モーターの回し方</h2>
+<div class="highlight"><pre><span></span><code><span class="n">Motor</span><span class="w"> </span><span class="n">motor</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">motor</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">Apin</span><span class="p">,</span><span class="w"> </span><span class="n">B8</span><span class="p">,</span><span class="w"> </span><span class="n">TIMER10</span><span class="p">,</span><span class="w"> </span><span class="n">CH1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Aピン（回転方向1）</span>
+<span class="w">    </span><span class="n">motor</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">Bpin</span><span class="p">,</span><span class="w"> </span><span class="n">B9</span><span class="p">,</span><span class="w"> </span><span class="n">TIMER11</span><span class="p">,</span><span class="w"> </span><span class="n">CH1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Bピン（回転方向2）</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">motor</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span><span class="w">    </span><span class="c1">// 50%のPWMで正回転</span>
+<span class="w">        </span><span class="n">sken_system</span><span class="p">.</span><span class="n">delayMillis</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2秒回転</span>
+<span class="w">        </span><span class="n">motor</span><span class="p">.</span><span class="n">stop</span><span class="p">();</span><span class="w">       </span><span class="c1">// モータ停止</span>
+<span class="w">        </span><span class="n">sken_system</span><span class="p">.</span><span class="n">delayMillis</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2秒停止</span>
+<span class="w">        </span><span class="n">motor</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">-50</span><span class="p">);</span><span class="w">    </span><span class="c1">// 50%のPWMで逆回転</span>
+<span class="w">        </span><span class="n">sken_system</span><span class="p">.</span><span class="n">delayMillis</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2秒回転</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>ポイント</strong><br />
+- モーターはAピン・Bピン・PWMピンを指定して初期化<br />
+- <code>write()</code>で回転速度（-100～100%）を指定</p>
+</blockquote>
+<h2 id="3">3. エンコーダーの読み方（カウント値・角度・速度）</h2>
+<h3 id="_1">基本：カウント値だけ読む</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Encoder</span><span class="w"> </span><span class="n">encoder</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">encoder</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">A0</span><span class="p">,</span><span class="w"> </span><span class="n">A1</span><span class="p">,</span><span class="w"> </span><span class="n">TIMER2</span><span class="p">);</span><span class="w">  </span><span class="c1">// A0, A1ピンをエンコーダ入力に設定</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">encoder</span><span class="p">.</span><span class="n">read</span><span class="p">();</span><span class="w">  </span><span class="c1">// 現在のエンコーダカウント値を取得</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>ポイント</strong><br />
+- <code>Encoder::init()</code>でエンコーダを使えるようにする<br />
+- <code>Encoder::read()</code>で現在のカウント（回転量）を取得する</p>
+</blockquote>
+<h3 id="_2">応用：角度・速度も読む（割り込みを使う）</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Encoder</span><span class="w"> </span><span class="n">encoder</span><span class="p">;</span><span class="w">           </span><span class="c1">// エンコーダオブジェクト</span>
+<span class="n">Encoder_data</span><span class="w"> </span><span class="n">e_data</span><span class="p">;</span><span class="w">       </span><span class="c1">// 角度や速度を保存する構造体</span>
+
+<span class="c1">// タイマー割り込み関数（毎ms呼び出される）</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">encoder_interrupt</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">encoder</span><span class="p">.</span><span class="n">interrupt</span><span class="p">(</span><span class="o">&amp;</span><span class="n">e_data</span><span class="p">);</span><span class="w">  </span><span class="c1">// エンコーダの値を更新</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">encoder</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">A0</span><span class="p">,</span><span class="w"> </span><span class="n">A1</span><span class="p">,</span><span class="w"> </span><span class="n">TIMER2</span><span class="p">);</span><span class="w">                        </span><span class="c1">// A0, A1ピンをエンコーダ入力に設定</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">addTimerInterruptFunc</span><span class="p">(</span><span class="n">encoder_interrupt</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// タイマー割り込み1ms周期で登録</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e_data</span><span class="p">.</span><span class="n">deg</span><span class="p">;</span><span class="w">      </span><span class="c1">// 現在の角度 [度]</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e_data</span><span class="p">.</span><span class="n">volcity</span><span class="p">;</span><span class="w"> </span><span class="c1">// 現在の速度 [mm/s]</span>
+
+<span class="w">        </span><span class="c1">// ここでangleやvelocityを使った処理を書く</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>ポイント</strong><br />
+- <code>Encoder::interrupt()</code>を周期的に呼ぶことで、角度・速度を自動計算<br />
+- <code>e_data.deg</code>で角度（degree）<br />
+- <code>e_data.volcity</code>で速度（mm/s）が取得できる</p>
+</blockquote>
+<h3 id="encoder_data">【補足】構造体<code>Encoder_data</code>の中身</h3>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">Encoder_data</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w">        </span><span class="c1">// カウンタ値</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">rot</span><span class="p">;</span><span class="w">       </span><span class="c1">// 回転数 [回転]</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">deg</span><span class="p">;</span><span class="w">       </span><span class="c1">// 角度 [度]</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">distance</span><span class="p">;</span><span class="w">  </span><span class="c1">// 移動距離 [mm]</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">volcity</span><span class="p">;</span><span class="w">   </span><span class="c1">// 速度 [mm/s]</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">rps</span><span class="p">;</span><span class="w">       </span><span class="c1">// 回転速度 [rps]</span>
 <span class="p">};</span>
-
-<span class="cp">#endif</span>
 </code></pre></div>
-<h3 id="srcpidcontrollercpp">src/PIDController.cpp</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;PIDController.h&quot;</span>
+<blockquote>
+<p>必要に応じて<br />
+- <strong>回転数 (<code>rot</code>)</strong>
+- <strong>移動距離 (<code>distance</code>)</strong>
+- <strong>回転速度 (<code>rps</code>)</strong><br />
+も使える！</p>
+</blockquote>
+<h2 id="4">4. サーボモーターの動かし方</h2>
+<div class="highlight"><pre><span></span><code><span class="n">RcPwm</span><span class="w"> </span><span class="n">servo</span><span class="p">;</span>
 
-<span class="n">PIDController</span><span class="o">::</span><span class="n">PIDController</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">kp</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">ki</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">kd</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">_kp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kp</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_ki</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ki</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_kd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kd</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_integral</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">servo</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">A5</span><span class="p">,</span><span class="w"> </span><span class="n">TIMER2</span><span class="p">,</span><span class="w"> </span><span class="n">CH1</span><span class="p">);</span><span class="w">  </span><span class="c1">// A5ピンをサーボ信号出力に設定</span>
 
-<span class="kt">float</span><span class="w"> </span><span class="n">PIDController</span><span class="o">::</span><span class="n">compute</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">setpoint</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">pv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setpoint</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pv</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_integral</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">error</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">derivative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">_previousError</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">error</span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">_kp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">_ki</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_integral</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">_kd</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">derivative</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">servo</span><span class="p">.</span><span class="n">turn</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">    </span><span class="c1">// 最小角度</span>
+<span class="w">        </span><span class="n">sken_system</span><span class="p">.</span><span class="n">delayMillis</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="n">PIDController</span><span class="o">::</span><span class="n">reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">_previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_integral</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="includemotordriverh">include/MotorDriver.h</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#ifndef MotorDriver_h</span>
-<span class="cp">#define MotorDriver_h</span>
+<span class="w">        </span><span class="n">servo</span><span class="p">.</span><span class="n">turn</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span><span class="w">   </span><span class="c1">// 中央位置</span>
+<span class="w">        </span><span class="n">sken_system</span><span class="p">.</span><span class="n">delayMillis</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Arduino.h&quot;</span>
-
-<span class="k">class</span><span class="w"> </span><span class="nc">MotorDriver</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">MotorDriver</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ps1Pin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ps2Pin</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">begin</span><span class="p">();</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setSpeed</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">speed</span><span class="p">);</span>
-<span class="w">  </span><span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">_ps1Pin</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">_ps2Pin</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="cp">#endif</span>
-</code></pre></div>
-<h3 id="srcmotordrivercpp">src/MotorDriver.cpp</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Arduino.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MotorDriver.h&quot;</span>
-
-<span class="n">MotorDriver</span><span class="o">::</span><span class="n">MotorDriver</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ps1Pin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ps2Pin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">_ps1Pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ps1Pin</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_ps2Pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ps2Pin</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="n">MotorDriver</span><span class="o">::</span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">_ps1Pin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">_ps2Pin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="n">MotorDriver</span><span class="o">::</span><span class="n">setSpeed</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">speed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">speed</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">-100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-100</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">speed</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">speed</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">_ps1Pin</span><span class="p">,</span><span class="w"> </span><span class="n">map</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">));</span>
-<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">_ps2Pin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">speed</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">_ps1Pin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-<span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">_ps2Pin</span><span class="p">,</span><span class="w"> </span><span class="n">map</span><span class="p">(</span><span class="o">-</span><span class="n">speed</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">));</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">_ps1Pin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">_ps2Pin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">        </span><span class="n">servo</span><span class="p">.</span><span class="n">turn</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w">  </span><span class="c1">// 最大角度</span>
+<span class="w">        </span><span class="n">sken_system</span><span class="p">.</span><span class="n">delayMillis</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="includeencoderh">include/Encoder.h</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#ifndef Encoder_h</span>
-<span class="cp">#define Encoder_h</span>
+<blockquote>
+<p><strong>ポイント</strong><br />
+- <code>turn(%)</code>でサーボモータの角度を設定できる<br />
+- 0～100%で出力パルス幅（1000μs～2000μs）を調整</p>
+</blockquote>
+<h2 id="5">5. リミットスイッチの読み方</h2>
+<div class="highlight"><pre><span></span><code><span class="n">Gpio</span><span class="w"> </span><span class="n">limit_switch</span><span class="p">;</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Arduino.h&quot;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">limit_switch</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">C13</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// C13ピンにプルアップ入力設定</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">Encoder</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">Encoder</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pinA</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pinB</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">begin</span><span class="p">();</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="nf">getRPM</span><span class="p">();</span>
-<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="nf">getPulses</span><span class="p">();</span>
-<span class="w">  </span><span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">isr</span><span class="p">();</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">_pinA</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">_pinB</span><span class="p">;</span>
-<span class="w">    </span><span class="k">volatile</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">_pulseCount</span><span class="p">;</span>
-<span class="w">    </span><span class="k">volatile</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">_lastPulseCount</span><span class="p">;</span>
-<span class="w">    </span><span class="k">volatile</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">_lastTime</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="cp">#endif</span>
-</code></pre></div>
-<h3 id="srcencodercpp">src/Encoder.cpp</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Arduino.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Encoder.h&quot;</span>
-
-<span class="n">Encoder</span><span class="o">::</span><span class="n">Encoder</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pinA</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pinB</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">_pinA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pinA</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_pinB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pinB</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_pulseCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_lastPulseCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_lastTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="n">Encoder</span><span class="o">::</span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">_pinA</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span>
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">_pinB</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span>
-<span class="w">  </span><span class="n">attachInterrupt</span><span class="p">(</span><span class="n">digitalPinToInterrupt</span><span class="p">(</span><span class="n">_pinA</span><span class="p">),</span><span class="w"> </span><span class="n">isr</span><span class="p">,</span><span class="w"> </span><span class="n">CHANGE</span><span class="p">);</span>
-<span class="w">  </span><span class="n">attachInterrupt</span><span class="p">(</span><span class="n">digitalPinToInterrupt</span><span class="p">(</span><span class="n">_pinB</span><span class="p">),</span><span class="w"> </span><span class="n">isr</span><span class="p">,</span><span class="w"> </span><span class="n">CHANGE</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="n">Encoder</span><span class="o">::</span><span class="n">isr</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">stateA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">_pinA</span><span class="p">);</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">stateB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">_pinB</span><span class="p">);</span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">stateA</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">stateB</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">_pulseCount</span><span class="o">++</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">_pulseCount</span><span class="o">--</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">float</span><span class="w"> </span><span class="n">Encoder</span><span class="o">::</span><span class="n">getRPM</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">currentTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span>
-<span class="w">  </span><span class="kt">long</span><span class="w"> </span><span class="n">pulseDelta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_pulseCount</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">_lastPulseCount</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">timeDelta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentTime</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">_lastTime</span><span class="p">;</span>
-
-<span class="w">  </span><span class="n">_lastPulseCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_pulseCount</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_lastTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentTime</span><span class="p">;</span>
-
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">pulseDelta</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2048.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">60000.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">timeDelta</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">long</span><span class="w"> </span><span class="n">Encoder</span><span class="o">::</span><span class="n">getPulses</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">_pulseCount</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">limit_switch</span><span class="p">.</span><span class="n">read</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// スイッチが押されたらLOWになる</span>
+<span class="w">            </span><span class="c1">// スイッチ押されたときの処理を書く</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="includekinematicsh">include/Kinematics.h</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#ifndef Kinematics_h</span>
-<span class="cp">#define Kinematics_h</span>
+<blockquote>
+<p><strong>ポイント</strong><br />
+- <code>INPUT_PULLUP</code>を使うとスイッチ未接続時はHIGH、押すとLOWになる<br />
+- <code>read()</code>で押されたかどうかを判定</p>
+</blockquote>
+<h2 id="6-uart">6. UARTのやり方（シリアル通信）</h2>
+<h3 id="write">送信（write）</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Uart</span><span class="w"> </span><span class="n">serial</span><span class="p">;</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;B&#39;</span><span class="w"> </span><span class="p">};</span><span class="w">  </span><span class="c1">// 送るデータ</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Arduino.h&quot;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">serial</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">A9</span><span class="p">,</span><span class="w"> </span><span class="n">A10</span><span class="p">,</span><span class="w"> </span><span class="n">SERIAL1</span><span class="p">,</span><span class="w"> </span><span class="mi">9600</span><span class="p">);</span><span class="w">  </span><span class="c1">// UART1をボーレート9600で初期化</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">Kinematics</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">Kinematics</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">wheelDiameter</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">wheelBase</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pulsesPerRevolution</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">computeWheelSpeeds</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">linearVelocity</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">angularVelocity</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">leftSpeed</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rightSpeed</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">computeRobotVelocities</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">leftRPM</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">rightRPM</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&amp;</span><span class="n">linearVelocity</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&amp;</span><span class="n">angularVelocity</span><span class="p">);</span>
-<span class="w">  </span><span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">_wheelDiameter</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">_wheelBase</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">_pulsesPerRevolution</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">_wheelCircumference</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="cp">#endif</span>
-</code></pre></div>
-<h3 id="srckinematicscpp">src/Kinematics.cpp</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Kinematics.h&quot;</span>
-
-<span class="n">Kinematics</span><span class="o">::</span><span class="n">Kinematics</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">wheelDiameter</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">wheelBase</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pulsesPerRevolution</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">_wheelDiameter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wheelDiameter</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_wheelBase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wheelBase</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_pulsesPerRevolution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pulsesPerRevolution</span><span class="p">;</span>
-<span class="w">  </span><span class="n">_wheelCircumference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_wheelDiameter</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="n">Kinematics</span><span class="o">::</span><span class="n">computeWheelSpeeds</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">linearVelocity</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">angularVelocity</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">leftSpeed</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rightSpeed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">leftVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linearVelocity</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">angularVelocity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_wheelBase</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">);</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">rightVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linearVelocity</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">angularVelocity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_wheelBase</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">leftSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">leftVelocity</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">_wheelCircumference</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_pulsesPerRevolution</span><span class="p">;</span>
-<span class="w">  </span><span class="n">rightSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">rightVelocity</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">_wheelCircumference</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_pulsesPerRevolution</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="n">Kinematics</span><span class="o">::</span><span class="n">computeRobotVelocities</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">leftRPM</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">rightRPM</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&amp;</span><span class="n">linearVelocity</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&amp;</span><span class="n">angularVelocity</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">leftVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">leftRPM</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">60.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_wheelCircumference</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">rightVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">rightRPM</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">60.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_wheelCircumference</span><span class="p">;</span>
-
-<span class="w">  </span><span class="n">linearVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">leftVelocity</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rightVelocity</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span>
-<span class="w">  </span><span class="n">angularVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">rightVelocity</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">leftVelocity</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">_wheelBase</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w">   </span><span class="c1">// 2バイト送信</span>
+<span class="w">        </span><span class="n">sken_system</span><span class="p">.</span><span class="n">delayMillis</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1秒ごとに送信</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="_9">プログラムファイル</h2>
-<h3 id="srcmaincpp">src/main.cpp</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;MotorDriver.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Encoder.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Kinematics.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;PIDController.h&gt;</span>
+<h3 id="read">受信（read）</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Uart</span><span class="w"> </span><span class="n">serial</span><span class="p">;</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">received_data</span><span class="p">;</span>
 
-<span class="c1">// モータードライバーピン設定</span>
-<span class="n">MotorDriver</span><span class="w"> </span><span class="nf">leftMotor</span><span class="p">(</span><span class="n">PB14</span><span class="p">,</span><span class="w"> </span><span class="n">PB15</span><span class="p">);</span><span class="w"> </span><span class="c1">// 左モーター (TIMER8 CH2, TIMER8 CH3)</span>
-<span class="n">MotorDriver</span><span class="w"> </span><span class="nf">rightMotor</span><span class="p">(</span><span class="n">PA8</span><span class="p">,</span><span class="w"> </span><span class="n">PA11</span><span class="p">);</span><span class="w"> </span><span class="c1">// 右モーター (TIMER1 CH1, TIMER1 CH2)</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">serial</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">A9</span><span class="p">,</span><span class="w"> </span><span class="n">A10</span><span class="p">,</span><span class="w"> </span><span class="n">SERIAL1</span><span class="p">,</span><span class="w"> </span><span class="mi">9600</span><span class="p">);</span>
 
-<span class="c1">// エンコーダーピン設定</span>
-<span class="n">Encoder</span><span class="w"> </span><span class="nf">leftEncoder</span><span class="p">(</span><span class="n">PA0</span><span class="p">,</span><span class="w"> </span><span class="n">PA1</span><span class="p">);</span>
-<span class="n">Encoder</span><span class="w"> </span><span class="nf">rightEncoder</span><span class="p">(</span><span class="n">PB3</span><span class="p">,</span><span class="w"> </span><span class="n">PA5</span><span class="p">);</span>
-
-<span class="c1">// ロボットの運動学パラメータ</span>
-<span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">wheelDiameter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// タイヤ直径 (mm)</span>
-<span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">wheelBase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">200.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 車軸間距離 (mm)</span>
-<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pulsesPerRevolution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2048</span><span class="p">;</span><span class="w"> </span><span class="c1">// エンコーダの1回転あたりのパルス数</span>
-
-<span class="n">Kinematics</span><span class="w"> </span><span class="nf">kinematics</span><span class="p">(</span><span class="n">wheelDiameter</span><span class="p">,</span><span class="w"> </span><span class="n">wheelBase</span><span class="p">,</span><span class="w"> </span><span class="n">pulsesPerRevolution</span><span class="p">);</span>
-
-<span class="c1">// PIDコントローラのパラメータ</span>
-<span class="n">PIDController</span><span class="w"> </span><span class="nf">leftPID</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
-<span class="n">PIDController</span><span class="w"> </span><span class="nf">rightPID</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// モータードライバーの初期化</span>
-<span class="w">  </span><span class="n">leftMotor</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-<span class="w">  </span><span class="n">rightMotor</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-
-<span class="w">  </span><span class="c1">// エンコーダの初期化</span>
-<span class="w">  </span><span class="n">leftEncoder</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-<span class="w">  </span><span class="n">rightEncoder</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// 指定した距離と方向に移動する</span>
-<span class="w">  </span><span class="n">moveRobot</span><span class="p">(</span><span class="mf">100.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">);</span>
-
-<span class="w"> </span><span class="c1">// 100 mm 前進、0 度の回転、5秒かけて移動</span>
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2秒待機</span>
-
-<span class="w">  </span><span class="n">moveRobot</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">90.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 90度右回転、2秒かけて回転</span>
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2秒待機</span>
-<span class="p">}</span>
-
-<span class="c1">// ロボットを指定距離 (mm) と角度 (度) に指定した時間 (秒) で移動</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">moveRobot</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">distance</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">angle</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">time</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">linearVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">time</span><span class="p">;</span><span class="w"> </span><span class="c1">// mm/s</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">angularVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">180.0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">time</span><span class="p">;</span><span class="w"> </span><span class="c1">// rad/s</span>
-
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">leftTargetSpeed</span><span class="p">,</span><span class="w"> </span><span class="n">rightTargetSpeed</span><span class="p">;</span>
-<span class="w">  </span><span class="n">kinematics</span><span class="p">.</span><span class="n">computeWheelSpeeds</span><span class="p">(</span><span class="n">linearVelocity</span><span class="p">,</span><span class="w"> </span><span class="n">angularVelocity</span><span class="p">,</span><span class="w"> </span><span class="n">leftTargetSpeed</span><span class="p">,</span><span class="w"> </span><span class="n">rightTargetSpeed</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">leftEncoder</span><span class="p">.</span><span class="n">getPulses</span><span class="p">();</span><span class="w"> </span><span class="c1">// エンコーダのカウントリセット</span>
-<span class="w">  </span><span class="n">rightEncoder</span><span class="p">.</span><span class="n">getPulses</span><span class="p">();</span><span class="w"> </span><span class="c1">// エンコーダのカウントリセット</span>
-
-<span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">startTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span>
-<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">startTime</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">leftRPM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leftEncoder</span><span class="p">.</span><span class="n">getRPM</span><span class="p">();</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">rightRPM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rightEncoder</span><span class="p">.</span><span class="n">getRPM</span><span class="p">();</span>
-
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">leftSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leftPID</span><span class="p">.</span><span class="n">compute</span><span class="p">(</span><span class="n">leftTargetSpeed</span><span class="p">,</span><span class="w"> </span><span class="n">leftRPM</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">rightSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rightPID</span><span class="p">.</span><span class="n">compute</span><span class="p">(</span><span class="n">rightTargetSpeed</span><span class="p">,</span><span class="w"> </span><span class="n">rightRPM</span><span class="p">);</span>
-
-<span class="w">    </span><span class="n">leftMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="n">leftSpeed</span><span class="p">);</span>
-<span class="w">    </span><span class="n">rightMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="n">rightSpeed</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="n">leftMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="w">  </span><span class="n">rightMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Distance traveled: &quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">((</span><span class="n">leftEncoder</span><span class="p">.</span><span class="n">getPulses</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rightEncoder</span><span class="p">.</span><span class="n">getPulses</span><span class="p">())</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pulsesPerRevolution</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">wheelDiameter</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; mm&quot;</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Angle turned: &quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">((</span><span class="n">leftEncoder</span><span class="p">.</span><span class="n">getPulses</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">rightEncoder</span><span class="p">.</span><span class="n">getPulses</span><span class="p">())</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">360.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pulsesPerRevolution</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">wheelDiameter</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">wheelBase</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; degrees&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">received_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serial</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1000ms以内に受信</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">serial</span><span class="p">.</span><span class="n">checkTimeOut</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// 受信できた場合の処理</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="_10">説明</h2>
-<ol>
-<li><code>MotorDriver</code>ライブラリを使用して2つのモーターを制御します。</li>
-<li><code>Encoder</code>ライブラリを使用してエンコーダからパルスを取得します。</li>
-<li><code>Kinematics</code>ライブラリを使用して、ロボットの運動学と逆運動学を計算します。</li>
-<li><code>PIDController</code>ライブラリを使用して、エンコーダからのフィードバックを基にモーターの速度を制御します。</li>
-<li><code>moveRobot</code>関数で前進する距離（mm）と回転角度（度）、および移動時間（秒）を指定し、エンコーダのパルス数に基づいてモーターを制御します。</li>
-<li>エンコーダのカウントを監視し、指定した距離と角度に到達したらモーターを停止します。</li>
-</ol>
+<blockquote>
+<p><strong>ポイント</strong><br />
+- <code>init()</code>でピンと速度を設定<br />
+- <code>write()</code>で送信、<code>read()</code>で受信</p>
+</blockquote>
+<h2 id="7-cansken_system">7. CAN通信のやり方（sken_system経由）</h2>
+<h3 id="cantrancemit">送信（canTrancemit）</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">uint8_t</span><span class="w"> </span><span class="n">can_tx_data</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">startCanCommunicate</span><span class="p">(</span><span class="n">B13</span><span class="p">,</span><span class="w"> </span><span class="n">B12</span><span class="p">,</span><span class="w"> </span><span class="n">CAN_2</span><span class="p">);</span><span class="w">  </span><span class="c1">// CAN1開始</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">sken_system</span><span class="p">.</span><span class="n">canTrancemit</span><span class="p">(</span><span class="n">CAN_1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x123</span><span class="p">,</span><span class="w"> </span><span class="n">can_tx_data</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w">  </span><span class="c1">// ID=0x123, 8バイト送信</span>
+<span class="w">        </span><span class="n">sken_system</span><span class="p">.</span><span class="n">delayMillis</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1秒ごとに送信</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="addcanreceiveinterruptfunc">受信（addCanReceiveInterruptFunc）</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Can_data</span><span class="w"> </span><span class="n">can_data</span><span class="p">;</span><span class="w">  </span><span class="c1">// 受信データを格納する構造体</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">startCanCommunicate</span><span class="p">(</span><span class="n">B13</span><span class="p">,</span><span class="w"> </span><span class="n">B12</span><span class="p">,</span><span class="w"> </span><span class="n">CAN_2</span><span class="p">);</span><span class="w">  </span><span class="c1">// CAN1開始</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">addCanRceiveInterruptFunc</span><span class="p">(</span><span class="n">CAN_2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">can_data</span><span class="p">);</span><span class="w">  </span><span class="c1">// 受信割り込み設定</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 受信データはcan_data.rx_dataに格納される</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>ポイント</strong><br />
+- <code>startCanCommunicate()</code>で通信開始<br />
+- <code>canTrancemit()</code>でデータ送信<br />
+- <code>addCanRceiveInterruptFunc()</code>で受信設定</p>
+</blockquote>
+<h2 id="8-pid">8. PID制御の使い方</h2>
+<h3 id="pid">基本：PIDゲインを設定する</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Pid</span><span class="w"> </span><span class="n">pid_control</span><span class="p">;</span><span class="w">  </span><span class="c1">// PIDコントローラーオブジェクト</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// P=1, I=1, D=1, 微分フィルタ時定数20msでゲイン設定</span>
+<span class="w">    </span><span class="n">pid_control</span><span class="p">.</span><span class="n">setGain</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ここに制御コードを書く</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>ポイント</strong><br />
+- <code>setGain(P, I, D, 時定数)</code>でパラメータ設定<br />
+- 微分前ローパスフィルタ（時間定数）も指定可能！</p>
+</blockquote>
+<h3 id="pid_1">PID制御を実行する（目標値と現在値から）</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Pid</span><span class="w"> </span><span class="n">pid_control</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">  </span><span class="c1">// 目標値（例えば目標速度）</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">       </span><span class="c1">// 現在の値（現在の速度）</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">       </span><span class="c1">// 出力（モータへの指令など）</span>
+
+<span class="c1">// 毎1msで呼び出される関数</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">pid_func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pid_control</span><span class="p">.</span><span class="n">control</span><span class="p">(</span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">now</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 目標値と現在値から制御出力を計算</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">pid_control</span><span class="p">.</span><span class="n">setGain</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 適当なゲイン設定</span>
+
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">addTimerInterruptFunc</span><span class="p">(</span><span class="n">pid_func</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1msごとにPID制御実行</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// outを使ってモーターに指令を出すなど</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>ポイント</strong><br />
+- <code>control(target, now, period)</code>でPID出力計算<br />
+- 割り込みで周期的にPID制御するのが基本！</p>
+</blockquote>
+<h3 id="pid_2">PID制御を実行する（偏差から直接計算）</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Pid</span><span class="w"> </span><span class="n">pid_control</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// 偏差（目標値 - 現在値）</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">pid_func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pid_control</span><span class="p">.</span><span class="n">control</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 偏差から制御出力を計算</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">pid_control</span><span class="p">.</span><span class="n">setGain</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">);</span><span class="w">  </span><span class="c1">// PIDゲイン設定</span>
+
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">addTimerInterruptFunc</span><span class="p">(</span><span class="n">pid_func</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1msごとにPID制御</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 目標値と現在値の差を計算</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+<span class="w">        </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">now</span><span class="p">;</span><span class="w">  </span><span class="c1">// 偏差計算</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>ポイント</strong><br />
+- 偏差だけ分かっていれば、直接 <code>control(e, period)</code> でもOK<br />
+- 使いやすい方法を選べる！</p>
+</blockquote>
+<h3 id="_3">積分・微分成分をリセットする</h3>
+<div class="highlight"><pre><span></span><code><span class="n">Pid</span><span class="w"> </span><span class="n">pid_control</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">pid_func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pid_control</span><span class="p">.</span><span class="n">control</span><span class="p">(</span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">now</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">pid_control</span><span class="p">.</span><span class="n">setGain</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">);</span><span class="w">  </span><span class="c1">// PIDゲイン設定</span>
+<span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">addTimerInterruptFunc</span><span class="p">(</span><span class="n">pid_func</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1msごとに制御</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sken_system</span><span class="p">.</span><span class="n">millis</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 毎秒</span>
+<span class="w">            </span><span class="n">pid_control</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span><span class="w">  </span><span class="c1">// 積分・微分成分をリセット</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>ポイント</strong><br />
+- 長時間動かすと積分（I成分）が暴走することがある<br />
+- 必要に応じて定期的に<code>reset()</code>してリフレッシュ！</p>
+</blockquote>
 
 
 
