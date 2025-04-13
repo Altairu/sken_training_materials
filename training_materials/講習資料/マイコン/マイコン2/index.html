@@ -1652,20 +1652,24 @@
 <a href="https://github.com/Altairu/ALTAIR_MDD_V2">ALTAIR_MDD_V2</a></p>
 <p><img alt="image" src="https://github.com/user-attachments/assets/8f2e0aaf-9ab4-401e-84b1-836afa1ff9af" /></p>
 <blockquote>
-<p>encoder
- * A0 A1 TIMER5
- * B3 A5 TIMER2
- * B6 B7 TIMER4
- * C6 C7 TIMER3</p>
-<p>MD
- * B14(TIMER8  CH2)     B15(TIMER8  CH3)  もしくは B14(TIMER12 CH1) B15(TIMER12 CH2)
- * A8(TIMER1  CH1)     A11(TIMER1  CH4)
- * A6(TIMER13 CH1)     A7(TIMER14 CH1)
- * B8(TIMER10 CH1)     B9(TIMER11 CH1)</p>
-<p>Serial
-* tx:C10  rx:C11  SERIAL3 
-* tx:A9  rx:A10  SERIAL1</p>
+<p>encoder</p>
 </blockquote>
+<p>A0 A1 TIMER5</p>
+<p>B3 A5 TIMER2</p>
+<p>B6 B7 TIMER4</p>
+<p>C6 C7 TIMER3</p>
+<blockquote>
+<p>MD</p>
+</blockquote>
+<p>B14(TIMER8  CH2)     B15(TIMER8  CH3)  もしくは B14(TIMER12 CH1) B15(TIMER12 CH2)</p>
+<p>A8(TIMER1  CH1)     A11(TIMER1  CH4)</p>
+<p>A6(TIMER13 CH1)     A7(TIMER14 CH1)</p>
+<p>B8(TIMER10 CH1)     B9(TIMER11 CH1)</p>
+<blockquote>
+<p>Serial
+tx:C10  rx:C11  SERIAL3 </p>
+</blockquote>
+<p>tx:A9  rx:A10  SERIAL1</p>
 <h2 id="1-lled">1. Lチカのやり方（LED点滅）</h2>
 <div class="highlight"><pre><span></span><code><span class="n">Gpio</span><span class="w"> </span><span class="n">led</span><span class="p">;</span><span class="w">  </span><span class="c1">// Gpioクラスのオブジェクトを作成</span>
 
