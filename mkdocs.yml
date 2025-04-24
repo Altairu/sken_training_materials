@@ -68,8 +68,10 @@ extra:
       - manage
       - reject
   features:
+    - navigation.tabs
     - navigation.top
     - navigation.sections
+    - navigation.expand
     - navigation.indexes
     - header.autohide
     - navigation.tracking
