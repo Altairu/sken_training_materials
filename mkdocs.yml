@@ -3,9 +3,7 @@ site_name: 電気班 講習資料
 
 nav:
   - ホーム画面: index.md 
-  - 自己紹介: my.md 
   - 講習資料:
-      - 1年体験入部: training_materials/講習資料/1年体験入部/S-ken体験入部制御班Lちか.md
       - ROS 2:
           - ROS2講習1: training_materials/講習資料/ROS 2/ROS2_1.md
           - ROS2講習2: training_materials/講習資料/ROS 2/ROS2_2.md
@@ -22,18 +20,20 @@ nav:
           - 回路講習2: training_materials/講習資料/回路/回路講習2スライド.md
           - 回路講習3: training_materials/講習資料/回路/回路講習4.md
           - 回路講習4: training_materials/講習資料/回路/回路講習5.md
-      - ubuntu: training_materials/講習資料/ubuntu/ubuntu1.md
       - マイコン: 
           - マイコン講習1: training_materials/講習資料/マイコン/マイコン1.md
           - マイコン講習2: training_materials/講習資料/マイコン/マイコン2.md
           - マイコン講習3: training_materials/講習資料/マイコン/マイコン3.md
+      - 1年体験入部: training_materials/講習資料/1年体験入部/S-ken体験入部制御班Lちか.md
       - ライセンス: training_materials/講習資料/ライセンス/ライセンススライド.md
       - pid: training_materials/講習資料/pid/pid.md
+      - ubuntu: training_materials/講習資料/ubuntu/ubuntu1.md
       - マークダウン書き方: training_materials/講習資料/マークダウン書き方.md
   - 講習課題:
       - python課題: training_materials/特訓課題/python.md
       - python課題答え: training_materials/講習資料/code/python答え.md
       - 回路課題: training_materials/特訓課題/回路.md
+  - 管理者連絡先: my.md 
 
 
 theme:
