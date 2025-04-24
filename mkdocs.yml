@@ -51,8 +51,8 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  logo: images/sken.png
-  favicon: images/sken.png
+  logo: images/sken.jpeg
+  favicon: images/sken.jpeg
   
 extra:
   consent:
