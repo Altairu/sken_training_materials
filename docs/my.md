@@ -33,22 +33,6 @@
 
 ## メッセージ
 
-私が発信する情報や記事は、日々の活動の中で得た知見や工夫を共有することを目的としています。  
+情報や記事は、日々の活動の中で得た知見や工夫を共有することを目的としています。  
 興味を持っていただけたら、ぜひお気軽に各SNSやGitHubでフォローしてください！
 
-## 写真集
-
-<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-  <div style="flex: 0 0 45%; margin-bottom: 20px;">
-    <img src="training_materials/images/image11.png" alt="活動写真1" style="width:100%;">
-  </div>
-  <div style="flex: 0 0 45%; margin-bottom: 20px;">
-    <img src="training_materials/images/image12.png" alt="活動写真2" style="width:100%;">
-  </div>
-  <div style="flex: 0 0 45%; margin-bottom: 20px;">
-    <img src="training_materials/images/image13.png" alt="活動写真3" style="width:100%;">
-  </div>
-  <div style="flex: 0 0 45%; margin-bottom: 20px;">
-    <img src="training_materials/images/image14.png" alt="活動写真4" style="width:100%;">
-  </div>
-</div>

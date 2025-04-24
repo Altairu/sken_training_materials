@@ -21,9 +21,9 @@ nav:
           - 回路講習3: training_materials/講習資料/回路/回路講習4.md
           - 回路講習4: training_materials/講習資料/回路/回路講習5.md
       - マイコン: 
-          - マイコン講習_SystemWorkbench1: training_materials/講習資料/マイコン/マイコン1.md
-          - マイコン講習_SystemWorkbench2: training_materials/講習資料/マイコン/マイコン2.md
-          - マイコン講習_SystemWorkbench3: training_materials/講習資料/マイコン/マイコン3.md
+          - マイコン講習_SystemWorkbench1: training_materials/講習資料/マイコンSW/マイコン1.md
+          - マイコン講習_SystemWorkbench2: training_materials/講習資料/マイコンSW/マイコン2.md
+          - マイコン講習_SystemWorkbench3: training_materials/講習資料/マイコンSW/マイコン3.md
       - 1年体験入部: training_materials/講習資料/1年体験入部/S-ken体験入部制御班Lちか.md
       - ライセンス: training_materials/講習資料/ライセンス/ライセンススライド.md
       - pid: training_materials/講習資料/pid/pid.md
