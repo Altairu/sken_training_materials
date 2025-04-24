@@ -51,8 +51,8 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  logo: images/altair.png
-  favicon: images/altair.png
+  logo: images/sken.png
+  favicon: images/sken.png
   
 extra:
   consent:
