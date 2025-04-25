@@ -5,7 +5,7 @@ nav:
   - ホーム画面: index.md 
   - 機械班:
       - SolidEdge: 
-          - SolidEdge: training_materials/機械班/siryou.md
+          - SolidEdge1: training_materials/機械班/SolidEdge1.md
   - 電気班:
     - 講習資料:
       - ROS 2:
@@ -25,9 +25,13 @@ nav:
           - 回路講習3: training_materials/講習資料/回路/回路講習4.md
           - 回路講習4: training_materials/講習資料/回路/回路講習5.md
       - マイコン: 
-          - マイコン講習_SystemWorkbench1: training_materials/講習資料/マイコンSW/マイコン1.md
-          - マイコン講習_SystemWorkbench2: training_materials/講習資料/マイコンSW/マイコン2.md
-          - マイコン講習_SystemWorkbench3: training_materials/講習資料/マイコンSW/マイコン3.md
+          - SW4STM32: 
+            - マイコン講習_SystemWorkbench1: training_materials/講習資料/マイコンSW/マイコン1.md
+            - マイコン講習_SystemWorkbench2: training_materials/講習資料/マイコンSW/マイコン2.md
+            - マイコン講習_SystemWorkbench3: training_materials/講習資料/マイコンSW/マイコン3.md
+          - ESP32:
+            - マイコン講習_ESP32_1: training_materials/講習資料/マイコンesp/マイコン1.md
+            - マイコン講習_ESP32_2: training_materials/講習資料/マイコンesp/マイコン2.md          
       - 1年体験入部: training_materials/講習資料/1年体験入部/S-ken体験入部制御班Lちか.md
       - pid: training_materials/講習資料/pid/pid.md
       - ubuntu: training_materials/講習資料/ubuntu/ubuntu1.md
