@@ -5,6 +5,9 @@ https://Altairu.github.io/sken_training_materials/
 
 ```bash
 mkdocs gh-deploy
+
+& "$env:USERPROFILE\AppData\Roaming\Python\Python311\Scripts\mkdocs.exe" gh-deploy
+
 ```
 
 ## 必要な環境構築
