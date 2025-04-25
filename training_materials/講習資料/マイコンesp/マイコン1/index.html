@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#esp32arduino-ide" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1101,6 +1106,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    マイコン講習_ESP32_1
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1113,6 +1133,118 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1arduino-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Step 1：Arduino IDEのインストール
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Step 1：Arduino IDEのインストール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-mac-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows / Mac / Linux 共通
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2esp32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2：ESP32ボードのボードマネージャ設定
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3esp32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3：ESP32ボードパッケージのインストール
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4：ボードの選択とポート設定
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5ledl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5：LED点滅テスト（Lチカ）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5：LED点滅テスト（Lチカ）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#led_blinkino" class="md-nav__link">
+    <span class="md-ellipsis">
+      コード例：LED_Blink.ino
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6：書き込み＆実行
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      トラブルシューティング
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1510,6 +1642,109 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1arduino-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Step 1：Arduino IDEのインストール
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Step 1：Arduino IDEのインストール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-mac-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows / Mac / Linux 共通
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2esp32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2：ESP32ボードのボードマネージャ設定
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3esp32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3：ESP32ボードパッケージのインストール
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4：ボードの選択とポート設定
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5ledl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5：LED点滅テスト（Lチカ）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5：LED点滅テスト（Lチカ）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#led_blinkino" class="md-nav__link">
+    <span class="md-ellipsis">
+      コード例：LED_Blink.ino
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6：書き込み＆実行
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      トラブルシューティング
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1528,9 +1763,94 @@
   
 
 
-  <h1>マイコン講習_ESP32_1</h1>
+<h1 id="esp32arduino-ide">ESP32をArduino IDEで使うための環境構築ガイド</h1>
+<ul>
+<li>Arduino IDE（バージョン 1.8以上推奨）</li>
+<li>ESP32開発ボード（例：ESP32 DevKitC, ESP32-WROOM-32など）</li>
+<li>USBケーブル（マイコン接続用）</li>
+<li>インターネット環境</li>
+</ul>
+<h2 id="step-1arduino-ide">🧩 Step 1：Arduino IDEのインストール</h2>
+<h3 id="windows-mac-linux">Windows / Mac / Linux 共通</h3>
+<p>以下のリンクからArduino IDEをダウンロード＆インストールしてください。</p>
+<p>🔗 <a href="https://www.arduino.cc/en/software">Arduino IDE ダウンロードページ</a></p>
+<p><img alt="alt text" src="../images/ArduinoIDE.png" /></p>
+<h2 id="step-2esp32">Step 2：ESP32ボードのボードマネージャ設定</h2>
+<ol>
+<li>
+<p>Arduino IDEを開き、メニューから<br />
+<code>ファイル &gt; 環境設定（Preferences）</code>を選択。</p>
+</li>
+<li>
+<p>「追加のボードマネージャのURL」に以下を追加：</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>https://espressif.github.io/arduino-esp32/package_esp32_index.json
+</code></pre></div>
+<p><img alt="alt text" src="../images/image.png" /></p>
+<p><img alt="alt text" src="../images/image-1.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>画像ではESP以外の設定も入っています．すでに他のURLがある場合は、カンマ区切りで追加してください．</p>
+</div>
+<h2 id="step-3esp32">Step 3：ESP32ボードパッケージのインストール</h2>
+<ol>
+<li>
+<p><code>ツール &gt; ボード &gt; ボードマネージャ</code>を開く。</p>
+</li>
+<li>
+<p>検索欄に「esp32」と入力。</p>
+</li>
+<li>
+<p>「esp32 by Espressif Systems」が表示されたら「インストール」をクリック。</p>
+</li>
+</ol>
+<h2 id="step-4">Step 4：ボードの選択とポート設定</h2>
+<ol>
+<li>
+<p><code>ツール &gt; ボード</code>から、自分のESP32ボード（例：<code>ESP32 Dev Module</code>）を選択。</p>
+</li>
+<li>
+<p><code>ツール &gt; シリアルポート</code>から、ESP32が接続されているポート（例：COM3、/dev/ttyUSB0など）を選ぶ。</p>
+</li>
+</ol>
+<h2 id="step-5ledl">Step 5：LED点滅テスト（Lチカ）</h2>
+<p>ESP32に内蔵されているLED（多くはGPIO2）を点滅させて動作確認を行います。</p>
+<h3 id="led_blinkino">コード例：<code>LED_Blink.ino</code></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// LEDが接続されているGPIOピン</span>
+<span class="cp">#define LED_PIN 2</span>
 
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"> </span><span class="c1">// ピンを出力モードに設定</span>
+<span class="p">}</span>
 
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED ON</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w">                  </span><span class="c1">// 500ミリ秒待機</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// LED OFF</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w">                  </span><span class="c1">// 500ミリ秒待機</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>GPIOの番号はボードによって異なる場合があります．ボードの回路図などで確認してください．</p>
+</div>
+<h2 id="step-6">Step 6：書き込み＆実行</h2>
+<ol>
+<li>プログラムをArduino IDEに貼り付け。</li>
+<li><code>→</code>（アップロード）ボタンをクリック。</li>
+<li>コンパイルと書き込み完了後、LEDが点滅すれば成功！</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>書き込み時に「BOOT」ボタンを長押しする必要があるボードもあります（例：ESP32 DevKitC）。</p>
+</div>
+<h2 id="_1">トラブルシューティング</h2>
+<ul>
+<li>ポートが表示されない → ドライバのインストールを確認</li>
+<li>書き込みに失敗する → BOOTボタンを押しながら書き込みを試す</li>
+<li>LEDが点滅しない → GPIO番号を確認（ボードによって異なる）</li>
+</ul>
 
 
 
