@@ -87,3 +87,7 @@ print(my_electric_car.describe_battery())  # 出力: Battery size: 100 kWh
 
 ```
 ここでは、`ElectricCar`クラスが`Car`クラスを継承しており、新しい機能である`describe_battery`メソッドを追加している
+
+
+??? Note
+    最終更新者:Shion Noguchi

@@ -372,3 +372,7 @@ def main():  # main 関数
     rclpy.shutdown()             # 5. 終了処理
     print('プログラム終了')
 ```
+
+
+??? Note
+    最終更新者:Shion Noguchi

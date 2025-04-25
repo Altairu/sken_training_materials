@@ -297,3 +297,7 @@ altair mkpy new_script.py
 ```bash
 altair oppy existing_script.py
 ```
+
+
+??? Note
+    最終更新者:Shion Noguchi

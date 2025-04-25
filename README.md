@@ -2,3 +2,7 @@
 sken_講習資料
 
 https://Altairu.github.io/sken_training_materials/
+
+```bash
+mkdocs gh-deploy
+```

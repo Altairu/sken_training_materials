@@ -1106,3 +1106,7 @@ fused_x = (w_r * realsense_x + w_m * microcontroller_x) / (w_r + w_m)
 実際にロボコンで使用された例を基に解説を行った．
 
 次の資料ではこれらを基に簡易的なロボットのRobowareパッケージを構築していく．
+
+
+??? Note
+    最終更新者:Shion Noguchi

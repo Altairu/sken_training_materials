@@ -197,3 +197,6 @@ void loop() {
   delay(1000);
 }
 ```
+
+??? Note
+    最終更新者:Shion Noguchi
