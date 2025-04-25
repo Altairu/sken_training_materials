@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../../images/sken.jpeg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -311,18 +311,64 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SolidEdge
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            SolidEdge
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../%E6%A9%9F%E6%A2%B0%E7%8F%AD/overview/" class="md-nav__link">
+      <a href="../../../%E6%A9%9F%E6%A2%B0%E7%8F%AD/siryou/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    概要
+    SolidEdge
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1677,7 +1723,7 @@
 <li>defキーワードを使用して関数を定義します。</li>
 </ul>
 <p>例:
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;こんにちは, &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
 
 <span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Altair&quot;</span><span class="p">)</span>
@@ -1689,7 +1735,7 @@
 <li>キーワード引数を使用すると、引数の順序を気にせずに関数を呼び出すことができます。</li>
 </ul>
 <p>例:
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">show_info</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">show_info</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;名前:&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;年齢:&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
 
@@ -1731,7 +1777,7 @@
 </code></pre></div>
 <h2 id="_5">おまけ</h2>
 <p>シリアル通信で遊ぼう
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">serial</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">serial</span>
 
 <span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="s1">&#39;/dev/ttyACM0&#39;</span><span class="p">,</span> <span class="mi">9600</span><span class="p">,</span><span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="c1"># &quot;COM19&quot;</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
