@@ -2037,9 +2037,9 @@
 <p>A6(TIMER13 CH1)     A7(TIMER14 CH1)</p>
 <p>B8(TIMER10 CH1)     B9(TIMER11 CH1)</p>
 <blockquote>
-<p>Serial
-tx:C10  rx:C11  SERIAL3 </p>
+<p>Serial</p>
 </blockquote>
+<p>tx:C10  rx:C11  SERIAL3 </p>
 <p>tx:A9  rx:A10  SERIAL1</p>
 <h2 id="1-lled">1. Lチカのやり方（LED点滅）</h2>
 <div class="highlight"><pre><span></span><code><span class="n">Gpio</span><span class="w"> </span><span class="n">led</span><span class="p">;</span><span class="w">  </span><span class="c1">// Gpioクラスのオブジェクトを作成</span>
@@ -2243,14 +2243,22 @@ tx:C10  rx:C11  SERIAL3 </p>
 </code></pre></div>
 <h3 id="addcanreceiveinterruptfunc">受信（addCanReceiveInterruptFunc）</h3>
 <div class="highlight"><pre><span></span><code><span class="n">Can_data</span><span class="w"> </span><span class="n">can_data</span><span class="p">;</span><span class="w">  </span><span class="c1">// 受信データを格納する構造体</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">can_rx_data</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">};</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
 <span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">startCanCommunicate</span><span class="p">(</span><span class="n">B13</span><span class="p">,</span><span class="w"> </span><span class="n">B12</span><span class="p">,</span><span class="w"> </span><span class="n">CAN_2</span><span class="p">);</span><span class="w">  </span><span class="c1">// CAN1開始</span>
 <span class="w">    </span><span class="n">sken_system</span><span class="p">.</span><span class="n">addCanRceiveInterruptFunc</span><span class="p">(</span><span class="n">CAN_2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">can_data</span><span class="p">);</span><span class="w">  </span><span class="c1">// 受信割り込み設定</span>
-
 <span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">can_data</span><span class="p">.</span><span class="n">rx_stdid</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x123</span><span class="p">){</span>
 <span class="w">        </span><span class="c1">// 受信データはcan_data.rx_dataに格納される</span>
+<span class="w">        </span><span class="n">can_rx_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">can_data</span><span class="p">.</span><span class="n">rx_data</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="n">can_rx_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">can_data</span><span class="p">.</span><span class="n">rx_data</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">        </span><span class="n">can_rx_data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">can_data</span><span class="p">.</span><span class="n">rx_data</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">        </span><span class="n">can_rx_data</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">can_data</span><span class="p">.</span><span class="n">rx_data</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">        </span><span class="n">can_rx_data</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">can_data</span><span class="p">.</span><span class="n">rx_data</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">        </span><span class="n">can_rx_data</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">can_data</span><span class="p">.</span><span class="n">rx_data</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
