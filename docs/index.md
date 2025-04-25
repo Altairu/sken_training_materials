@@ -7,7 +7,7 @@
 ## コンテンツのご案内
 ### 機械班資料
 - **SolidEdge** 
-SolidEdgeに関する資料
+  SolidEdgeに関する資料
 
 
 ### 電気班資料
