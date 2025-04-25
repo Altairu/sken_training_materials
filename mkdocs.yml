@@ -4,6 +4,7 @@ site_name: Sken 技術資料
 nav:
   - ホーム画面: index.md 
   - 機械班:
+      - 概要: training_materials/機械班/overview.md
   - 電気班:
     - 講習資料:
       - ROS 2:
