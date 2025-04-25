@@ -1109,4 +1109,4 @@ fused_x = (w_r * realsense_x + w_m * microcontroller_x) / (w_r + w_m)
 
 
 ??? Note
-    最終更新者:Shion Noguchi
+    著者:Shion Noguchi

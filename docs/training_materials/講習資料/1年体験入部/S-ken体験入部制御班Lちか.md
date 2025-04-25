@@ -165,4 +165,4 @@ for文が実行されると、まず初期化文が実行されます。次に�
 
 
 ??? Note
-    最終更新者:Shion Noguchi
+    著者:Shion Noguchi

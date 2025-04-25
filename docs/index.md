@@ -93,4 +93,4 @@ GitHub リポジトリ [Altairu/sken_training_materials](https://github.com/Alta
     また、筆者の所属する組織とは一切関係がありません。
 
 ??? Note
-    最終更新者:Shion Noguchi
+    著者:Shion Noguchi

@@ -90,4 +90,4 @@ print(my_electric_car.describe_battery())  # 出力: Battery size: 100 kWh
 
 
 ??? Note
-    最終更新者:Shion Noguchi
+    著者:Shion Noguchi

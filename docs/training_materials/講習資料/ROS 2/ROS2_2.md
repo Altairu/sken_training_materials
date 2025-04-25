@@ -246,4 +246,4 @@ rqt
 
 
 ??? Note
-    最終更新者:Shion Noguchi
+    著者:Shion Noguchi

@@ -334,4 +334,4 @@ whileはaが10未満の間、以下のコードブロックを繰り返すルー
 
 
 ??? Note
-    最終更新者:Shion Noguchi
+    著者:Shion Noguchi
