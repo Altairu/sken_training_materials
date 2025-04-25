@@ -50,4 +50,4 @@ ZIPファイルがダウンロードされるので展開し， Siemens solid Ed
 インストールが完了しました！！！
 
 ??? Note
-    著者:Mio Saitou
+    著者:Mio Salto
