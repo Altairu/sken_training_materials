@@ -1,9 +1,11 @@
 # filepath: /home/altair/sken_training_materials/mkdocs.yml
-site_name: 電気班 講習資料
+site_name: Sken 技術資料
 
 nav:
   - ホーム画面: index.md 
-  - 講習資料:
+  - 機械班:
+  - 電気班:
+    - 講習資料:
       - ROS 2:
           - ROS2講習1: training_materials/講習資料/ROS 2/ROS2_1.md
           - ROS2講習2: training_materials/講習資料/ROS 2/ROS2_2.md
@@ -25,14 +27,15 @@ nav:
           - マイコン講習_SystemWorkbench2: training_materials/講習資料/マイコンSW/マイコン2.md
           - マイコン講習_SystemWorkbench3: training_materials/講習資料/マイコンSW/マイコン3.md
       - 1年体験入部: training_materials/講習資料/1年体験入部/S-ken体験入部制御班Lちか.md
-      - ライセンス: training_materials/講習資料/ライセンス/ライセンススライド.md
       - pid: training_materials/講習資料/pid/pid.md
       - ubuntu: training_materials/講習資料/ubuntu/ubuntu1.md
-      - マークダウン書き方: training_materials/講習資料/マークダウン書き方.md
-  - 講習課題:
+    - 講習課題:
       - python課題: training_materials/特訓課題/python.md
       - python課題答え: training_materials/講習資料/code/python答え.md
       - 回路課題: training_materials/特訓課題/回路.md
+  - 共通資料:
+    - マークダウン書き方: training_materials/講習資料/マークダウン書き方.md
+    - ライセンス: training_materials/講習資料/ライセンス/ライセンススライド.md
   - 管理者連絡先: my.md 
 
 
