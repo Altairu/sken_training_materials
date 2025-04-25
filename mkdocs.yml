@@ -15,9 +15,9 @@ nav:
           - ROS2講習ロボコン1: training_materials/講習資料/ROS 2/ROS2_ロボコン1.md
           - ROS2講習ロボコン2: training_materials/講習資料/ROS 2/ROS2_ロボコン2.md
       - python3:
-          - 講習1: training_materials/講習資料/python3/python3講習1.md
-          - 講習2: training_materials/講習資料/python3/python3講習2.md
-          - 講習3: training_materials/講習資料/python3/python3講習3.md
+          - python_1: training_materials/講習資料/python3/python3講習1.md
+          - python_2: training_materials/講習資料/python3/python3講習2.md
+          - python_3: training_materials/講習資料/python3/python3講習3.md
       - 回路:
           - 回路講習0: training_materials/講習資料/回路/回路講習0.md
           - 回路講習1: training_materials/講習資料/回路/回路講習1スライド.md
@@ -26,12 +26,12 @@ nav:
           - 回路講習4: training_materials/講習資料/回路/回路講習5.md
       - マイコン: 
           - SW4STM32: 
-            - マイコン講習_SystemWorkbench1: training_materials/講習資料/マイコンSW/マイコン1.md
-            - マイコン講習_SystemWorkbench2: training_materials/講習資料/マイコンSW/マイコン2.md
-            - マイコン講習_SystemWorkbench3: training_materials/講習資料/マイコンSW/マイコン3.md
+            - SystemWorkbench1: training_materials/講習資料/マイコンSW/マイコン1.md
+            - SystemWorkbench2: training_materials/講習資料/マイコンSW/マイコン2.md
+            - SystemWorkbench3: training_materials/講習資料/マイコンSW/マイコン3.md
           - ESP32:
-            - マイコン講習_ESP32_1: training_materials/講習資料/マイコンesp/マイコン1.md
-            - マイコン講習_ESP32_2: training_materials/講習資料/マイコンesp/マイコン2.md          
+            - ESP32_1: training_materials/講習資料/マイコンesp/マイコン1.md
+            - ESP32_2: training_materials/講習資料/マイコンesp/マイコン2.md          
       - 1年体験入部: training_materials/講習資料/1年体験入部/S-ken体験入部制御班Lちか.md
       - pid: training_materials/講習資料/pid/pid.md
       - ubuntu: training_materials/講習資料/ubuntu/ubuntu1.md

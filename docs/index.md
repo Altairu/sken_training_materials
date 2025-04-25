@@ -30,6 +30,8 @@
 
 > **参考:** [qiita](https://qiita.com/_Altair_) の記事もチェックしてください。
 
+[回路モジュールのreadme置き場](https://github.com/SkenHub/Circuit-Module-Readme/tree/main/REDME)はこちら
+
 #### 講習課題
 
 - **python 課題・答え**  
