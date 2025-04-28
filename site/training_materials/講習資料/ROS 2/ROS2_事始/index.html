@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%922%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/">
+        <link rel="prev" href="../../../%E6%A9%9F%E6%A2%B0%E7%8F%AD/SolidEdge1/">
       
       
-        <link rel="next" href="../%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%925/">
+        <link rel="next" href="../ROS2_1/">
       
       
       <link rel="icon" href="../../../../images/sken.jpeg">
@@ -20,7 +20,7 @@
     
     
       
-        <title>回路講習3 - Sken 技術資料</title>
+        <title>ROS2環境構築 - Sken 技術資料</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3" class="md-skip">
+        <a href="#ubuntu-2204-ltsros2-humble-hawksbill" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              回路講習3
+              ROS2環境構築
             
           </span>
         </div>
@@ -425,18 +425,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -452,7 +454,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             ROS 2
@@ -463,10 +465,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../ROS%202/ROS2_%E4%BA%8B%E5%A7%8B/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ROS2環境構築
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -477,6 +501,131 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      前提条件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      インストール手順
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="インストール手順">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. パッケージの更新
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ソースリストの追加
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. ロケールの設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. aptリポジトリの追加
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ros2-humble" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. ROS2 Humbleのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 環境変数の設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-colcon" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. colconのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 動作確認
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      おわりに
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -489,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ROS%202/ROS2_1/" class="md-nav__link">
+      <a href="../ROS2_1/" class="md-nav__link">
         
   
   
@@ -512,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ROS%202/ROS2_2/" class="md-nav__link">
+      <a href="../ROS2_2/" class="md-nav__link">
         
   
   
@@ -535,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ROS%202/ROS2_3/" class="md-nav__link">
+      <a href="../ROS2_3/" class="md-nav__link">
         
   
   
@@ -558,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ROS%202/ROS2_%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B31/" class="md-nav__link">
+      <a href="../ROS2_%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B31/" class="md-nav__link">
         
   
   
@@ -581,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ROS%202/ROS2_%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B32/" class="md-nav__link">
+      <a href="../ROS2_%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B32/" class="md-nav__link">
         
   
   
@@ -724,20 +873,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -753,7 +900,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             回路
@@ -767,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/" class="md-nav__link">
+      <a href="../../%E5%9B%9E%E8%B7%AF/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/" class="md-nav__link">
         
   
   
@@ -790,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%920/" class="md-nav__link">
+      <a href="../../%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%920/" class="md-nav__link">
         
   
   
@@ -813,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%921%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
+      <a href="../../%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%921%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
         
   
   
@@ -836,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%922%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
+      <a href="../../%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%922%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
         
   
   
@@ -856,32 +1003,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    回路講習3
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%924/" class="md-nav__link">
         
   
   
@@ -892,53 +1017,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      モーターを回してみる
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kicad" class="md-nav__link">
-    <span class="md-ellipsis">
-      KiCadで作ってみよう
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      以下の使用のものを作れ
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -951,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%925/" class="md-nav__link">
+      <a href="../../%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%925/" class="md-nav__link">
         
   
   
@@ -1607,16 +1685,7 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      モーターを回してみる
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kicad" class="md-nav__link">
-    <span class="md-ellipsis">
-      KiCadで作ってみよう
+      前提条件
     </span>
   </a>
   
@@ -1625,9 +1694,96 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      以下の使用のものを作れ
+      インストール手順
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="インストール手順">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. パッケージの更新
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ソースリストの追加
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. ロケールの設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. aptリポジトリの追加
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ros2-humble" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. ROS2 Humbleのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 環境変数の設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-colcon" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. colconのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 動作確認
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      おわりに
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1650,43 +1806,66 @@
   
 
 
-<h1 id="3"><strong>回路講習3</strong></h1>
-<h3 id="_1"><strong>モーターを回してみる</strong></h3>
-<p><br></p>
-<p><strong>N-CH MOSFETを使って</strong>
-<strong>モーターを単方向に回す</strong>
-<strong>回路を作ってみよう．</strong></p>
-<p><img alt="bg right:50% width:700px" src="../../../images/fea3dd07563e8d6c23764b51e0a1ec6b5b984d0498fdf6a077e5d3098a18f6b0.png" />  </p>
-<h3 id="kicad">KiCadで作ってみよう</h3>
+<h1 id="ubuntu-2204-ltsros2-humble-hawksbill">Ubuntu 22.04 LTSでのROS2 Humble Hawksbillのインストール手順</h1>
+<p>Ubuntu 22.04 LTS（Jammy Jellyfish）にROS2 Humble 機会があったのでメモしてたのを記事にしました。
+一応説明すると、ROS2（Robot Operating System 2）は、ロボット開発のためのオープンソースフレームワーク</p>
+<p>以下を持ってきました</p>
+<p><a href="https://qiita.com/_Altair_/items/4b2fdae96dd8a94f55a4">Ubuntu 22.04 LTSでのROS2 Humble Hawksbillのインストール手順</a></p>
+<h2 id="_1">前提条件</h2>
+<p>まず、以下の前提条件を確認しといてや：</p>
 <ul>
-<li>フォトカプラ　</li>
-<li>
-<p>TLP250</p>
-</li>
-<li>
-<p>MOSFET</p>
-</li>
-<li>IRF3205</li>
+<li>Ubuntu 22.04 LTSがインストールされていること</li>
+<li>管理者権限（sudo）があること</li>
 </ul>
-<p>逆起電力防止用ダイオード
-ノイズ除去コンデンサ</p>
-<p><img alt="bg right:50% width:700px" src="../../../images/b6a8a11523bb458b80aede7d94126d304213015ed5e15b4cd3b8a97a7b328ba2.png" />  </p>
-<hr />
-<h3 id="_2">以下の使用のものを作れ</h3>
-<p>モーターを単方向に二つ動かす回路マイコンにより制御されマイコンと駆動部のGNDを絶縁すること</p>
-<p>マイコン信号:Conn_01x04（Ps1,Ps2,+5V,GND）</p>
-<p>電源入力:Conn_01x02(+12V,GND2)</p>
-<p>電源にバイパスコンデンサ:C_Polarized</p>
-<hr />
-<p><img alt="bg width:1200px" src="../../../images/e87cb545999029b00e3be127bfad08f3dc08313174785326ad61e0d4fa33c551.png" />  </p>
-<hr />
-<p><img alt="bg width:1000px" src="../../../images/c72e0cf8536bf5a673a44278e7c5faf368524f2b1a1220ec1528895df89d94fd.png" />  </p>
-<hr />
-<p><img alt="bg width:700px" src="../../../images/076f712a59d73d50bdfc6746abe9d3a3e087dab538f92b8b644d15e2b41e2630.png" />  </p>
-<details class="note">
-<summary>Note</summary>
-<p>著者:Shion Noguchi</p>
-</details>
+<h2 id="_2">インストール手順</h2>
+<h3 id="1">1. パッケージの更新</h3>
+<p>まずは、システムのパッケージを最新の状態に更新に。</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</code></pre></div>
+<h3 id="2">2. ソースリストの追加</h3>
+<p>ROS2のパッケージをダウンロードするために、ソースリストを追加する必要がある。</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>software-properties-common
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>universe
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+<h3 id="3">3. ロケールの設定</h3>
+<p>ロケール（言語と地域設定）を適切に設定しとく。</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>locales
+sudo<span class="w"> </span>locale-gen<span class="w"> </span>en_US<span class="w"> </span>en_US.UTF-8
+sudo<span class="w"> </span>update-locale<span class="w"> </span><span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF-8<span class="w"> </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+<span class="nb">export</span><span class="w"> </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+</code></pre></div>
+<h3 id="4-apt">4. aptリポジトリの追加</h3>
+<p>ROS2のaptリポジトリを追加する。</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span>gnupg<span class="w"> </span>lsb-release
+sudo<span class="w"> </span>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo &quot;deb [arch=amd64,arm64,armhf] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main&quot; &gt; /etc/apt/sources.list.d/ros2-latest.list&#39;</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+<h3 id="5-ros2-humble">5. ROS2 Humbleのインストール</h3>
+<p>ROS2 Humble Hawksbillをインストール。</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-humble-desktop
+</code></pre></div>
+<h3 id="6">6. 環境変数の設定</h3>
+<p>ROS2の環境変数を設定するために、<code>.bashrc</code>に追記。</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source /opt/ros/humble/setup.bash&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<h3 id="7-colcon">7. colconのインストール</h3>
+<p>ビルドツールであるcolconをインストールする。</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-colcon-common-extensions
+</code></pre></div>
+<h3 id="8">8. 動作確認</h3>
+<p>最後に、ROS2が正しくインストールされているか確認するために、デモノードを実行</p>
+<div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>run<span class="w"> </span>demo_nodes_cpp<span class="w"> </span>talker
+</code></pre></div>
+<p>別のターミナルを開いて、リスナーを実行</p>
+<div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>run<span class="w"> </span>demo_nodes_cpp<span class="w"> </span>listener
+</code></pre></div>
+<h3 id="_3">おわりに</h3>
+<p>これで、Ubuntu 22.04 LTSにROS2 Humble Hawksbillのインストールが完了したはず。
+初めてUbuntu触ったときは色々戸惑ったけど慣れればいける。気がする…</p>
 
 
 
