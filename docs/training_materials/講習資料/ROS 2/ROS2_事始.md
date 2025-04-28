@@ -100,3 +100,5 @@ ros2 run demo_nodes_cpp listener
 これで、Ubuntu 22.04 LTSにROS2 Humble Hawksbillのインストールが完了したはず。
 初めてUbuntu触ったときは色々戸惑ったけど慣れればいける。気がする…
 
+??? Note
+    著者:Shion Noguchi
