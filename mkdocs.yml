@@ -40,6 +40,7 @@ nav:
       - python課題答え: training_materials/講習資料/code/python答え.md
       - 回路課題: training_materials/特訓課題/回路.md
   - 共通資料:
+    - wiki使い方: training_materials/共有/wiki_readme.md
     - マークダウン書き方: training_materials/講習資料/マークダウン書き方.md
     - ライセンス: training_materials/講習資料/ライセンス/ライセンススライド.md
     - Github: training_materials/講習資料/github/github1.md

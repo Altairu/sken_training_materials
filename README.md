@@ -3,6 +3,8 @@ sken_講習資料
 
 https://Altairu.github.io/sken_training_materials/
 
+使い方に関しては，サイト内の「wiki使い方」をご覧ください・
+
 ```bash
 mkdocs gh-deploy
 
