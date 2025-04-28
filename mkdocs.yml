@@ -5,7 +5,7 @@ nav:
   - ホーム画面: index.md 
   - 機械班:
       - SolidEdge: 
-          - SolidEdge1: training_materials/機械班/SolidEdge1.md
+          - SolidEdge環境構築: training_materials/機械班/SolidEdge1.md
   - 電気班:
     
     - ROS 2:
@@ -19,7 +19,7 @@ nav:
         - python_2: training_materials/講習資料/python3/python3講習2.md
         - python_3: training_materials/講習資料/python3/python3講習3.md
     - 回路:
-        - 回路講習0: training_materials/講習資料/回路/回路講習0.md
+        - Kicad使い方: training_materials/講習資料/回路/回路講習0.md
         - 回路講習1: training_materials/講習資料/回路/回路講習1スライド.md
         - 回路講習2: training_materials/講習資料/回路/回路講習2スライド.md
         - 回路講習3: training_materials/講習資料/回路/回路講習4.md
