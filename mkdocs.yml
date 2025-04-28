@@ -9,6 +9,7 @@ nav:
   - 電気班:
     
     - ROS 2:
+        - ROS2環境構築: training_materials/講習資料/ROS 2/ROS2_事始.md
         - ROS2講習1: training_materials/講習資料/ROS 2/ROS2_1.md
         - ROS2講習2: training_materials/講習資料/ROS 2/ROS2_2.md
         - ROS2講習3: training_materials/講習資料/ROS 2/ROS2_3.md
