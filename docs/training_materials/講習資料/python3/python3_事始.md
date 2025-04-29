@@ -43,3 +43,5 @@ python
 
 [日本語化はこちらを参考に](https://www.javadrive.jp/vscode/install/index4.html)
 
+??? Note
+    著者:Shion Noguchi
