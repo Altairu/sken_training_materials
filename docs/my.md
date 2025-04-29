@@ -3,7 +3,7 @@
 
 ![alt text](images/altair.png)
 
-こんにちは、**Altair** です。  
+こんにちは、**Shion Noguchi** です。  
 私は高専ロボコンで主に制御と回路の担当として活動してきました。
 
 
