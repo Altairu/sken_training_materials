@@ -29,7 +29,7 @@ python
 ![alt text](image-1.png)
 
 !!! Failure
-   もしこの画面が出ない場合は， "Add Python 3.x to PATH" をチェックしなかった，Pythonがインストールされていないのどちらかです
+    もしこの画面が出ない場合は， "Add Python 3.x to PATH" をチェックしなかった，Pythonがインストールされていないのどちらか
 
 
 ## 2. エディタのインストール（例：VS Code）
