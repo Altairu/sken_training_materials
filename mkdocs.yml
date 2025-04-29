@@ -16,6 +16,7 @@ nav:
         - ROS2講習ロボコン1: training_materials/講習資料/ROS 2/ROS2_ロボコン1.md
         - ROS2講習ロボコン2: training_materials/講習資料/ROS 2/ROS2_ロボコン2.md
     - python3:
+        - python環境構築: training_materials/講習資料/python3/python3_事始.md
         - python_1: training_materials/講習資料/python3/python3講習1.md
         - python_2: training_materials/講習資料/python3/python3講習2.md
         - python_3: training_materials/講習資料/python3/python3講習3.md
