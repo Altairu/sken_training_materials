@@ -355,7 +355,99 @@
   
   
   <span class="md-ellipsis">
-    SolidEdge環境構築
+    SolidEdge1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    マシニングセンタ
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            マシニングセンタ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%A9%9F%E6%A2%B0%E7%8F%AD/%E3%83%9E%E3%82%B7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%B3%E3%82%BF/NVX5060/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NVX5060
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%A9%9F%E6%A2%B0%E7%8F%AD/SolidEdge1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SolidEdge1
     
   </span>
   
@@ -2513,7 +2605,7 @@ setup.pyを変更しないとノードを実行できません
 コメントアウトしている７つを変更しなければならない．
 一般公開しない場合は７つ目のみ要変更</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">setuptools</span><span class="w"> </span><span class="kn">import</span> <span class="n">find_packages</span><span class="p">,</span> <span class="n">setup</span>
+<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">find_packages</span><span class="p">,</span> <span class="n">setup</span>
 
 <span class="n">package_name</span> <span class="o">=</span> <span class="s1">&#39;hazimetepkg&#39;</span> <span class="c1"># 1.パッケージ名</span>
 
@@ -2546,7 +2638,7 @@ setup.pyを変更しないとノードを実行できません
 <li>ソースコード作成
 本来ならここでソースコードを作るが自動生成されたものを使ってみましょう
 hazimetenode.pyは自動生成されたプログラムです．
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi from hazimetepkg.&#39;</span><span class="p">)</span>
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
@@ -2588,18 +2680,18 @@ colcon build
 <h2 id="ros2_2">ROS2プログラミング</h2>
 <p>ROS2では基本的にクラスを使ってプログラミングします．
 test1_node.py
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>  <span class="c1"># 1. ROS2 Python モジュールのインポート</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>  <span class="c1"># rclpy.node モジュールから Node クラスをインポート</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">rclpy</span>  <span class="c1"># 1. ROS2 Python モジュールのインポート</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>  <span class="c1"># rclpy.node モジュールから Node クラスをインポート</span>
 
 
-<span class="k">class</span><span class="w"> </span><span class="nc">test1Node</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>  <span class="c1"># test1Nodeクラス</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">test1Node</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>  <span class="c1"># test1Nodeクラス</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ノードの生成&#39;</span><span class="p">)</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;test1_node&#39;</span><span class="p">)</span>  <span class="c1"># 基底クラスコンストラクタのよび出し</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;アルタイル参上&#39;</span><span class="p">)</span>  <span class="c1"># 4. ノードの処理</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>  <span class="c1"># main 関数</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>  <span class="c1"># main 関数</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;プログラム開始&#39;</span><span class="p">)</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>               <span class="c1"># 2. 初期化</span>
     <span class="n">node</span> <span class="o">=</span> <span class="n">test1Node</span><span class="p">()</span>         <span class="c1"># 3. ノードの生成</span>
@@ -2632,19 +2724,19 @@ test1_node.py
 ROS2では<code>spinOnce()</code>や<code>spin()</code>でコールバックを明示的に呼び出す必要がある．</p>
 <h3 id="_13">タイマを使ったコールバック</h3>
 <p>test1_node2.py
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>  <span class="c1"># 1. ROS2 Python モジュールのインポート</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>  <span class="c1"># rclpy.node モジュールから Node クラスをインポート</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">rclpy</span>  <span class="c1"># 1. ROS2 Python モジュールのインポート</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>  <span class="c1"># rclpy.node モジュールから Node クラスをインポート</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">test1Node2</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>  <span class="c1"># test1Node2クラス</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コンストラクタ</span>
+<span class="k">class</span> <span class="nc">test1Node2</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>  <span class="c1"># test1Node2クラス</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コンストラクタ</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ノードの生成&#39;</span><span class="p">)</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;test1_node2&#39;</span><span class="p">)</span>  <span class="c1"># 基底クラスコンストラクタのよび出し</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer_callback</span><span class="p">)</span>  <span class="c1"># タイマーの生成</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># タイマーのコールバック関数</span>
+    <span class="k">def</span> <span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># タイマーのコールバック関数</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;アルタイル参上！？&#39;</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>  <span class="c1"># main 関数</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>  <span class="c1"># main 関数</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;プログラム開始&#39;</span><span class="p">)</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>               <span class="c1"># 2. 初期化</span>
     <span class="n">node</span> <span class="o">=</span> <span class="n">test1Node2</span><span class="p">()</span>        <span class="c1"># 3. ノードの生成</span>
@@ -2666,7 +2758,7 @@ steup.pyに加えるの忘れずに</p>
 <p><img alt="Alt text" src="../images/image-10.png" />
 Ctrl+Cで強制的にプログラムを終了させてください．</p>
 <h2 id="_15">例外処理</h2>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>  <span class="c1"># main 関数</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>  <span class="c1"># main 関数</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;プログラム開始&#39;</span><span class="p">)</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>                <span class="c1"># 2. 初期化</span>
     <span class="n">node</span> <span class="o">=</span> <span class="n">test1Node3</span><span class="p">()</span>         <span class="c1"># 3. ノードの生成</span>

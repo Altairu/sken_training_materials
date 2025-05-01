@@ -1,0 +1,2559 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../SolidEdge1/">
+      
+      
+        <link rel="next" href="../../SolidEdge1/">
+      
+      
+      <link rel="icon" href="../../../../images/sken.jpeg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>NVX5060 - Sken 技術資料</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,300i,400,400i,700,700i%7CInconsolata:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans JP";--md-code-font:"Inconsolata"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nvx-5060" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Sken 技術資料" class="md-header__button md-logo" aria-label="Sken 技術資料" data-md-component="logo">
+      
+  <img src="../../../../images/sken.jpeg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sken 技術資料
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NVX5060
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Altairu/sken_training_materials" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Altairu/sken_training_materials
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Sken 技術資料" class="md-nav__button md-logo" aria-label="Sken 技術資料" data-md-component="logo">
+      
+  <img src="../../../../images/sken.jpeg" alt="logo">
+
+    </a>
+    Sken 技術資料
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Altairu/sken_training_materials" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Altairu/sken_training_materials
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ホーム画面
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    機械班
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            機械班
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SolidEdge
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            SolidEdge
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SolidEdge1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SolidEdge1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    マシニングセンタ
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            マシニングセンタ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    NVX5060
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    NVX5060
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概要">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      本記事の概要
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvx-5060_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      NVX-5060について
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      使い方(ハードウェア)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使い方(ハードウェア)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      起動
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      工具交換
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ワークオフセット
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      工具長補正
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      データ入力
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      加工
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用後
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      使い方(ソフトウェア)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使い方(ソフトウェア)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      データ入力・変換
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q&amp;A集
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q&amp;A集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qa121" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q&amp;A1：なんで非常停止を先に引くの?(&rarr;2.1章)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qa222" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q&amp;A2：なんで加工原点を左上や左下にしないといけないの?(&rarr;2.2章)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qa324" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q&amp;A3：なんで"メモリ"を押してはいけないの?(&rarr;2.4章)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      終わりに
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SolidEdge1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SolidEdge1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    電気班
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            電気班
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ROS 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            ROS 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_%E4%BA%8B%E5%A7%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2環境構築
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2講習1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2講習2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2講習3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2講習ロボコン1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2講習ロボコン2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    python3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            python3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/python3/python3_%E4%BA%8B%E5%A7%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python環境構築
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/python3/python3%E8%AC%9B%E7%BF%921/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python_1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/python3/python3%E8%AC%9B%E7%BF%922/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python_2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/python3/python3%E8%AC%9B%E7%BF%923/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python_3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    回路
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            回路
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kicad環境構築
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%920/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kicad使い方
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%921%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回路講習1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%922%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回路講習2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%924/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回路講習3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%925/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回路講習4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    マイコン
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            マイコン
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SW4STM32
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            SW4STM32
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3SW/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SystemWorkbench1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3SW/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SystemWorkbench2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3SW/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B33/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SystemWorkbench3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ESP32
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            ESP32
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3esp/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ESP32_1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3esp/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ESP32_2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CH552
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            CH552
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/CH552/CH552_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CH552_1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/CH552/CH552_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CH552_2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/1%E5%B9%B4%E4%BD%93%E9%A8%93%E5%85%A5%E9%83%A8/S-ken%E4%BD%93%E9%A8%93%E5%85%A5%E9%83%A8%E5%88%B6%E5%BE%A1%E7%8F%ADL%E3%81%A1%E3%81%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1年体験入部
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/pid/pid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ubuntu/ubuntu1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ubuntu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    講習課題
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            講習課題
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%89%B9%E8%A8%93%E8%AA%B2%E9%A1%8C/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python課題
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/code/python%E7%AD%94%E3%81%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python課題答え
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%89%B9%E8%A8%93%E8%AA%B2%E9%A1%8C/%E5%9B%9E%E8%B7%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回路課題
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    共通資料
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            共通資料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%85%B1%E6%9C%89/wiki_readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    wiki使い方
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E6%9B%B8%E3%81%8D%E6%96%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    マークダウン書き方
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ライセンス
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/github/github1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Github
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../my/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    管理者連絡先
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概要">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      本記事の概要
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvx-5060_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      NVX-5060について
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      使い方(ハードウェア)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使い方(ハードウェア)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      起動
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      工具交換
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ワークオフセット
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      工具長補正
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      データ入力
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      加工
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用後
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      使い方(ソフトウェア)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使い方(ソフトウェア)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      データ入力・変換
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q&amp;A集
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q&amp;A集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qa121" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q&amp;A1：なんで非常停止を先に引くの?(&rarr;2.1章)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qa222" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q&amp;A2：なんで加工原点を左上や左下にしないといけないの?(&rarr;2.2章)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qa324" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q&amp;A3：なんで"メモリ"を押してはいけないの?(&rarr;2.4章)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      終わりに
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="nvx-5060">機械班&emsp;NVX-5060の使い方ガイド</h1>
+<p><img alt="my image" src="../img/nvx5060_0.jpg" /></p>
+<h2 id="_1">概要</h2>
+<h3 id="_2">本記事の概要</h3>
+<p>本記事はS-kenの機械班のためにポイントを押さえてNVX-5060についての使用方法を伝授するのを目的としている．<br>
+また，本記事は金子氏が製作したWord文書を著者がMarkdownに移植してきたもののため，所々書式が変な点があるが，容赦していただきたい．</p>
+<p>元ファイルはGithubに上がっている．参考にされたし．
+https://github.com/SkenHub/mechanic-library
+<br><br></p>
+<h3 id="nvx-5060_1">NVX-5060について</h3>
+<p>VX-5060は森精機製作所株式会社が製作したNVX5000シリーズの小モデルである．5060の60はx軸の加工範囲が600mmあることを意味する．他には5080，5100，5700がある．加工範囲はx軸は600mm，y軸は530mm，z軸は510mmとなる．
+<img alt="my image" src="../img/nvx5060_1.jpg" /></p>
+<ul>
+<li>テーブルサイズ：900 mm × 600 mm</li>
+<li>最大積載重量：800 kg</li>
+<li>主軸回転数：13,000 rpm 
+&emsp;←私たちが使用できるのは8000まで</li>
+<li>主軸モーター出力：15.0/11.0 kW</li>
+<li>早送り速度：30,000 mm/min</li>
+<li>ATC（自動工具交換装置）
+&emsp;←収納本数：30本（オプションで60本，90本も選択可能）</li>
+<li>本体重量：6,000 kg</li>
+<li>価格：地方なら一戸建てが買える額，食費1日1万で3年持つ額
+<br><br></li>
+</ul>
+<h2 id="_3">使い方(ハードウェア)</h2>
+<h3 id="_4">起動</h3>
+<p>起動方法はCV-500と変わらない．まずはコンプレッサーの電源をつけて，バルブを閉める．
+本体電源は右から回った裏手にある．電源は引っかかりを越えるまで右回りに回す．
+<img alt="my image" src="../img/nvx5060_2.jpg" />
+<img alt="my image" src="../img/nvx5060_3.jpg" />
+<img alt="my image" src="../img/nvx5060_4.jpg" />
+なぜ非常停止ボタンを先に押すの？の疑問は Q&amp;A1 を参照(P.21)． MAPPS の画面から分かる通り，操作パネルは専用OSではなく，わざわざ GUI 型の OS の中に，ソフトとして駆動させている．</p>
+<p>| <span style="background-color:Deepskyblue"><font color="black">ポイント：待ち時間の有効活用</font></span><br>この時間の間にはドアを開けることができるので，この時間中にワーク(加工物)をセットアップするといい．使用ネジはφ4で平衡を出すために必ず4点で固定すること． |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+<br></p>
+<p>“オン”を押してから 5 分ぐらい待つと次の画面が現れる．“確認”の F2 ボタンを押す．
+<img alt="my image" src="../img/nvx5060_5.jpg" /><br></p>
+<p>作業者確認としてドアの開け閉めが要求されるので，ドアを開けて敷いてある布を取り除く．
+<img alt="my image" src="../img/nvx5060_6.jpg" /><br></p>
+<p>| <span style="background-color:Deepskyblue"><font color="black">ポイント：ドア開閉</font></span><br>ドアを開くのみであれば左のドアロック解除のみで良い．ドアを開けた状態で工具やワークベースを動かしたい場合は右下のインタロックモードを“セッティング”に回す．ドアが開いていれば“ドアロック解除”が光り，インタロックモードになっていれば上のセッティングランプが点滅，警告音が鳴る．インタロックモード中は加工ができないため，加工前には“通常”に回すこと． |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+<img alt="my image" src="../img/nvx5060_7.jpg" /><br><br></p>
+<h3 id="_5">工具交換</h3>
+<p>NVX-5060 を使い始めるときや途中の T18 と T20 の交換時に工具交換を行う必要がある．こ
+こではワークオフセットでxy座標を決めるときに見やすいようにT29からT20へ交換を行う．</p>
+<p>まず MDI モードに移行して，その中のプログラムモードに移る． 
+<img alt="my image" src="../img/nvx5060_8.jpg" /><br></p>
+<p>工具交換の呪文をキーボードから入力する． 
+<img alt="my image" src="../img/nvx5060_9.jpg" /><br></p>
+<p>入力が完了したら，キーボード右側の“挿入”を押す．以下の画像では EOB を Z0 の前にも入
+れている．
+<img alt="my image" src="../img/nvx5060_10.jpg" />
+| <span style="background-color:Deepskyblue"><font color="black">ポイント：打ち間違え &amp; ???</font></span><br>打ち間違えたときは“キャンセル”ボタンを押せば1つ文字を消すことができる．<br><div style="font-size: 0.7em">工具交換においてNVX特有のショートカット呪文が存在する...かも？T20;M06;だけで工具交換!?</div> |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |</p>
+<p>操作パネル左下の“起動”を押すと工具交換が始まる．
+<br><br></p>
+<h3 id="_6">ワークオフセット</h3>
+<p>xy座標の補正原点をワークオフセットで設定する．NVX-5060はマシンバイスと追加で設
+置した定盤がある．そのため，考慮する点が多い．
+<img alt="my image" src="../img/nvx5060_11.jpg" /></p>
+<ol>
+<li>マシンバイスが横に設置してある</li>
+<li><font color="red">課題</font>：大きい工具の運用に難．横に出た板の加工が干渉</li>
+<li>
+<p><font color="Deepskyblue">解決</font>：横が 300mm を超えないようにワークを用意する．</p>
+</li>
+<li>
+<p>機械原点が右奥<br></p>
+</li>
+<li><font color="red">課題</font>：右上を原点として，ワークオフセットが正常にできていない場合，加工をしようとする時に工具がマシンバイスに当たる．“何を言ってんの？”&rarr;Q&amp;A2</li>
+<li>
+<p><font color="Deepskyblue">解決</font>：原点を“左下”か“左上”に設定する．</p>
+</li>
+<li>
+<p>定盤がマシンバイスの平面部よりも0.1mmほど低い<br></p>
+</li>
+<li><font color="red">課題</font>：加工範囲外を含む，横に長い板をマシンバイスに乗せたときに板が傾く．</li>
+<li><font color="Deepskyblue">解決</font>：横が300mmを超えないようにワークを用意するか，定盤の左側 に板を出す</li>
+</ol>
+<p>これらを踏まえて，板を左手前に設置し，工具を板の“左下”か“左上に”持っていく．
+早送りは事故する可能性が十分に高いため，ここではハンドルでの移動を教える．
+<img alt="my image" src="../img/nvx5060_12.jpg" />
+ハンドルモードは“×100”や“×10”を押すと起動する．ハンドルの移動方向と移動ス
+ケールを選択した後，ハンドルを回すと工具とワークベースが移動する．A，B，C は NVX の
+追加オプションである 4 軸や 5 軸用のものだが，こちらのものはそんなものは搭載されてい
+ない．</p>
+<p>| <font color="red"><strong>※注意</strong></font><br>ワークオフセット座標に綺麗に持っていきたいときに工具を板にギリギリまで近づけるのはいいが，<font color="red">板に30mmぐらいまで近づいたときはハンドル全体を掴んで繊細に動かすこと</font>． |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+<br></p>
+<p>板と工具の xy 軸を“正しい”位置に設置出来たら，“オフセット”に移る． 
+<img alt="my image" src="../img/nvx5060_13.jpg" /><br></p>
+<p>そうすると以下の画面が現れる．変更する箇所はG54のXとYであるCV500 のように1ボタンですぐに設定できるわけではなく，いちいち直打ちで現在の絶対座標をG54に入力しなければならない．“工具オフセット”が表示されたら左下の“ワークオフセット”を押す． 
+<img alt="my image" src="../img/nvx5060_14.jpg" /><br></p>
+<p>以下の画像は X を入力後に Y を入力中である．入力の際は以下を念頭に置くこと．<br>
+<font color="red">“<strong>入力先が合っているか</strong>”</font><br>
+<font color="red">“<strong>間違えて共通に入れていないか</strong>”</font><br>
+<font color="red">“<strong>G54 の座標は絶対座標と符合も含めて間違えていないか</strong>”</font><br>
+<font color="red">“<strong>Z は入れていないか</strong>”</font><br>
+共通や Z に値を入れるとその分の補正もかかるため，事故やエラーが発生する．
+記入欄で入力したら，キーボード右側の“入力”を押して値を入力する． 
+<img alt="my image" src="../img/nvx5060_15.jpg" /><br></p>
+<p>入力後も上記の4点を確認すること．間違えていたりしていたら矢印キーで選択して，キーボード右側の“削除”で消える．無理であれば0の入力で上書きする． 
+<img alt="my image" src="../img/nvx5060_16.jpg" /><br>
+<br></p>
+<h3 id="_7">工具長補正</h3>
+<p>工具長補正は“オフセット”の“工具オフセット”で入力する．
+<img alt="my image" src="../img/nvx5060_17.jpg" /><br></p>
+<p>NVX-5060 では工具が自動的に選択される．随時工具を交換する．S-ken が使用できるのは
+T18，T20 のみ．他は工場長と要相談． 
+<img alt="my image" src="../img/nvx5060_18.jpg" /><br></p>
+<p>| <span style="background-color:Deepskyblue"><font color="black">ポイント：ベースマスター君</font></span><br>板は 4 方のネジかクランプで締めているため，どうしても板の真ん中が浮いてしまう．そのため，ベースマスターを中心とネジの間か，ネジ寄りに設置して工具長補正を行うと，綺麗に加工ができる． |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+<img alt="my image" src="../img/nvx5060_19.jpg" /><br></p>
+<p>NVXは-1.972mm(T2の場合)で行ってほしい．定盤が非常に平なため，養生テープによるかさ増しは必要なく，板の防護フィルムのみで設置し<font color="red"><strong>-1.990などそこまで深く切削しないでただきたい</strong></font>．</p>
+<p>セッティングが完了したら，工具オフセットで F8 の“長測定”から実行までをして工具長補正の入力を行う．終わったら，必要な工具のすべてに工具長補正を行ったことを確認すること． 
+<br><br></p>
+<h3 id="_8">データ入力</h3>
+<p>ワークオフセットと工具長補正のセッティングが完了したら，USB による NC データの入
+力を行う．NCVC で作成したデータの.ncd を USB に入れて USB 挿入口の上の口に入れる．<br>
+<font color="red">下の口は反応しないので注意</font>．</p>
+<p><img alt="my image" src="../img/nvx5060_20.jpg" /><br></p>
+<p>USB を入れてから以下の表示が出てくるが，これが消えるまで待つ．（10 秒程度） 
+<img alt="my image" src="../img/nvx5060_21.jpg" /><br></p>
+<p>“DNC”&rarr;“プログラム”&rarr;“一覧”へ行く．絶対にメモリを押してはならない&rarr;（Q&amp;A3）
+<img alt="my image" src="../img/nvx5060_22.jpg" /><br></p>
+<p>この画面は MC の HDD を参照しているようなものである．ここに USB のファイルをコピーす
+る必要がある．USB を参照するには“パンチ／リード”を押す． 
+<img alt="my image" src="../img/nvx5060_23.jpg" /><br></p>
+<p>“リード”を押す．“パンチ”は MC のファイルを USB に書き込むもの．リードは読み込み．
+<img alt="my image" src="../img/nvx5060_24.jpg" /><br></p>
+<p>USB の画面は次のようになる．加工したいファイルを探す．フォルダを開きたい場合は入力を押す．<br>
+<font color="red">この作業がだるかったら，加工したいファイルのみを入れた USB を用意すること</font>． 
+<img alt="my image" src="../img/nvx5060_25.jpg" /><br>
+欲しいファイルが見つかったら“実行”を押す． <br>
+これで USB のファイルが MC 側の HDD にコピーされた． </p>
+<p>コピーされたファイルは最新に置かれるため，矢印キーの上を押してリスト最新に飛ぶ．
+<img alt="my image" src="../img/nvx5060_26.jpg" /><br></p>
+<p>ここでキーボード右側の“入力”を押すと加工確認フェーズに移される．しかし，以下のエラーが出る場合がある．</p>
+<ul>
+<li>
+<p><strong>運転中です。</strong><br>
+キーボード左上の“リセット”を押してからまた入力を押せばいける． 
+<img alt="my image" src="../img/nvx5060_27.jpg" /><br></p>
+</li>
+<li>
+<p><strong>ファイルフォーマットが正しくありません。</strong><br>
+NCVC でちゃんとメモ帳の施しをしていなかったらそうなる．
+（ヘッダーの日時,名前の削除など）
+<img alt="my image" src="../img/nvx5060_28.jpg" /><br></p>
+</li>
+</ul>
+<p>あとは左下の“実行”を押して加工を開始する．加工時間は分からないため，事前に CV500
+や自分の PC で確認し，タイマーをセットすること． 
+<img alt="my image" src="../img/nvx5060_29.jpg" /><br>
+<br></p>
+<h3 id="_9">加工</h3>
+<p>最初に工具交換してからドリル・エンドミルが板に近づいて加工を始めるが，その時にあ
+らぬ方向に動く場合に備えて赤い“停止”ボタンに指を置くこと．穴加工するときに T20 も
+使う場合は，T18 のφ3 のエンドミルを使用するまで MC から離れてはならない．
+加工が終わると，<font color="red">警告音がなるのでパネル左上の“リセット”を押して止める</font>． 
+<br><br></p>
+<h3 id="_10">使用後</h3>
+<p>加工が終わったら，エアーで吹き飛ばし，板を取り出す．その後は使用前に近いぐらい綺麗にバリと切削油を吹き飛ばす．ワークベースは X300, Y0 に 工具は Z0 に戻すこと．
+ <img alt="my image" src="../img/nvx5060_30.jpg" /><br></p>
+<p>最終的には以下の形にすること． 
+ <img alt="my image" src="../img/nvx5060_31.jpg" /><br></p>
+<ul>
+<li><strong>電源オフ</strong><br>
+非常停止を押す &rarr; 左上の“オフ” &rarr; 後ろの本体電源を回す 
+ <img alt="my image" src="../img/nvx5060_32.jpg" /><br>
+<br><br></li>
+</ul>
+<h2 id="_11">使い方(ソフトウェア)</h2>
+<h3 id="_12">データ入力・変換</h3>
+<p>ここでは SolidEdgeから変換された.dxfから.ncdができるまでに抑えておくポイントのみを説明する．CV-500の.ncdファイルが作成できるほどの知識があることが前提である．</p>
+<p>| <span style="background-color:Deepskyblue"><font color="black">ポイント：SolidEdgeでのおすすめ設定</font></span><br>“幾何学関係を維持”という機能がデフォルトでオンになっているが，これはエラーの元となる．これを一切出さなくする．メリットとしては見やすくなる，エラーが発生しない．オフセットの値は 1.47 にすると丁度良い．1.485 は板を嚙合わせるときにがばがばになる．<br>このオフセット分野では一個ずつ試して最適な値を見つけてくれる有志を探している． |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+ <img alt="my image" src="../img/nvx5060_33.jpg" /><br>
+ <img alt="my image" src="../img/nvx5060_34.jpg" /><br><br><br><br></p>
+<ol>
+<li>
+<p><strong>原点は左下か左上に</strong>．<br>
+これは工具がマシンバイスに当たらない，板が設置しやすいなど
+の利点を持つ．逆に右上か右下はやめて欲しい．
+ <img alt="my image" src="../img/nvx5060_35.jpg" /><br><br></p>
+</li>
+<li>
+<p><strong>参照先を早く見つけたい場合</strong>は，“オプション”&rarr;“切削パラメータの設定”で任意の切
+削パラメータ押して，OK を押すと，次から下のレイヤと切削条件ファイルとの関係で参
+照先が任意のファイルに飛んでくれる．
+ <img alt="my image" src="../img/nvx5060_36.jpg" /><br><br></p>
+</li>
+<li>
+<p><font color="red"><strong>絶対にNVX-5060のフォルダ内の切削条件ファイルを使うこと</strong></font>．<br>
+これを間違えるとMCが止まりえぐいことが起こる．これは二度確認すること.
+CV-500も同様．
+<br>これをミスると NVX はうるさい警告音を鳴らし，入力を受け付けなくなる．
+ <img alt="my image" src="../img/nvx5060_37.jpg" /><br><br></p>
+</li>
+<li>
+<p><strong>T5の場合は-4.975のように975でやっていただきたい</strong>．<br>
+CV と違って平衡が取れているため，養生を追加で貼る必要もない．（1 枚のみで OK）
+ <img alt="my image" src="../img/nvx5060_38.jpg" /><br><br></p>
+</li>
+<li>
+<p><strong>メモでの編集はCV-500と変わらないが，できればM9M5は改行していただきたい</strong>．<br>
+普通は 1 行に運転プログラムが 2 つ入れることはご法度で，エラーが吐かれる．しかし，
+舞鶴高専の MC らは“オートセパレート機能”をオプションで付けているため，そのよう
+なコマンドを打っても自動で改行し，エラーが出ないようにしてくれている．</p>
+</li>
+</ol>
+<p><img alt="my image" src="../img/nvx5060_39.jpg" /><br><br></p>
+<h2 id="qa">Q&amp;A集</h2>
+<h4 id="qa121">Q&amp;A1：なんで非常停止を先に引くの?(&rarr;2.1章)</h4>
+<p>電源オンの時にマシンが暴走した万が一のために，先に非常停止を引く．</p>
+<h4 id="qa222">Q&amp;A2：なんで加工原点を左上や左下にしないといけないの?(&rarr;2.2章)</h4>
+<p>NVX-5060 では機械原点が上から見て右奥にあるため，右上や右下を原点に置いて加工を左に
+行うとき，ワークオフセットをしていなかった場合にマシンバイスに当たる可能があるから．
+ <img alt="my image" src="../img/nvx5060_40.jpg" /><br>
+ 要は，ちゃんとワークオフセットを行っているのであれば右上でも右下でも良い．逆に，左や左下にもデメリットはあり，.dxf ファイルデータ自体間違えたときに，加工範囲違いで左からマシンバイスに工具を当ててしまう点が挙げられる．
+  <img alt="my image" src="../img/nvx5060_41.jpg" /><br></p>
+<h4 id="qa324">Q&amp;A3：なんで"メモリ"を押してはいけないの?(&rarr;2.4章)</h4>
+<p>NVX-5060では加工プログラムを保管する場所としてマシン本体に搭載の“メモリ”と外部メモリの“DNC”で構成されている．メモリでは数バイトしか入らないため，.ncdファイルを入れると最悪MCが動かなくなる．DNCは横に併設されている PC でサーバを介してMC側に加工ファイルを移すことは可能．
+<br></p>
+<h2 id="_13">終わりに</h2>
+<p>Q&amp;Aなどは直接こちらのLINEかメール（tsuchi0175@gmail.com）で受け付けており，そ
+の質問と回答をQ&amp;Aに記す． <br>
+最後に，本記事の基となった文書を書いていただいた金子氏に謝辞を．</p>
+<details class="note">
+<summary>Note</summary>
+<p>著者:Iritani Yoshinari
+    :Kaneko Takuma </p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 -Altair-
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://x.com/Flying___eagle" target="_blank" rel="noopener" title="mebiusbox2 on Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm297.1 84L257.3 234.6 379.4 396h-95.6L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5 78.2-89.5zm-37.8 251.6L153.4 142.9h-28.3l171.8 224.7h26.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Altairu" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4></h4>
+<p></p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
