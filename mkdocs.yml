@@ -34,6 +34,7 @@ nav:
           - SystemWorkbench1: training_materials/講習資料/マイコンSW/マイコン1.md
           - SystemWorkbench2: training_materials/講習資料/マイコンSW/マイコン2.md
           - SystemWorkbench3: training_materials/講習資料/マイコンSW/マイコン3.md
+          - SystemWorkbench4: training_materials/講習資料/マイコンSW/マイコン4.md
         - ESP32:
           - ESP32_1: training_materials/講習資料/マイコンesp/マイコン1.md
           - ESP32_2: training_materials/講習資料/マイコンesp/マイコン2.md          
