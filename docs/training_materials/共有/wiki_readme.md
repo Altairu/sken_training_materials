@@ -75,9 +75,9 @@
    git add .
    git commit -m "新しい資料を追加"
 
-   mkdocs gh-deploy　%ubuntuの場合はこちら
+   mkdocs gh-deploy　#ubuntuの場合はこちら
 
-   & "$env:USERPROFILE\AppData\Roaming\Python\Python311\Scripts\mkdocs.exe" gh-deploy　%winの場合はこちら
+   & "$env:USERPROFILE\AppData\Roaming\Python\Python311\Scripts\mkdocs.exe" gh-deploy #winの場合はこちら
    ```
 
 ## 運営に関する決まり事
