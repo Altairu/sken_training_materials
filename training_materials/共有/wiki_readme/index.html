@@ -1139,6 +1139,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3SW/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SystemWorkbench4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1642,10 +1665,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="資料追加方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can" class="md-nav__link">
+    <span class="md-ellipsis">
+      CAN通信が動かない
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      スイッチが効かない
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       運営に関する決まり事
     </span>
@@ -1654,7 +1701,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       問い合わせ
     </span>
@@ -1811,10 +1858,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="資料追加方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can" class="md-nav__link">
+    <span class="md-ellipsis">
+      CAN通信が動かない
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      スイッチが効かない
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       運営に関する決まり事
     </span>
@@ -1823,7 +1894,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       問い合わせ
     </span>
@@ -1910,6 +1981,30 @@ pymdown-extensions           9.9
 <summary>Note</summary>
 <p>著者:Shion Noguchi</p>
 </details>
+<p>以下のようにすることもできる
+<div class="highlight"><pre><span></span><code>!!! トラブル対処 Tip
+    ###  CAN通信が動かない
+    - `HAL_CAN_LEGACY_MODULE_ENABLED` を有効にしているか？
+    - 配線（B13, B12）が逆ではないか？
+    - ターミネータ抵抗（120Ω）が両端にあるか？
+    ###  スイッチが効かない
+    - `INPUT_PULLUP`の設定漏れ
+    - GNDとの接続確認
+</code></pre></div></p>
+<div class="admonition トラブル対処 tip">
+<p class="admonition-title">トラブル対処</p>
+<h3 id="can">CAN通信が動かない</h3>
+<ul>
+<li><code>HAL_CAN_LEGACY_MODULE_ENABLED</code> を有効にしているか？</li>
+<li>配線（B13, B12）が逆ではないか？</li>
+<li>ターミネータ抵抗（120Ω）が両端にあるか？</li>
+</ul>
+<h3 id="_3">スイッチが効かない</h3>
+<ul>
+<li><code>INPUT_PULLUP</code>の設定漏れ</li>
+<li>GNDとの接続確認</li>
+</ul>
+</div>
 <ol>
 <li>
 <p><strong>ナビゲーションの更新</strong><br />
@@ -1937,7 +2032,7 @@ mkdocs<span class="w"> </span>gh-deploy<span class="w">　</span><span class="c1
 </code></pre></div></p>
 </li>
 </ol>
-<h2 id="_3">運営に関する決まり事</h2>
+<h2 id="_4">運営に関する決まり事</h2>
 <ol>
 <li><strong>資料のフォーマット統一</strong>  </li>
 <li>資料の末尾に必ず著者情報を記載してください。</li>
@@ -1957,7 +2052,7 @@ mkdocs<span class="w"> </span>gh-deploy<span class="w">　</span><span class="c1
 <li><code>mkdocs.yml</code> のナビゲーションはカテゴリごとに整理してください。</li>
 <li>不要なリンクや重複を避けるように注意してください。</li>
 </ol>
-<h2 id="_4">問い合わせ</h2>
+<h2 id="_5">問い合わせ</h2>
 <p>運営に関する質問や提案がある場合は、<a href="https://x.com/Flying___eagle">こちら</a> の DM までご連絡ください。</p>
 <details class="note">
 <summary>Note</summary>
