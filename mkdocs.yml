@@ -8,7 +8,6 @@ nav:
           - SolidEdge1: training_materials/機械班/SolidEdge1.md
       - マシニングセンタ:
           - NVX5060: training_materials/機械班/マシニングセンタ/NVX5060.md
-          - SolidEdge環境構築: training_materials/機械班/SolidEdge1.md
   - 電気班:
     
     - ROS 2:
