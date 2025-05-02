@@ -15,7 +15,7 @@ if not GOOGLE_API_KEY or not DISCORD_WEBHOOK_URL:
 # Google Generative AIのAPIキーを設定
 try:
     genai.configure(api_key=GOOGLE_API_KEY)
-    model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel("gemini-1.5-flash")
 except Exception as e:
     raise RuntimeError(f"Google Generative AIの初期化に失敗しました: {e}")
 
