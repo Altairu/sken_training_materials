@@ -23,6 +23,7 @@ nav:
         - python3_2: training_materials/講習資料/python3/python3講習2.md
         - python3_3: training_materials/講習資料/python3/python3講習3.md
         - python3_4: training_materials/講習資料/python3/python3講習4.md
+        - python3_5: training_materials/講習資料/python3/python3講習5.md
     - 回路:
         - Kicad環境構築: training_materials/講習資料/回路/環境構築.md
         - Kicad使い方: training_materials/講習資料/回路/回路講習0.md
