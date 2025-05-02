@@ -43,13 +43,18 @@ def is_change_important(file_changes):
             "逆に、記事の内容に新しい説明や資料が追加された場合のみ、要約して答えてください。\n"
             f"変更内容:\n{file_changes}"
         )
+        print(f"AIに送信するプロンプト:\n{prompt}")  # デバッグ用にプロンプトを出力
         response = model.generate_content(prompt)
         result = response.text.strip()
+        print(f"AIからの応答: {result}")  # デバッグ用にAIの応答を出力
+        if not result:
+            raise ValueError("AIからの応答が空です。")
         if result == "この変更は重要ではありません":
             return False, None
         return True, result
     except Exception as e:
-        raise RuntimeError(f"Google Generative AIの応答取得中にエラーが発生しました: {e}")
+        print(f"AI応答の取得中にエラーが発生しました: {e}")
+        return False, "AI応答の取得に失敗しました。変更内容を確認してください。"
 
 # Discordに通知を送信
 def send_to_discord(summary):
@@ -68,7 +73,8 @@ def send_to_discord(summary):
         if response.status_code != 204:
             raise RuntimeError(f"Discord通知の送信に失敗しました: {response.status_code}")
     except Exception as e:
-        raise RuntimeError(f"Discord通知の送信中にエラーが発生しました: {e}")
+        print(f"Discord通知の送信中にエラーが発生しました: {e}")
+        print("通知内容: ", summary)
 
 # メイン処理
 def main():
