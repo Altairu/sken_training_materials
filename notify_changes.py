@@ -85,6 +85,12 @@ def main():
             return
 
         changes_text = "\n".join(changes)
+        print(f"検出された変更内容:\n{changes_text}")  # デバッグ用に変更内容を出力
+
+        if not changes_text.strip():
+            print("変更内容が空です。通知を送信しません。")
+            return
+
         is_important, summary = is_change_important(changes_text)
         if not is_important:
             print("変更は重要ではありません。通知を送信しません。")
