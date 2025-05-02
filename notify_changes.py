@@ -22,24 +22,16 @@ except Exception as e:
 # Gitの差分を取得
 def get_git_diff():
     try:
-        # ステージングされていない変更を取得
-        result_unstaged = subprocess.run(["git", "diff", "--name-only"], capture_output=True, text=True)
-        print(f"未ステージングの変更: {result_unstaged.stdout.strip()}")  # デバッグ用
-        if result_unstaged.returncode != 0:
+        # docs/ディレクトリとmkdocs.ymlの変更を検出
+        result = subprocess.run(
+            ["git", "diff", "--name-only", "HEAD", "--", "docs/", "mkdocs.yml"],
+            capture_output=True,
+            text=True
+        )
+        if result.returncode != 0:
             raise RuntimeError("Git diffの取得に失敗しました。")
-        unstaged_changes = result_unstaged.stdout.strip().split("\n")
-
-        # ステージングされた変更を取得
-        result_staged = subprocess.run(["git", "diff", "--cached", "--name-only"], capture_output=True, text=True)
-        print(f"ステージングされた変更: {result_staged.stdout.strip()}")  # デバッグ用
-        if result_staged.returncode != 0:
-            raise RuntimeError("Git diff --cachedの取得に失敗しました。")
-        staged_changes = result_staged.stdout.strip().split("\n")
-
-        # 両方の変更を結合
-        all_changes = list(filter(None, unstaged_changes + staged_changes))
-        print(f"検出された全変更: {all_changes}")  # デバッグ用
-        return all_changes
+        changes = result.stdout.strip().split("\n")
+        return list(filter(None, changes))  # 空のエントリを除外
     except Exception as e:
         raise RuntimeError(f"Gitの差分取得中にエラーが発生しました: {e}")
 
