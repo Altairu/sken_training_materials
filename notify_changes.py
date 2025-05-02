@@ -1,14 +1,19 @@
 import os
 import subprocess
 import requests
-import openai
+import google.generativeai as genai
+from dotenv import load_dotenv
 
-# 環境変数からAPIキーとWebhook URLを取得
+# .envファイルから環境変数をロード
+load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 
 if not GOOGLE_API_KEY or not DISCORD_WEBHOOK_URL:
     raise EnvironmentError("Google APIキーまたはDiscord Webhook URLが設定されていません。")
+
+# Google Generative AIのAPIキーを設定
+genai.configure(api_key=GOOGLE_API_KEY)
 
 # Gitの差分を取得
 def get_git_diff():
@@ -17,23 +22,31 @@ def get_git_diff():
         raise RuntimeError("Git diffの取得に失敗しました。")
     return result.stdout.strip().split("\n")
 
-# Google Generative AIを使用して要約を生成
-def generate_summary(file_changes):
-    openai.api_key = GOOGLE_API_KEY
-    prompt = f"以下のファイル変更内容を要約してください:\n{file_changes}"
-    response = openai.Completion.create(
-        engine="text-davinci-003",
-        prompt=prompt,
-        max_tokens=100
+# Google Generative AIを使用して重要性を判定
+def is_change_important(file_changes):
+    prompt = (
+        "この変更が「実質的な情報の追加・更新（＝利用者が読む内容の変化）」を含んでいるかどうかを判定してください。\n"
+        "以下のような変更は重要ではありません：\n"
+        "- ウェブサイトの構造やHTMLレイアウトの変更\n"
+        "- ナビゲーションやCSS、デザイン変更\n"
+        "- MkDocs等の自動生成によるインデックス・フッター等の作成\n"
+        "- 改行、スペース、フォーマット、句読点の修正\n"
+        "これらに該当する場合は、「この変更は重要ではありません」とだけ答えてください。\n"
+        "逆に、記事の内容に新しい説明や資料が追加された場合のみ、要約して答えてください。\n"
+        f"変更内容:\n{file_changes}"
     )
-    return response.choices[0].text.strip()
+    response = genai.generate_text(prompt=prompt, model="text-bison-001")
+    result = response.result.strip()
+    if result == "この変更は重要ではありません":
+        return False, None
+    return True, result
 
 # Discordに通知を送信
 def send_to_discord(summary):
     payload = {
         "embeds": [
             {
-                "title": "📝 Webサイトに変更がありました！",
+                "title": "📝 Webサイトに重要な変更がありました！",
                 "description": "このWebサイトの更新では、以下の変更が加えられました。\n\n" + summary,
                 "color": 5814783,
                 "url": "https://altairu.github.io/sken_training_materials/"
@@ -52,7 +65,12 @@ def main():
             print("変更は検出されませんでした。")
             return
 
-        summary = generate_summary("\n".join(changes))
+        changes_text = "\n".join(changes)
+        is_important, summary = is_change_important(changes_text)
+        if not is_important:
+            print("変更は重要ではありません。通知を送信しません。")
+            return
+
         send_to_discord(summary)
         print("通知が送信されました。")
     except Exception as e:
