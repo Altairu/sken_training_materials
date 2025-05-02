@@ -31,7 +31,14 @@ def generate_summary(file_changes):
 # Discordに通知を送信
 def send_to_discord(summary):
     payload = {
-        "content": f"重要な変更が検出されました:\n{summary}"
+        "embeds": [
+            {
+                "title": "📝 Webサイトに変更がありました！",
+                "description": "このWebサイトの更新では、以下の変更が加えられました。\n\n" + summary,
+                "color": 5814783,
+                "url": "https://altairu.github.io/sken_training_materials/"
+            }
+        ]
     }
     response = requests.post(DISCORD_WEBHOOK_URL, json=payload)
     if response.status_code != 204:
