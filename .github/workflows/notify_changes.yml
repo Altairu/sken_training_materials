@@ -25,4 +25,5 @@ jobs:
 
       - name: Run notification script
         env:
-          DISCORD_WEBHOOK_URL: ${{ sec
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python notify_changes.py
