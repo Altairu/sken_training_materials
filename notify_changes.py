@@ -32,7 +32,8 @@ def send_to_discord(commit_message):
                 {
                     "title": "📝 Webサイトに重要な変更がありました！",
                     "description": f"{commit_message}\n\nwikiURL: [こちらをクリック](https://altairu.github.io/sken_training_materials/)",
-                    "color": 5814783
+                    "color": 5814783,
+                    "url": "https://altairu.github.io/sken_training_materials/",
                 }
             ]
         }
