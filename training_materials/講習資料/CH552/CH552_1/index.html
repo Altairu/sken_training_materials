@@ -1415,10 +1415,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="開発環境を整える">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ドライバー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arduinoide" class="md-nav__link">
+    <span class="md-ellipsis">
+      ArduinoIDE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       ボード設定とオプション
     </span>
@@ -1427,7 +1451,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       プログラムの書き込み方法
     </span>
@@ -1436,7 +1460,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       サンプルコード
     </span>
@@ -1445,7 +1469,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       プログラミング
     </span>
@@ -1884,10 +1908,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="開発環境を整える">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ドライバー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arduinoide" class="md-nav__link">
+    <span class="md-ellipsis">
+      ArduinoIDE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       ボード設定とオプション
     </span>
@@ -1896,7 +1944,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       プログラムの書き込み方法
     </span>
@@ -1905,7 +1953,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       サンプルコード
     </span>
@@ -1914,7 +1962,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       プログラミング
     </span>
@@ -1943,6 +1991,18 @@
 
 <h1 id="ch552-arduino">CH552で始める Arduino スタイル開発ガイド</h1>
 <h2 id="_1">開発環境を整える</h2>
+<h3 id="_2">ドライバー</h3>
+<p>PCにドライバーを入れていきます．</p>
+<p><a href="https://www.wch.cn/download/file?id=418">こちら</a>でZIPファイルをダウンロードして，
+展開してください．</p>
+<p><img alt="alt text" src="../image.png" /></p>
+<p>すると，WCH-LinkUtility.exeをダブルクリックで実行します．
+すると以下のような画面が出ると思います．
+ひらいたら，右上のバツ印で閉じてもらって大丈夫です．</p>
+<p>このとき，いくつか聞かれますが「はい」を選択しておいてください．
+自動的にドライバーがPCに入ります．</p>
+<p><img alt="alt text" src="../image-1.png" /></p>
+<h3 id="arduinoide">ArduinoIDE</h3>
 <p>CH552をArduino開発環境で扱うには、少し準備が必要です。<br />
 まずArduino IDEをインストールし、「ファイル」→「基本設定」を開きます。<br />
 「追加のボードマネージャのURL」欄に次のURLを追加してください。</p>
@@ -1955,27 +2015,17 @@
 <p>設定を保存したら、「ツール」→「ボード」→「ボードマネージャ」を開きます。<br />
 検索欄に「CH55xduino」と入力し、表示されたパッケージをインストールしましょう。</p>
 <p>これでCH552がArduino IDE上で使えるようになります。</p>
-<p>次に，PCにドライバーを入れていきます．</p>
-<p><a href="https://www.wch.cn/download/file?id=418">こちら</a>でZIPファイルをダウンロードして，
-展開してください．</p>
-<p><img alt="alt text" src="../image.png" /></p>
-<p>すると，WCH-LinkUtility.exeをダブルクリックで実行します．
-すると以下のような画面が出ると思います．
-ひらいたら，右上のバツ印で閉じてもらって大丈夫です．</p>
-<p>このとき，いくつか聞かれますが「はい」を選択しておいてください．
-自動的にドライバーがPCに入ります．</p>
-<p><img alt="alt text" src="../image-1.png" /></p>
-<h2 id="_2">ボード設定とオプション</h2>
+<h2 id="_3">ボード設定とオプション</h2>
 <p>ボードの種類は「CH552 Board」を選びます。<br />
 特別な事情がない限り、他の設定はデフォルトのままで問題ありません。</p>
 <p>通常はUSB経由でプログラムを書き込んだりシリアル通信したりするので、通信モードは「Default CDC」を選びます。<br />
 もしCH552のHID機能（USBキーボードやマウスエミュレーション）を使いたい場合は、「USER CODE w/ 148B USB ram」などに設定して、USB用にRAMを確保しましょう。</p>
-<h2 id="_3">プログラムの書き込み方法</h2>
+<h2 id="_4">プログラムの書き込み方法</h2>
 <p>CH552は直接パソコンと接続します。<br />
 特別な書き込み器は必要ありません。</p>
 <p>書き込みの際、基板のSWを導通させてブートローダーモードに切り替えます。Arduino IDEからプログラムを書き込むと、自動的に転送が始まります。<br />
 書き込みエラーが出た場合は、USBドライバが正しくインストールされているか、ケーブルがデータ通信用かどうかを確認してみましょう。</p>
-<h2 id="_4">サンプルコード</h2>
+<h2 id="_5">サンプルコード</h2>
 <p>ここでは、LEDを点滅させるプログラムを作成します。<br />
 以下のコードをArduino IDEに入力し、CH552に書き込んでみましょう。</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define LED_BUILTIN 15 </span><span class="c1">// P1.5に接続されたLEDを使う</span>
@@ -1993,7 +2043,7 @@
 </code></pre></div>
 <p>このプログラムは、CH552のP1.5ピンに接続されたLEDを500ミリ秒ごとに点滅させます。<br />
 Arduino標準の<code>pinMode()</code>、<code>digitalWrite()</code>、<code>delay()</code>を使っているため、ほかのArduinoボードと同じ感覚で開発できます。</p>
-<h2 id="_5">プログラミング</h2>
+<h2 id="_6">プログラミング</h2>
 <p>では外部のLEDを動かしてみましょう．
 ピンはP3.2,p1.4を使います．</p>
 <ul>

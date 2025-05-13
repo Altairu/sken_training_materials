@@ -1888,20 +1888,20 @@
 </ul>
 <hr />
 <p>サービスノード例
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">airobot_interfaces.srv</span><span class="w"> </span><span class="kn">import</span> <span class="n">StringCommand</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span> <span class="nn">airobot_interfaces.srv</span> <span class="kn">import</span> <span class="n">StringCommand</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">BringmeService</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>  <span class="c1"># ハッピーサービスクラス</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コンストラクタ</span>
+<span class="k">class</span> <span class="nc">BringmeService</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>  <span class="c1"># ハッピーサービスクラス</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コンストラクタ</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;bringme_service&#39;</span><span class="p">)</span>
         <span class="c1"># サービスの生成（サービス型，サービス名, コールバック関数)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">service</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_service</span><span class="p">(</span>
             <span class="n">StringCommand</span><span class="p">,</span> <span class="s1">&#39;command&#39;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">food</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;candy&#39;</span><span class="p">]</span>   
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>  <span class="c1"># コールバック関数</span>
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>  <span class="c1"># コールバック関数</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">food</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">command</span><span class="p">:</span>
@@ -1911,7 +1911,7 @@
         <span class="k">return</span> <span class="n">response</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>  <span class="c1"># main関数</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>  <span class="c1"># main関数</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
     <span class="n">node</span> <span class="o">=</span> <span class="n">BringmeService</span><span class="p">()</span>
     <span class="k">try</span><span class="p">:</span>
@@ -1941,13 +1941,13 @@
 </ul>
 <hr />
 <p>クライアントノード例
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">airobot_interfaces.srv</span><span class="w"> </span><span class="kn">import</span> <span class="n">StringCommand</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span> <span class="nn">airobot_interfaces.srv</span> <span class="kn">import</span> <span class="n">StringCommand</span>
 
 
-<span class="k">class</span><span class="w"> </span><span class="nc">BringmeClient</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">BringmeClient</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;bringme_client_node&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_client</span><span class="p">(</span><span class="n">StringCommand</span><span class="p">,</span> <span class="s1">&#39;command&#39;</span><span class="p">)</span> <span class="c1"># クライアントの生成</span>
         <span class="c1"># サービスが利用できるまで待機</span>
@@ -1955,12 +1955,12 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;サービスは利用できません．待機中...&#39;</span><span class="p">)</span>        
         <span class="bp">self</span><span class="o">.</span><span class="n">request</span> <span class="o">=</span> <span class="n">StringCommand</span><span class="o">.</span><span class="n">Request</span><span class="p">()</span>  <span class="c1"># リクエストのインスタンス生成</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">send_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">send_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">order</span>  <span class="c1"># リクエストに値の代入   </span>
         <span class="bp">self</span><span class="o">.</span><span class="n">future</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">call_async</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">)</span> <span class="c1"># サービスのリクエスト</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
     <span class="n">node</span> <span class="o">=</span> <span class="n">BringmeClient</span><span class="p">()</span>
     <span class="n">order</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;何を取ってきますか：&#39;</span><span class="p">)</span>
