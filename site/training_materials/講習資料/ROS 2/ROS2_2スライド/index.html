@@ -1840,8 +1840,8 @@
 <hr />
 <h1 id="_2">トピック通信プログラムの作り方</h1>
 <p>パブリッシャを使ったクラスの一般的な書き方
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">パブリッシャのクラスの名前</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>  
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コンストラクタ</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">パブリッシャのクラスの名前</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>  
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コンストラクタ</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;ノード名&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">メッセージ型</span><span class="p">,</span> <span class="n">トピック名</span><span class="p">,</span> <span class="n">通信品質</span><span class="p">)</span>   
         <span class="c1"># 1.パブリッシャの生成</span>
@@ -1853,7 +1853,7 @@
         <span class="c1"># 一定周期でパブリッシュする必要がなければタイマ不要</span>
         <span class="c1"># その他の必要な処理を書く</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コールバック関数</span>
+    <span class="k">def</span> <span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コールバック関数</span>
         <span class="c1">#メッセージに値を代入するなど</span>
         <span class="c1">#3.パブリッシュ</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">メッセージ</span><span class="p">)</span>
@@ -1872,19 +1872,19 @@ ros2 pkg create --build-type ament_python --node-name topic_publisher_node topic
 </code></pre></div></p>
 <hr />
 <p>topic_publisher_node.py
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>                         <span class="c1"># ROS2のPythonモジュール</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>          <span class="c1"># rclpy.nodeモジュールからNodeクラスをインポート</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span>      <span class="c1"># std_msgs.msgモジュールからStringクラスをインポート</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">rclpy</span>                         <span class="c1"># ROS2のPythonモジュール</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>          <span class="c1"># rclpy.nodeモジュールからNodeクラスをインポート</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>      <span class="c1"># std_msgs.msgモジュールからStringクラスをインポート</span>
 
 
-<span class="k">class</span><span class="w"> </span><span class="nc">hazimetePublisher</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>  <span class="c1"># &quot;Happy World&quot;とパブリッシュ並びに表示するクラス</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コンストラクタ</span>
+<span class="k">class</span> <span class="nc">hazimetePublisher</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>  <span class="c1"># &quot;Happy World&quot;とパブリッシュ並びに表示するクラス</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コンストラクタ</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;topic_publisher_node&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;topic&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>   <span class="c1"># パブリッシャの生成</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer_callback</span><span class="p">)</span>  <span class="c1"># タイマーの生成</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="mi">10</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コールバック関数</span>
+    <span class="k">def</span> <span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コールバック関数</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;アルタイル</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span>
@@ -1915,8 +1915,8 @@ DEBUG,INFO,WARN,ERROR,FATALとレベルが高くなる
 <hr />
 <h1 id="_4">トピック通信プログラムの作り方</h1>
 <p>サブスクライバを使ったクラスの書き方
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">サブスクライバのクラス名</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コンストラクタ</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">サブスクライバのクラス名</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コンストラクタ</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;ノード名&#39;</span><span class="p">)</span>
         <span class="c1"># 1.サブスクライバの生成</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">メッセージ型</span><span class="p">,</span>
@@ -1928,25 +1928,25 @@ DEBUG,INFO,WARN,ERROR,FATALとレベルが高くなる
 　　<span class="c1"># 2.コールバックの定義</span>
 　　<span class="c1"># 新しい通信が届くとrclpy.spin()がコールバック呼び出し</span>
    <span class="c1"># メッセージを引数として取得可能</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>  <span class="c1"># コールバック関数</span>
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>  <span class="c1"># コールバック関数</span>
     　　<span class="c1"># msgを使った処理</span>
 </code></pre></div></p>
 <hr />
 <p>topic_subscriber_node.py
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>                         <span class="c1"># ROS2のPythonモジュール</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>          <span class="c1"># rclpy.nodeモジュールからNodeクラスをインポート</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span>      <span class="c1"># std_msgs.msgモジュールからStringクラスをインポート</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">rclpy</span>                         <span class="c1"># ROS2のPythonモジュール</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>          <span class="c1"># rclpy.nodeモジュールからNodeクラスをインポート</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>      <span class="c1"># std_msgs.msgモジュールからStringクラスをインポート</span>
 
 
 <span class="c1"># Sring型メッセージをサブスクライブして端末に表示するだけの簡単なクラス</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">hazimeteSubscriber</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コンストラクタ</span>
+<span class="k">class</span> <span class="nc">hazimeteSubscriber</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># コンストラクタ</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;topic_subscriber_node&#39;</span><span class="p">)</span>
         <span class="c1"># サブスクライバの生成</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">String</span><span class="p">,</span>
                                             <span class="s1">&#39;topic&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>  <span class="c1"># コールバック関数</span>
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>  <span class="c1"># コールバック関数</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;サブスクライブ: </span><span class="si">{</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></div></p>
 <hr />
@@ -1984,13 +1984,13 @@ topic_subscriber_node.pyでインポートしたモジュールを追加</p>
 ~/hazimete$ 
 </code></pre></div>
 <hr />
-<h2 id="import-sys-import-rclpy-from-rclpyexecutors-import-externalshutdownexception-from-rclpynode-import-node-from-std_msgsmsg-import-string-int32-class-hszimetepubsubnode-def-__init__self-super__init__hazimete_pub_sub-selfpub-selfcreate_publisherstring-hmazimete_msg-10-selfsub-selfcreate_subscriptionint32-number-selfcallback-10-selfhappy_actions-1-2-3-4-5-6-1-7-8-9-10-def-callbackself-sub_msg-pub_msg-string-selfget_loggerinfofsub_msgdata-pub_msgdata-selfhappy_actionssub_msgdata-10-1-selfpubpublishpub_msg-selfget_loggerinfofpub_msgdata-def-main-rclpyinit-node-hszimetepubsub-try-rclpyspinnode-except-keyboardinterrupt-pass-except-externalshutdownexception-sysexit1-finally-rclpytry_shutdown"><div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.executors</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExternalShutdownException</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span><span class="p">,</span> <span class="n">Int32</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">hszimetePubSub</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<h2 id="import-sys-import-rclpy-from-rclpyexecutors-import-externalshutdownexception-from-rclpynode-import-node-from-std_msgsmsg-import-string-int32-class-hszimetepubsubnode-def-__init__self-super__init__hazimete_pub_sub-selfpub-selfcreate_publisherstring-hmazimete_msg-10-selfsub-selfcreate_subscriptionint32-number-selfcallback-10-selfhappy_actions-1-2-3-4-5-6-1-7-8-9-10-def-callbackself-sub_msg-pub_msg-string-selfget_loggerinfofsub_msgdata-pub_msgdata-selfhappy_actionssub_msgdata-10-1-selfpubpublishpub_msg-selfget_loggerinfofpub_msgdata-def-main-rclpyinit-node-hszimetepubsub-try-rclpyspinnode-except-keyboardinterrupt-pass-except-externalshutdownexception-sysexit1-finally-rclpytry_shutdown"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.executors</span> <span class="kn">import</span> <span class="n">ExternalShutdownException</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span><span class="p">,</span> <span class="n">Int32</span>
+<span class="k">class</span> <span class="nc">hszimetePubSub</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;hazimete_pub_sub&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;hmazimete_msg&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">Int32</span><span class="p">,</span> <span class="s1">&#39;number&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -2005,13 +2005,13 @@ topic_subscriber_node.pyでインポートしたモジュールを追加</p>
             <span class="mi">8</span><span class="p">:</span> <span class="s1">&#39;物事の良い面を見ます．&#39;</span><span class="p">,</span>
             <span class="mi">9</span><span class="p">:</span> <span class="s1">&#39;人は皆違っていることを受け入れます．&#39;</span><span class="p">,</span>
             <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;皆で協力して世界を良くします．&#39;</span><span class="p">})</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_msg</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_msg</span><span class="p">):</span>
         <span class="n">pub_msg</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;サブスクライブ:</span><span class="si">{</span><span class="n">sub_msg</span><span class="o">.</span><span class="n">data</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
         <span class="n">pub_msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">happy_actions</span><span class="p">[</span><span class="n">sub_msg</span><span class="o">.</span><span class="n">data</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">pub_msg</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;パブリッシュ:</span><span class="si">{</span><span class="n">pub_msg</span><span class="o">.</span><span class="n">data</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
     <span class="n">node</span> <span class="o">=</span> <span class="n">hszimetePubSub</span><span class="p">()</span>
     <span class="k">try</span><span class="p">:</span>

@@ -3551,14 +3551,14 @@
 <h3 id="websocket-fastapi">WebSocket サーバーの基本実装（FastAPI）</h3>
 <p>以下のコードは，FastAPI を使用して WebSocket サーバーを作成し，クライアントとの通信を管理する．</p>
 <h4 id="web_socket_nodepy"><strong><code>web_socket_node.py</code>（通信ノード）</strong></h4>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span><span class="p">,</span> <span class="n">Float32MultiArray</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">WebSocket</span> <span class="k">as</span> <span class="n">FastAPIWebSocket</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">fastapi.responses</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTMLResponse</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">uvicorn</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span><span class="p">,</span> <span class="n">Float32MultiArray</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">WebSocket</span> <span class="k">as</span> <span class="n">FastAPIWebSocket</span>
+<span class="kn">from</span> <span class="nn">fastapi.responses</span> <span class="kn">import</span> <span class="n">HTMLResponse</span>
+<span class="kn">import</span> <span class="nn">uvicorn</span>
+<span class="kn">import</span> <span class="nn">os</span>
 
 <span class="c1"># IPアドレスとポート設定</span>
 <span class="n">IP_ADDRESS</span> <span class="o">=</span> <span class="s1">&#39;192.168.98.216&#39;</span>
@@ -3576,19 +3576,19 @@
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">UI_PATH</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">html</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">WebSocketNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">WebSocketNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;web_socket_node&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">send_data</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;web_socket_pub&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">Float32MultiArray</span><span class="p">,</span> <span class="s1">&#39;estimated_position&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
         <span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
-        <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">():</span>
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">get</span><span class="p">():</span>
             <span class="k">return</span> <span class="n">HTMLResponse</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
 
         <span class="nd">@app</span><span class="o">.</span><span class="n">websocket</span><span class="p">(</span><span class="s1">&#39;/ws&#39;</span><span class="p">)</span>
-        <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">websocket_endpoint</span><span class="p">(</span><span class="n">websocket</span><span class="p">:</span> <span class="n">FastAPIWebSocket</span><span class="p">):</span>
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">websocket_endpoint</span><span class="p">(</span><span class="n">websocket</span><span class="p">:</span> <span class="n">FastAPIWebSocket</span><span class="p">):</span>
             <span class="k">await</span> <span class="n">websocket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -3602,19 +3602,19 @@
             <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;WebSocket error: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_msg</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_msg</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">send_data</span> <span class="o">=</span> <span class="n">sub_msg</span><span class="o">.</span><span class="n">data</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">run_ros2</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">run_ros2</span><span class="p">():</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
     <span class="n">node</span> <span class="o">=</span> <span class="n">WebSocketNode</span><span class="p">()</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">run_fastapi</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">run_fastapi</span><span class="p">():</span>
     <span class="n">uvicorn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="n">IP_ADDRESS</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">PORT</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">ros2_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">run_ros2</span><span class="p">)</span>
     <span class="n">ros2_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
@@ -3836,11 +3836,11 @@ d = \sqrt{1000^2 + 500^2} = 1118.03 \text{ mm}
 以下に、位置制御に対するPID制御の実装例を示す。<br />
 このPythonコードでは、現在のロボットの座標<span class="arithmatex">\((X, Y, \Theta)\)</span> と目標座標を入力として、PID制御を適用し、速度<span class="arithmatex">\(V_x, V_y, \omega\)</span> を出力する。</p>
 <h3 id="pidpython"><strong>位置制御のためのPID制御（Python実装例）</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">math</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">PIDController</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Kp</span><span class="p">,</span> <span class="n">Ki</span><span class="p">,</span> <span class="n">Kd</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">PIDController</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Kp</span><span class="p">,</span> <span class="n">Ki</span><span class="p">,</span> <span class="n">Kd</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        PID制御の初期化</span>
 <span class="sd">        Kp: 比例ゲイン</span>
@@ -3856,7 +3856,7 @@ d = \sqrt{1000^2 + 500^2} = 1118.03 \text{ mm}
         <span class="bp">self</span><span class="o">.</span><span class="n">prev_error</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">integral</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        PID制御計算</span>
 <span class="sd">        error: 現在の偏差</span>
@@ -3867,8 +3867,8 @@ d = \sqrt{1000^2 + 500^2} = 1118.03 \text{ mm}
         <span class="bp">self</span><span class="o">.</span><span class="n">prev_error</span> <span class="o">=</span> <span class="n">error</span>
         <span class="k">return</span> <span class="n">output</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">PositionPIDController</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Kp_linear</span><span class="p">,</span> <span class="n">Ki_linear</span><span class="p">,</span> <span class="n">Kd_linear</span><span class="p">,</span> <span class="n">Kp_angular</span><span class="p">,</span> <span class="n">Ki_angular</span><span class="p">,</span> <span class="n">Kd_angular</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">PositionPIDController</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Kp_linear</span><span class="p">,</span> <span class="n">Ki_linear</span><span class="p">,</span> <span class="n">Kd_linear</span><span class="p">,</span> <span class="n">Kp_angular</span><span class="p">,</span> <span class="n">Ki_angular</span><span class="p">,</span> <span class="n">Kd_angular</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        位置制御のためのPID制御器</span>
 <span class="sd">        Kp_linear, Ki_linear, Kd_linear: 並進方向（X, Y）のPIDゲイン</span>
@@ -3880,7 +3880,7 @@ d = \sqrt{1000^2 + 500^2} = 1118.03 \text{ mm}
         <span class="bp">self</span><span class="o">.</span><span class="n">pid_theta</span> <span class="o">=</span> <span class="n">PIDController</span><span class="p">(</span><span class="n">Kp_angular</span><span class="p">,</span> <span class="n">Ki_angular</span><span class="p">,</span> <span class="n">Kd_angular</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">compute_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current_pos</span><span class="p">,</span> <span class="n">target_pos</span><span class="p">,</span> <span class="n">max_speed</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">max_omega</span><span class="o">=</span><span class="mi">30</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">compute_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current_pos</span><span class="p">,</span> <span class="n">target_pos</span><span class="p">,</span> <span class="n">max_speed</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">max_omega</span><span class="o">=</span><span class="mi">30</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        現在位置から目標位置への制御を計算</span>
 <span class="sd">        current_pos: [x, y, theta] 現在の座標（mm, mm, deg）</span>
@@ -4009,8 +4009,8 @@ WebSocket を通じて送信された指令を受け取り，ロボットの移�
 </tbody>
 </table>
 <h3 id="_18"><strong>初期化処理</strong></h3>
-<p><div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ControllerNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ControllerNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;controller_node&#39;</span><span class="p">)</span>
 </code></pre></div>
 <code>ControllerNode</code> クラスを ROS2 ノードとして初期化する．<br />
@@ -4052,7 +4052,7 @@ ROS2 のノードとして機能するために <code>super().__init__('controll
 モード <code>0</code>（通常モード）と <code>1</code>（X軸反転モード）で目標座標を切り替える．<br />
 モード <code>1</code> では <code>X</code> 座標が負の値となり，左右対称の座標系となる．  </p>
 <h3 id="websocket_2"><strong>WebSocket からのデータ受信</strong></h3>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">listener_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">listener_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">13</span><span class="p">:</span>
@@ -4110,7 +4110,7 @@ WebSocket から送信されるデータは，カンマ区切りの文字列と�
 - どのボタンが押されたかをチェックし，対応する目標地点 <code>target</code> を取得
 - <code>move_to_target(target, mode, 0)</code> を呼び出し，目標地点に向けて移動を開始</p>
 <h3 id="_23"><strong>目標地点への移動の計算</strong></h3>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">move_to_target</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">team_color</span><span class="p">,</span> <span class="n">action_number</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">move_to_target</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">team_color</span><span class="p">,</span> <span class="n">action_number</span><span class="p">):</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">speedmode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_speed</span> <span class="o">=</span> <span class="mi">500</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_accel</span> <span class="o">=</span> <span class="mi">500</span>
@@ -4144,7 +4144,7 @@ WebSocket から送信されるデータは，カンマ区切りの文字列と�
 - 180°を超えた場合は逆回転を行う
 - 角速度 <code>omega</code> は <code>max_angular_speed</code> を超えないよう制限</p>
 <h3 id="_26"><strong>速度指令の送信</strong></h3>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">send_velocity_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Vx</span><span class="p">,</span> <span class="n">Vy</span><span class="p">,</span> <span class="n">omega</span><span class="p">,</span> <span class="n">team_color</span><span class="p">,</span> <span class="n">action_number</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">send_velocity_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Vx</span><span class="p">,</span> <span class="n">Vy</span><span class="p">,</span> <span class="n">omega</span><span class="p">,</span> <span class="n">team_color</span><span class="p">,</span> <span class="n">action_number</span><span class="p">):</span>
     <span class="n">msg</span> <span class="o">=</span> <span class="n">Float32MultiArray</span><span class="p">()</span>
     <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">Vx</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">Vy</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">omega</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">team_color</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">action_number</span><span class="p">)]</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">publisher_</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -4191,15 +4191,15 @@ WebSocket から送信されるデータは，カンマ区切りの文字列と�
 <h3 id="1-pc"><strong>(1) PC からマイコンへデータ送信</strong></h3>
 <p>ROS2 の <code>serial_send_node</code> からマイコンへデータを送る．</p>
 <h4 id="python"><strong>Python によるシリアル通信の実装（送信側）</strong></h4>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">serial</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">serial</span>
+<span class="kn">import</span> <span class="nn">struct</span>
 
 <span class="c1"># シリアルポート設定</span>
 <span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="s1">&#39;/dev/ttyACM0&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">HEADER</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xA5\xA5</span><span class="s1">&#39;</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">send_data_to_mcu</span><span class="p">(</span><span class="n">command_number</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">Vx</span><span class="p">,</span> <span class="n">Vy</span><span class="p">,</span> <span class="n">omega</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">send_data_to_mcu</span><span class="p">(</span><span class="n">command_number</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">Vx</span><span class="p">,</span> <span class="n">Vy</span><span class="p">,</span> <span class="n">omega</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;MDD0にデータを送信する関数&quot;&quot;&quot;</span>
     <span class="c1"># 速度の範囲制限（符号付き16ビット整数）</span>
     <span class="n">Vx</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">32768</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">32767</span><span class="p">,</span> <span class="n">Vx</span><span class="p">))</span>
@@ -4218,7 +4218,7 @@ WebSocket から送信されるデータは，カンマ区切りの文字列と�
 </code></pre></div>
 <h3 id="2-pc"><strong>(2) マイコンから PC へデータ受信</strong></h3>
 <h4 id="python_1"><strong>Python によるシリアル通信の実装（受信側）</strong></h4>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">receive_data_from_mcu</span><span class="p">():</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">receive_data_from_mcu</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;MDD0からデータを受信する関数&quot;&quot;&quot;</span>
     <span class="n">buffer</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span>
 
@@ -4262,14 +4262,14 @@ WebSocket から送信されるデータは，カンマ区切りの文字列と�
 </tbody>
 </table>
 <h3 id="serial_send_nodepc"><strong><code>serial_send_node</code>（PC → マイコン）</strong></h3>
-<p><div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Float32MultiArray</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">serial</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
+<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">Float32MultiArray</span>
+<span class="kn">import</span> <span class="nn">serial</span>
+<span class="kn">import</span> <span class="nn">struct</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">SerialSendNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">SerialSendNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;serial_send_node&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">subscription</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
             <span class="n">Float32MultiArray</span><span class="p">,</span>
@@ -4278,7 +4278,7 @@ WebSocket から送信されるデータは，カンマ区切りの文字列と�
             <span class="mi">10</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="s1">&#39;/dev/ttyACM0&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">listener_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">listener_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
         <span class="n">command_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
         <span class="n">mode</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
         <span class="n">Vx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -4288,12 +4288,12 @@ WebSocket から送信されるデータは，カンマ区切りの文字列と�
         <span class="c1"># データ送信</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">command_number</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">Vx</span><span class="p">,</span> <span class="n">Vy</span><span class="p">,</span> <span class="n">omega</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">send_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command_number</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">Vx</span><span class="p">,</span> <span class="n">Vy</span><span class="p">,</span> <span class="n">omega</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">send_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command_number</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">Vx</span><span class="p">,</span> <span class="n">Vy</span><span class="p">,</span> <span class="n">omega</span><span class="p">):</span>
         <span class="n">HEADER</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xA5\xA5</span><span class="s1">&#39;</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;BBhhh&#39;</span><span class="p">,</span> <span class="n">command_number</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">Vx</span><span class="p">,</span> <span class="n">Vy</span><span class="p">,</span> <span class="n">omega</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">HEADER</span> <span class="o">+</span> <span class="n">data</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
     <span class="n">node</span> <span class="o">=</span> <span class="n">SerialSendNode</span><span class="p">()</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
@@ -4306,14 +4306,14 @@ WebSocket から送信されるデータは，カンマ区切りの文字列と�
 - <code>cmd_vel</code> トピックを購読し，マイコンへシリアル通信で送信
 - <code>send_data</code> 関数でバイナリデータに変換して送信</p>
 <h3 id="serial_read_node-pc"><strong><code>serial_read_node</code>（マイコン → PC）</strong></h3>
-<p><div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">SerialReadNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SerialReadNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;serial_read_node&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">publisher_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">Float32MultiArray</span><span class="p">,</span> <span class="s1">&#39;robot_position&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="s1">&#39;/dev/ttyACM0&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_serial_data</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">read_serial_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">read_serial_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">buffer</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span>
         <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">ser</span><span class="o">.</span><span class="n">in_waiting</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">buffer</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ser</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -4327,7 +4327,7 @@ WebSocket から送信されるデータは，カンマ区切りの文字列と�
                     <span class="bp">self</span><span class="o">.</span><span class="n">publisher_</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
                 <span class="n">buffer</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
     <span class="n">node</span> <span class="o">=</span> <span class="n">SerialReadNode</span><span class="p">()</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
@@ -4362,13 +4362,13 @@ d = \sqrt{(x_t - x_0)^2 + (y_t - y_0)^2}
 \theta = \tan^{-1} \left( \frac{y_t - y_0}{x_t - x_0} \right)
 \]</div>
 <h4 id="ros2_3"><strong>ROS2 ノード実装（自己位置推定）</strong></h4>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">std_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Float32MultiArray</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pyrealsense2</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rs</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">Float32MultiArray</span>
+<span class="kn">import</span> <span class="nn">pyrealsense2</span> <span class="k">as</span> <span class="nn">rs</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">RealSensePositionNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">RealSensePositionNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;realsense_position_node&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">publisher_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">Float32MultiArray</span><span class="p">,</span> <span class="s1">&#39;realsense_position&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
@@ -4379,7 +4379,7 @@ d = \sqrt{(x_t - x_0)^2 + (y_t - y_0)^2}
 
         <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_position</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">update_position</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update_position</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">frames</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pipe</span><span class="o">.</span><span class="n">wait_for_frames</span><span class="p">()</span>
         <span class="n">pose</span> <span class="o">=</span> <span class="n">frames</span><span class="o">.</span><span class="n">get_pose_frame</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">pose</span><span class="p">:</span>
@@ -4390,11 +4390,11 @@ d = \sqrt{(x_t - x_0)^2 + (y_t - y_0)^2}
             <span class="bp">self</span><span class="o">.</span><span class="n">publisher_</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RealSense Position: X=</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">, Y=</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">, Theta=</span><span class="si">{</span><span class="n">theta</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">destroy_node</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">destroy_node</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pipe</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
     <span class="n">node</span> <span class="o">=</span> <span class="n">RealSensePositionNode</span><span class="p">()</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
@@ -4408,9 +4408,9 @@ d = \sqrt{(x_t - x_0)^2 + (y_t - y_0)^2}
 <p>D435iは，<strong>ステレオカメラを用いた深度測定</strong> と <strong>IMUを利用した動き補正</strong> が可能なカメラである．<br />
 これを利用して，障害物の有無や人物の検出を行う．</p>
 <h4 id="ros2_4"><strong>ROS2 ノード実装（深度データ取得）</strong></h4>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pyrealsense2</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rs</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyrealsense2</span> <span class="k">as</span> <span class="nn">rs</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
 
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">pipeline</span><span class="p">()</span>
 <span class="n">config</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">config</span><span class="p">()</span>
@@ -4442,8 +4442,8 @@ d = \sqrt{(x_t - x_0)^2 + (y_t - y_0)^2}
 <p>物体認識には <strong>YOLO（You Only Look Once）</strong> を使用する．<br />
 YOLO は高速かつ高精度なリアルタイム物体検出が可能であり，ロボットが人や障害物を認識するために利用する．</p>
 <h4 id="ros2_5"><strong>ROS2 ノード実装例</strong></h4>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
 
 <span class="c1"># YOLOモデルをロード</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">hub</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;/home/altair/Roboware/ultralytics/yolov5&#39;</span><span class="p">,</span> <span class="s1">&#39;custom&#39;</span><span class="p">,</span>
