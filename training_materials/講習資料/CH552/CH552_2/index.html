@@ -1530,6 +1530,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      講習テストコード
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="講習テストコード">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用ピン
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      動作説明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2030,6 +2063,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      講習テストコード
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="講習テストコード">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用ピン
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      動作説明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2060,18 +2126,22 @@
 <li>P3.3ピンにプルアップ抵抗（10kΩ程度）を接続します。</li>
 </ul>
 <h3 id="_3">サンプルコード</h3>
-<p>以下のコードは、ボタンが押されたときにシリアルモニタにメッセージを表示します。</p>
+<p>以下のコードは、ボタンが押されたときにLEDをONにする．</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define BUTTON_PIN 33 </span><span class="c1">// P3.3に接続されたボタン</span>
+<span class="cp">#define LED 15</span>
+
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">BUTTON_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"> </span><span class="c1">// ボタンピンをプルアップ入力モードに設定</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w">               </span><span class="c1">// シリアル通信を初期化</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"> </span><span class="c1">// LEDを出力モードに</span>
 <span class="p">}</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BUTTON_PIN</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// ボタンが押された場合</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Button Pressed!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED 点灯</span>
 <span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span><span class="w"> </span><span class="c1">// チャタリング防止のための遅延</span>
+<span class="w">  </span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="c1">//そうでないとき</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED 消灯</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -2147,6 +2217,115 @@ CH552ではPWM信号を使用してサーボモーターを動かします。</p
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 最小角度を制限</span>
 <span class="w">    </span><span class="n">myServo</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">angle</span><span class="p">);</span>
 <span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span><span class="w"> </span><span class="c1">// チャタリング防止</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="_10">講習テストコード</h2>
+<ul>
+<li><strong>ボタン0</strong>：全LEDを点灯</li>
+<li><strong>ボタン1</strong>：全LEDを消灯</li>
+<li><strong>ボタン2</strong>：LED0・LED2を点灯、LED1を消灯</li>
+</ul>
+<h4 id="_11">使用ピン</h4>
+<table>
+<thead>
+<tr>
+<th>名前</th>
+<th>GPIO番号</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LED_BUILTIN0</code></td>
+<td>GPIO15</td>
+<td>LED出力1</td>
+</tr>
+<tr>
+<td><code>LED_BUILTIN1</code></td>
+<td>GPIO34</td>
+<td>LED出力2</td>
+</tr>
+<tr>
+<td><code>LED_BUILTIN2</code></td>
+<td>GPIO33</td>
+<td>LED出力3</td>
+</tr>
+<tr>
+<td><code>BUTTON_PIN0</code></td>
+<td>GPIO12</td>
+<td>ボタン入力1（全点灯）</td>
+</tr>
+<tr>
+<td><code>BUTTON_PIN1</code></td>
+<td>GPIO13</td>
+<td>ボタン入力2（全消灯）</td>
+</tr>
+<tr>
+<td><code>BUTTON_PIN2</code></td>
+<td>GPIO35</td>
+<td>ボタン入力3（一部点灯）</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">動作説明</h4>
+<ol>
+<li>
+<p><strong>初期化（setup関数）</strong></p>
+<ul>
+<li>LEDピンを出力モードに設定。</li>
+<li>ボタンピンを <code>INPUT_PULLUP</code> モードで入力に設定。</li>
+</ul>
+</li>
+<li>
+<p><strong>ループ処理（loop関数）</strong></p>
+<ul>
+<li>各ボタンの押下状態を <code>digitalRead()</code> で確認。</li>
+<li>条件に応じてLEDの点灯/消灯を <code>digitalWrite()</code> で制御。</li>
+<li>ボタンはプルアップ入力なので、押されているとき <code>LOW</code> になります。</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1">// LEDのピン番号を定義（LED_BUILTIN0〜2にそれぞれGPIO15, GPIO34, GPIO33を割り当て）</span>
+<span class="cp">#define LED_BUILTIN0 15</span>
+<span class="cp">#define LED_BUILTIN1 34 </span>
+<span class="cp">#define LED_BUILTIN2 33</span>
+
+<span class="c1">// ボタンのピン番号を定義（BUTTON_PIN0〜2にそれぞれGPIO12, GPIO13, GPIO35を割り当て）</span>
+<span class="cp">#define BUTTON_PIN0 12</span>
+<span class="cp">#define BUTTON_PIN1 13</span>
+<span class="cp">#define BUTTON_PIN2 35</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// LED用のGPIOピンを出力モードに設定</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_BUILTIN0</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED_BUILTIN0 を出力モードに</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_BUILTIN1</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED_BUILTIN1 を出力モードに</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_BUILTIN2</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED_BUILTIN2 を出力モードに</span>
+
+<span class="w">  </span><span class="c1">// ボタン用のGPIOピンを入力プルアップモードに設定（ボタンが押されたとき LOW になる）</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">BUTTON_PIN0</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"> </span><span class="c1">// BUTTON_PIN0 を入力（プルアップ）</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">BUTTON_PIN1</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"> </span><span class="c1">// BUTTON_PIN1 を入力（プルアップ）</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">BUTTON_PIN2</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"> </span><span class="c1">// BUTTON_PIN2 を入力（プルアップ）</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ボタン0が押されたとき（LOW）、すべてのLEDを点灯</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BUTTON_PIN0</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">){</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN0</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED0 点灯</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN1</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED1 点灯</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN2</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED2 点灯</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// ボタン1が押されたとき（LOW）、すべてのLEDを消灯</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BUTTON_PIN1</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">){</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN0</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// LED0 消灯</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN1</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// LED1 消灯</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN2</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// LED2 消灯</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// ボタン2が押されたとき（LOW）、LED0とLED2を点灯、LED1を消灯</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BUTTON_PIN2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">){</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN0</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED0 点灯</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN1</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// LED1 消灯</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN2</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED2 点灯</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>

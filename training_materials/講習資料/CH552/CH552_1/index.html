@@ -2045,15 +2045,15 @@
 Arduino標準の<code>pinMode()</code>、<code>digitalWrite()</code>、<code>delay()</code>を使っているため、ほかのArduinoボードと同じ感覚で開発できます。</p>
 <h2 id="_6">プログラミング</h2>
 <p>では外部のLEDを動かしてみましょう．
-ピンはP3.2,p1.4を使います．</p>
+ピンはP3.4,p3.3を使います．</p>
 <ul>
-<li>P3.2，P1.4ピンにLEDのアノード（長い脚）を接続します。</li>
+<li>P3.4，P3.3ピンにLEDのアノード（長い脚）を接続します。</li>
 <li>LEDのカソード（短い脚）は330Ω程度の抵抗を通してGNDに接続します。</li>
 </ul>
 <p>LEDを直接接続するとCH552に負荷がかかるため、必ず抵抗を入れるようにしましょう。</p>
 <p>以下のコードを使用して、P3.2とP1.4に接続された外部LEDを交互に点滅させるプログラムを作成します。</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#define LED1 32 </span><span class="c1">// P3.2に接続されたLED</span>
-<span class="cp">#define LED2 14 </span><span class="c1">// P1.4に接続されたLED</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#define LED1 34 </span><span class="c1">// P3.4に接続されたLED</span>
+<span class="cp">#define LED2 33 </span><span class="c1">// P3.3に接続されたLED</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED1</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED1を出力モードに設定</span>
@@ -2070,7 +2070,7 @@ Arduino標準の<code>pinMode()</code>、<code>digitalWrite()</code>、<code>del
 <span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w">               </span><span class="c1">// 500ミリ秒待機</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>このプログラムでは、P3.2とP1.4に接続されたLEDが交互に点滅します。<br />
+<p>このプログラムでは、P3.4とP3.3に接続されたLEDが交互に点滅します。<br />
 <code>digitalWrite()</code>関数を使用して、各ピンの出力を制御しています。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
