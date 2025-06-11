@@ -6,6 +6,7 @@ nav:
   - 機械班:
       - SolidEdge: 
           - SolidEdge1: training_materials/機械班/SolidEdge1.md
+          - SolidEdge2025: training_materials/機械班/SE2025.md
       - マシニングセンタ:
           - NVX5060: training_materials/機械班/マシニングセンタ/NVX5060.md
   - 電気班:
