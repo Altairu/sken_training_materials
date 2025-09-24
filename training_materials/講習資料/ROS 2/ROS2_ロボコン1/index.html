@@ -3602,7 +3602,8 @@
 <li><strong>IM920 の場合</strong></li>
 <li>電波法の関係上，通信速度に制限がある（長距離通信向けであり、リアルタイム性が求められるロボコンには不向き）．</li>
 </ul>
-<p>このため，WIFI を用いた通信を選択し，その実装として<strong>WebSocket</strong>を採用する．</p>
+<p>このため，WIFI を用いた通信を選択し，その実装として<strong>WebSocket</strong>を採用する．
+ROSには同じネットワークであればトピックを共有するという機能があるためPCtoPCであれば，WebSocketを実装しなくてもよい．</p>
 <h3 id="websocket">WebSocket のメリット</h3>
 <ul>
 <li><strong>リアルタイム通信</strong>：ロボットの操作に対し，低遅延で反応できる．</li>
