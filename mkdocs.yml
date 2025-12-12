@@ -46,6 +46,9 @@ nav:
         - CH552:
           - CH552_1: training_materials/講習資料/CH552/CH552_1.md
           - CH552_2: training_materials/講習資料/CH552/CH552_2.md
+    - AIコーディング:
+      - バイブコーディング: training_materials/講習資料/AIコーディング/バイブコーディング.md
+      - Gemini: training_materials/講習資料/AIコーディング/Gemini.md
     - 1年体験入部: training_materials/講習資料/1年体験入部/S-ken体験入部制御班Lちか.md
     - pid: training_materials/講習資料/pid/pid.md
     - ubuntu: training_materials/講習資料/ubuntu/ubuntu1.md
