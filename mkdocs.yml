@@ -34,6 +34,7 @@ nav:
         - 回路講習2: training_materials/講習資料/回路/回路講習2スライド.md
         - 回路講習3: training_materials/講習資料/回路/回路講習4.md
         - 回路講習4: training_materials/講習資料/回路/回路講習5.md
+        - モジュール: training_materials/講習資料/回路/モジュール.md
     - マイコン: 
         - SW4STM32: 
           - SystemWorkbench1: training_materials/講習資料/マイコンSW/マイコン1.md

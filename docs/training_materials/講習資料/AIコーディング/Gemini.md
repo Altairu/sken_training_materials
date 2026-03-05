@@ -279,3 +279,7 @@ int main(void)
 
 Pythonコードを見ると、受信だけでなく **ID: 0x150** で現在位置（`x, y, theta`）を受信しようとしています。
 もし現在位置を返す処理も実装する必要があれば、`sken_system.canTrancemit` を使って返信するコードを追加しましょうか？
+
+
+??? Note
+    著者:Shion Noguchi
