@@ -37,6 +37,8 @@ nav:
         - 回路講習4: training_materials/講習資料/回路/回路講習5.md
         
     - マイコン: 
+        - STM32CubeIDE:
+          - 環境構築: training_materials/講習資料/STM32CubeIDE/環境構築.md
         - SW4STM32: 
           - SystemWorkbench1: training_materials/講習資料/マイコンSW/マイコン1.md
           - SystemWorkbench2: training_materials/講習資料/マイコンSW/マイコン2.md
