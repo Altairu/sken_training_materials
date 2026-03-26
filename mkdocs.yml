@@ -38,7 +38,8 @@ nav:
         
     - マイコン: 
         - STM32CubeIDE:
-          - 環境構築: training_materials/講習資料/STM32CubeIDE/環境構築.md
+          - 環境構築: training_materials/講習資料/STM32CubeIDE/1/環境構築.md
+          - ライブラリ使い方: training_materials/講習資料/STM32CubeIDE/2/ライブラリ使い方.md
         - SW4STM32: 
           - SystemWorkbench1: training_materials/講習資料/マイコンSW/マイコン1.md
           - SystemWorkbench2: training_materials/講習資料/マイコンSW/マイコン2.md
