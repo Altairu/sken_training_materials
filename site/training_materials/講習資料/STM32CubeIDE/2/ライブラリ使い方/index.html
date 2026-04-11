@@ -5388,9 +5388,15 @@ screen<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span><span class="m
 
 <span class="c1">// 運動学インスタンスの初期化</span>
 <span class="n">Kinematics</span><span class="w"> </span><span class="n">kinematics</span><span class="p">;</span>
-<span class="n">kinematics</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OMNI_3</span><span class="p">;</span><span class="w">            </span><span class="c1">// モードを選択 (OMNI_3, OMNI_4, MEKANUM)</span>
-<span class="n">kinematics</span><span class="p">.</span><span class="n">robot_diameter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">150.0</span><span class="p">;</span><span class="w">   </span><span class="c1">// ロボットの直径 (mm)</span>
-<span class="n">kinematics</span><span class="p">.</span><span class="n">wheel_radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30.0</span><span class="p">;</span><span class="w">      </span><span class="c1">// ホイール半径 (mm)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">HAL_Init</span><span class="p">();</span>
+<span class="w">  </span><span class="n">SystemClock_Config</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">kinematics</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OMNI_3</span><span class="p">;</span><span class="w">            </span><span class="c1">// モードを選択 (OMNI_3, OMNI_4, MEKANUM)</span>
+<span class="w">  </span><span class="n">kinematics</span><span class="p">.</span><span class="n">robot_diameter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">150.0</span><span class="p">;</span><span class="w">   </span><span class="c1">// ロボットの直径 (mm)</span>
+<span class="w">  </span><span class="n">kinematics</span><span class="p">.</span><span class="n">wheel_radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30.0</span><span class="p">;</span><span class="w">      </span><span class="c1">// ホイール半径 (mm)</span>
 </code></pre></div>
 <h4 id="2_3">2. 目標ホイール速度の取得</h4>
 <p>ロボットの目標速度<code>Vx</code>, <code>Vy</code>, <code>ω</code>から各ホイールの速度を計算します。<code>Kinematics_GetTargetSpeeds</code>関数を呼び出し、個々のホイール速度を取得します。</p>
@@ -5414,21 +5420,24 @@ screen<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span><span class="m
 <h4 id="_16">使用例</h4>
 <p>PID制御を使用せずにオムニ３輪を制御する例。</p>
 <div class="highlight"><pre><span></span><code><span class="n">Kinematics</span><span class="w"> </span><span class="n">kinematics</span><span class="p">;</span>
-<span class="n">kinematics</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OMNI_3</span><span class="p">;</span>
-<span class="n">kinematics</span><span class="p">.</span><span class="n">robot_diameter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">150.0</span><span class="p">;</span>
-<span class="n">kinematics</span><span class="p">.</span><span class="n">wheel_radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30.0</span><span class="p">;</span>
 
 <span class="kt">float</span><span class="w"> </span><span class="n">speedFR</span><span class="p">,</span><span class="w"> </span><span class="n">speedFL</span><span class="p">,</span><span class="w"> </span><span class="n">speedBR</span><span class="p">;</span>
 <span class="kt">float</span><span class="w"> </span><span class="n">Vx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100.0</span><span class="p">;</span><span class="w">   </span><span class="c1">// 前方向速度</span>
 <span class="kt">float</span><span class="w"> </span><span class="n">Vy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50.0</span><span class="p">;</span><span class="w">    </span><span class="c1">// 横方向速度</span>
 <span class="kt">float</span><span class="w"> </span><span class="n">omega</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 回転速度</span>
 
-<span class="n">Kinematics_GetTargetSpeeds</span><span class="p">(</span><span class="o">&amp;</span><span class="n">kinematics</span><span class="p">,</span><span class="w"> </span><span class="n">Vx</span><span class="p">,</span><span class="w"> </span><span class="n">Vy</span><span class="p">,</span><span class="w"> </span><span class="n">omega</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">speedFR</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">speedFL</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">speedBR</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">kinematics</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OMNI_3</span><span class="p">;</span>
+<span class="w">  </span><span class="n">kinematics</span><span class="p">.</span><span class="n">robot_diameter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">150.0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">kinematics</span><span class="p">.</span><span class="n">wheel_radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30.0</span><span class="p">;</span>
 
-<span class="c1">// 各モーターに速度を設定</span>
-<span class="n">MotorDriver_setSpeed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">motorFR</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">speedFR</span><span class="p">);</span>
-<span class="n">MotorDriver_setSpeed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">motorFL</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">speedFL</span><span class="p">);</span>
-<span class="n">MotorDriver_setSpeed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">motorBR</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">speedBR</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Kinematics_GetTargetSpeeds</span><span class="p">(</span><span class="o">&amp;</span><span class="n">kinematics</span><span class="p">,</span><span class="w"> </span><span class="n">Vx</span><span class="p">,</span><span class="w"> </span><span class="n">Vy</span><span class="p">,</span><span class="w"> </span><span class="n">omega</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">speedFR</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">speedFL</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">speedBR</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// 各モーターに速度を設定</span>
+<span class="w">  </span><span class="n">MotorDriver_setSpeed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">motorFR</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">speedFR</span><span class="p">);</span>
+<span class="w">  </span><span class="n">MotorDriver_setSpeed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">motorFL</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">speedFL</span><span class="p">);</span>
+<span class="w">  </span><span class="n">MotorDriver_setSpeed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">motorBR</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">speedBR</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="_17">モータドライバ</h2>
 <p>この<code>motor_driver</code>ライブラリは、STM32マイコンを使用してDCモーターをPWM制御するためのライブラリです。タイマーのチャンネルを使用してモーターの正転と逆転、速度を制御することができます。</p>
