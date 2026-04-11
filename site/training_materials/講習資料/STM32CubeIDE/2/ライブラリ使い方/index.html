@@ -2320,6 +2320,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pid_setgainwithlimit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pid_setGainWithLimit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pid_setinvert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pid_setInvert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pid_control" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4513,6 +4535,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pid_setgainwithlimit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pid_setGainWithLimit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pid_setinvert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pid_setInvert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pid_control" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5499,7 +5543,7 @@ screen<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span><span class="m
 </ul>
 <h3 id="2_4">2. データ構造</h3>
 <h4 id="pid_1">Pid</h4>
-<p>PID制御のパラメータや状態を保持する構造体です。この構造体には、制御のために必要なゲインや誤差、積分値、微分値などが含まれます。</p>
+<p>PID制御のパラメータや状態を保持する構造体です。この構造体には、制御のために必要なゲインや誤差、積分値、微分値に加えて、積分成分の上限（アンチワインドアップ用）や出力の反転設定が含まれます。</p>
 <div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">integral_error</span><span class="p">;</span><span class="w">    </span><span class="c1">// 積分誤差の累積値</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">before_error</span><span class="p">;</span><span class="w">      </span><span class="c1">// 前回の誤差</span>
@@ -5511,6 +5555,8 @@ screen<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span><span class="m
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">i_control</span><span class="p">;</span><span class="w">         </span><span class="c1">// I制御成分</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">d_control</span><span class="p">;</span><span class="w">         </span><span class="c1">// D制御成分</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">time_constant</span><span class="p">;</span><span class="w">     </span><span class="c1">// 微分フィルタの時定数（0でフィルタなし）</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">integral_limit</span><span class="p">;</span><span class="w">    </span><span class="c1">// 積分誤差の絶対値上限（0で無制限）</span>
+<span class="w">    </span><span class="kt">int</span><span class="w">    </span><span class="n">output_invert</span><span class="p">;</span><span class="w">     </span><span class="c1">// 出力の符号（1: 正常, -1: 反転）</span>
 <span class="p">}</span><span class="w"> </span><span class="n">Pid</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="3_3">3. 関数の説明</h3>
@@ -5530,7 +5576,7 @@ screen<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span><span class="m
 </li>
 <li>
 <p><strong>説明</strong>:
-  <code>Pid_Init</code>は、積分誤差や前回誤差などの内部変数をゼロクリアし、PID制御の準備を行います。</p>
+  <code>Pid_Init</code>は、積分誤差や前回誤差などの内部変数をゼロクリアし、PID制御の準備を行います。<code>output_invert</code>は既定で<code>1</code>（反転なし）に設定されます。</p>
 </li>
 </ul>
 <h4 id="pid_setgain">Pid_setGain</h4>
@@ -5553,7 +5599,56 @@ screen<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span><span class="m
 </li>
 <li>
 <p><strong>説明</strong>:
-  PID制御で使用するゲインとフィルタの時定数を設定します。時定数を設定すると、微分成分にフィルタが適用され、制御の安定性を高めることができます。</p>
+  PID制御で使用するゲインとフィルタの時定数を設定します。時定数を設定すると、微分成分にフィルタが適用され、制御の安定性を高めることができます。積分成分に上限を設けたい場合は、代わりに<code>Pid_setGainWithLimit</code>を使用してください。</p>
+</li>
+</ul>
+<h4 id="pid_setgainwithlimit">Pid_setGainWithLimit</h4>
+<p>PID制御に使用するゲイン（比例、積分、微分）と、積分誤差の絶対値上限（アンチワインドアップ用）を設定します。</p>
+<ul>
+<li>
+<p><strong>プロトタイプ</strong>:
+  <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Pid_setGainWithLimit</span><span class="p">(</span><span class="n">Pid</span><span class="o">*</span><span class="w"> </span><span class="n">pid</span><span class="p">,</span>
+<span class="w">                          </span><span class="kt">double</span><span class="w"> </span><span class="n">p_gain</span><span class="p">,</span>
+<span class="w">                          </span><span class="kt">double</span><span class="w"> </span><span class="n">i_gain</span><span class="p">,</span>
+<span class="w">                          </span><span class="kt">double</span><span class="w"> </span><span class="n">d_gain</span><span class="p">,</span>
+<span class="w">                          </span><span class="kt">double</span><span class="w"> </span><span class="n">time_constant</span><span class="p">,</span>
+<span class="w">                          </span><span class="kt">double</span><span class="w"> </span><span class="n">integral_limit</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>引数</strong>:</p>
+</li>
+<li><code>pid</code>: ゲインを設定するPID制御構造体のポインタ</li>
+<li><code>p_gain</code>: 比例ゲイン（P）</li>
+<li><code>i_gain</code>: 積分ゲイン（I）</li>
+<li><code>d_gain</code>: 微分ゲイン（D）</li>
+<li><code>time_constant</code>: 微分フィルタの時定数（0でフィルタなし）</li>
+<li>
+<p><code>integral_limit</code>: 積分誤差の絶対値上限（0以下を指定した場合は無制限）</p>
+</li>
+<li>
+<p><strong>説明</strong>:
+  PID制御で使用するゲインとフィルタの時定数に加え、積分誤差の絶対値上限を設定します。内部では、<code>Pid_control</code>／<code>Pid_controlError</code>の中で、<code>integral_error</code>に対してこの上限でクリップ（±<code>integral_limit</code>）が行われます。</p>
+</li>
+</ul>
+<h4 id="pid_setinvert">Pid_setInvert</h4>
+<p>PIDの出力の符号（正転／反転）を設定します。</p>
+<ul>
+<li>
+<p><strong>プロトタイプ</strong>:
+  <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Pid_setInvert</span><span class="p">(</span><span class="n">Pid</span><span class="o">*</span><span class="w"> </span><span class="n">pid</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">invert</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>引数</strong>:</p>
+</li>
+<li><code>pid</code>: 対象のPID制御構造体のポインタ</li>
+<li>
+<p><code>invert</code>: 出力の符号。<code>1</code>で通常、<code>-1</code>で反転</p>
+</li>
+<li>
+<p><strong>説明</strong>:
+  センサやモータの配線方向の違いなどで、制御が正帰還になってしまう場合に、PIDの出力符号だけを簡単に反転させるために使用します。既定値は<code>1</code>（反転なし）です。</p>
 </li>
 </ul>
 <h4 id="pid_control">Pid_control</h4>
@@ -5581,7 +5676,7 @@ screen<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span><span class="m
 </li>
 <li>
 <p><strong>説明</strong>:
-  目標値と現在値の差から制御量を計算し、目標値に近づけるようにします。制御周期が大きく変動する場合は、<code>control_period</code>の値を調整することで積分・微分成分に反映させます。</p>
+  目標値と現在値の差から制御量を計算し、目標値に近づけるようにします。制御周期が大きく変動する場合は、<code>control_period</code>の値を調整することで積分・微分成分に反映させます。<code>Pid_setGainWithLimit</code>で積分上限を指定している場合は、内部で積分誤差が±<code>integral_limit</code>にクリップされます。また、<code>Pid_setInvert</code>で出力を反転している場合は、最終出力に対して符号反転が適用されます。</p>
 </li>
 </ul>
 <h4 id="pid_controlerror">Pid_controlError</h4>
@@ -5608,7 +5703,7 @@ screen<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span><span class="m
 </li>
 <li>
 <p><strong>説明</strong>:
-  与えられた誤差と制御周期を基に、制御量を計算します。</p>
+  与えられた誤差と制御周期を基に、制御量を計算します。<code>Pid_setGainWithLimit</code>や<code>Pid_setInvert</code>で設定した内容は、この関数にも反映されます。</p>
 </li>
 </ul>
 <h4 id="pid_reset">Pid_reset</h4>
@@ -5657,7 +5752,7 @@ screen<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span><span class="m
 </li>
 </ul>
 <h3 id="4_1">4. 使用例</h3>
-<p>以下は、PID制御を使用してモーター速度や角度の制御を行う例です。</p>
+<p>以下は、PID制御を使用してモーター角度の制御を行う簡単な例です。積分の暴走を防ぐために<code>Pid_setGainWithLimit</code>を使用し、必要に応じて<code>Pid_setInvert</code>で出力の符号を反転できます。</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pid.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;encoder.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;motor_driver.h&quot;</span>
@@ -5680,7 +5775,10 @@ screen<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span><span class="m
 <span class="w">    </span><span class="n">Encoder_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">encoder</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">htim5</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span><span class="w"> </span><span class="mi">8192</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
 
 <span class="w">    </span><span class="n">Pid_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">pid</span><span class="p">);</span>
-<span class="w">    </span><span class="n">Pid_setGain</span><span class="p">(</span><span class="o">&amp;</span><span class="n">pid</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span><span class="w">  </span><span class="c1">// PIDゲイン設定</span>
+<span class="w">    </span><span class="c1">// 比例・積分・微分ゲイン、時定数、積分誤差の上限を設定（例: ±100）</span>
+<span class="w">    </span><span class="n">Pid_setGainWithLimit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">pid</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// 必要に応じて出力の符号を反転（1: 正常, -1: 反転）</span>
+<span class="w">    </span><span class="n">Pid_setInvert</span><span class="p">(</span><span class="o">&amp;</span><span class="n">pid</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">target_angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">90.0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 目標角度 (度)</span>
 
@@ -5690,7 +5788,7 @@ screen<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span><span class="m
 
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">control_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Pid_control</span><span class="p">(</span><span class="o">&amp;</span><span class="n">pid</span><span class="p">,</span><span class="w"> </span><span class="n">target_angle</span><span class="p">,</span><span class="w"> </span><span class="n">current_angle</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
 
-<span class="w">        </span><span class="n">MotorDriver_setSpeed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">motor</span><span class="p">,</span><span class="w"> </span><span class="n">control_value</span><span class="p">);</span>
+<span class="w">        </span><span class="n">MotorDriver_setSpeed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">motor</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">control_value</span><span class="p">);</span>
 
 <span class="w">        </span><span class="c1">// デバッグ出力</span>
 <span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Target Angle: %.2f, Current Angle: %.2f, Control Value: %.2f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
