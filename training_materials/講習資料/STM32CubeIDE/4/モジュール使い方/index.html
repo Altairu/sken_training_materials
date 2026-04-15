@@ -3138,58 +3138,148 @@
 </ol>
 <h3 id="can-can1">CAN通信仕様 (すべて CAN1)</h3>
 <h4 id="a-ros2-mdd">A. パラメータ設定 (ROS2 -&gt; MDD)</h4>
-<p>CAN ID:
-- Motor1: 0x200
-- Motor2: 0x201
-- Motor3: 0x203
-- Motor4: 0x204</p>
-<p>Payload: 8B (little-endian int16)
-- Byte0-1: Pゲイン x100
-- Byte2-3: Iゲイン x100
-- Byte4-5: Dゲイン x100
-- Byte6-7: 車輪径/出力方向</p>
-<p>Byte6-7の解釈:
-- 絶対値: 車輪径[mm]
-- 符号: PID出力方向 (正=通常, 負=反転)</p>
-<p>例:
-- 0x0064 (100) -&gt; 車輪径 100mm, 通常方向
-- 0xFF9C (-100) -&gt; 車輪径 100mm, 反転方向</p>
+<p>CAN ID:</p>
+<ul>
+<li>
+<p>Motor1: 0x200</p>
+</li>
+<li>
+<p>Motor2: 0x201</p>
+</li>
+<li>
+<p>Motor3: 0x203</p>
+</li>
+<li>
+<p>Motor4: 0x204</p>
+</li>
+</ul>
+<p>Payload: 8B (little-endian int16)</p>
+<ul>
+<li>
+<p>Byte0-1: Pゲイン x100</p>
+</li>
+<li>
+<p>Byte2-3: Iゲイン x100</p>
+</li>
+<li>
+<p>Byte4-5: Dゲイン x100</p>
+</li>
+<li>
+<p>Byte6-7: 車輪径/出力方向</p>
+</li>
+</ul>
+<p>Byte6-7の解釈:</p>
+<ul>
+<li>
+<p>絶対値: 車輪径[mm]</p>
+</li>
+<li>
+<p>符号: PID出力方向 (正=通常, 負=反転)</p>
+</li>
+</ul>
+<p>例:</p>
+<ul>
+<li>
+<p>0x0064 (100) -&gt; 車輪径 100mm, 通常方向</p>
+</li>
+<li>
+<p>0xFF9C (-100) -&gt; 車輪径 100mm, 反転方向</p>
+</li>
+</ul>
 <h4 id="b-ros2-mdd">B. 目標値・モード指令 (ROS2 -&gt; MDD)</h4>
 <p>CAN ID: 0x210 (目標値)</p>
-<p>Payload: 8B (little-endian int16)
-- Byte0-1: M1目標 x10
-- Byte2-3: M2目標 x10
-- Byte4-5: M3目標 x10
-- Byte6-7: M4目標 x10</p>
-<p>スケール:
-- 速度モード時: 目標速度[rps] x10
-- 角度モード時: 目標角度[deg] x10</p>
+<p>Payload: 8B (little-endian int16)</p>
+<ul>
+<li>
+<p>Byte0-1: M1目標 x10</p>
+</li>
+<li>
+<p>Byte2-3: M2目標 x10</p>
+</li>
+<li>
+<p>Byte4-5: M3目標 x10</p>
+</li>
+<li>
+<p>Byte6-7: M4目標 x10</p>
+</li>
+</ul>
+<p>スケール:</p>
+<ul>
+<li>
+<p>速度モード時: 目標速度[rps] x10</p>
+</li>
+<li>
+<p>角度モード時: 目標角度[deg] x10</p>
+</li>
+</ul>
 <p>CAN ID: 0x211 (モード指令)</p>
-<p>Payload: 8B (little-endian int16)
-- Byte0-1: M1モード
-- Byte2-3: M2モード
-- Byte4-5: M3モード
-- Byte6-7: M4モード</p>
-<p>モード値:
-- 0: 速度制御
-- 1: 角度制御</p>
-<p>備考:
-- モードは受信後に保持され、次に0x211を受信するまで継続します。</p>
+<p>Payload: 8B (little-endian int16)</p>
+<ul>
+<li>
+<p>Byte0-1: M1モード</p>
+</li>
+<li>
+<p>Byte2-3: M2モード</p>
+</li>
+<li>
+<p>Byte4-5: M3モード</p>
+</li>
+<li>
+<p>Byte6-7: M4モード</p>
+</li>
+</ul>
+<p>モード値:</p>
+<ul>
+<li>
+<p>0: 速度制御</p>
+</li>
+<li>
+<p>1: 角度制御</p>
+</li>
+</ul>
+<p>備考:</p>
+<ul>
+<li>モードは受信後に保持され、次に0x211を受信するまで継続します。</li>
+</ul>
 <h4 id="c-mdd-ros2">C. ステータス返信 (MDD -&gt; ROS2)</h4>
 <p>CAN ID: 0x120 (リミットスイッチ)</p>
-<p>Payload: 4B
-- Byte0: Limit SW1
-- Byte1: Limit SW2
-- Byte2: Limit SW3
-- Byte3: Limit SW4</p>
+<p>Payload: 4B</p>
+<ul>
+<li>
+<p>Byte0: Limit SW1</p>
+</li>
+<li>
+<p>Byte1: Limit SW2</p>
+</li>
+<li>
+<p>Byte2: Limit SW3</p>
+</li>
+<li>
+<p>Byte3: Limit SW4</p>
+</li>
+</ul>
 <p>CAN ID: 0x121 (Motor系ステータス)</p>
-<p>Payload: 6B
-- Byte0: Motor1モード
-- Byte1: Motor2モード
-- Byte2: Motor3モード
-- Byte3: Motor4モード
-- Byte4: エラーコード
-- Byte5: システム状態 (0=パラメータ設定, 1=制御実行)</p>
+<p>Payload: 6B</p>
+<ul>
+<li>
+<p>Byte0: Motor1モード</p>
+</li>
+<li>
+<p>Byte1: Motor2モード</p>
+</li>
+<li>
+<p>Byte2: Motor3モード</p>
+</li>
+<li>
+<p>Byte3: Motor4モード</p>
+</li>
+<li>
+<p>Byte4: エラーコード</p>
+</li>
+<li>
+<p>Byte5: システム状態 (0=パラメータ設定, 1=制御実行)</p>
+</li>
+</ul>
 <h3 id="_5">エラーコード</h3>
 <table>
 <thead>
@@ -3222,8 +3312,10 @@
 </tr>
 </tbody>
 </table>
-<p>注記:
-- エラーコードはビットフラグで、同時に複数立つ場合があります。</p>
+<p>注記:</p>
+<ul>
+<li>エラーコードはビットフラグで、同時に複数立つ場合があります。</li>
+</ul>
 <h2 id="servo">Servo</h2>
 <p>回路名: ALTAIR_SERVO_MODULE_V6</p>
 <p>サーボモーター用モジュール。ROS2 PC から USB to CAN を介して目標角度を送信し、STM32 が 6ch のサーボ PWM を生成する。</p>
@@ -3356,26 +3448,54 @@
 </tr>
 </tbody>
 </table>
-<p>Payload (6B)
-- Byte0: Servo1角度 [0..180]
-- Byte1: Servo2角度 [0..180]
-- Byte2: Servo3角度 [0..180]
-- Byte3: Servo4角度 [0..180]
-- Byte4: Servo5角度 [0..180]
-- Byte5: Servo6角度 [0..180]</p>
-<p>注記:
-- Byte値が180を超える場合はMCU側で180にクリップします。</p>
+<p>Payload (6B)</p>
+<ul>
+<li>
+<p>Byte0: Servo1角度 [0..180]</p>
+</li>
+<li>
+<p>Byte1: Servo2角度 [0..180]</p>
+</li>
+<li>
+<p>Byte2: Servo3角度 [0..180]</p>
+</li>
+<li>
+<p>Byte3: Servo4角度 [0..180]</p>
+</li>
+<li>
+<p>Byte4: Servo5角度 [0..180]</p>
+</li>
+<li>
+<p>Byte5: Servo6角度 [0..180]</p>
+</li>
+</ul>
+<p>注記:</p>
+<ul>
+<li>Byte値が180を超える場合はMCU側で180にクリップします。</li>
+</ul>
 <h3 id="_8">通信時の動作</h3>
 <ul>
-<li>CAN受信時: LED(PA5) をON</li>
-<li>通信が途切れた場合: 最後に受信した目標角度を保持して出力を継続</li>
+<li>
+<p>CAN受信時: LED(PA5) をON</p>
+</li>
+<li>
+<p>通信が途切れた場合: 最後に受信した目標角度を保持して出力を継続</p>
+</li>
 </ul>
 <h3 id="servocoresrcmainc">実装メモ (Servo/Core/Src/main.c)</h3>
 <ul>
-<li>CAN1フィルタをCAN ID 100に設定</li>
-<li>CAN FIFO0受信割り込みで6バイトを取り込み</li>
-<li>受信データを6系統PWM比較値へ反映</li>
-<li>TIM1/TIM2/TIM3を1MHzカウンタ化 (Prescaler=83)、Period=19999で50Hz PWMを生成</li>
+<li>
+<p>CAN1フィルタをCAN ID 100に設定</p>
+</li>
+<li>
+<p>CAN FIFO0受信割り込みで6バイトを取り込み</p>
+</li>
+<li>
+<p>受信データを6系統PWM比較値へ反映</p>
+</li>
+<li>
+<p>TIM1/TIM2/TIM3を1MHzカウンタ化 (Prescaler=83)、Period=19999で50Hz PWMを生成</p>
+</li>
 </ul>
 <details class="note">
 <summary>Note</summary>
