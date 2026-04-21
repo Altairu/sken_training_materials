@@ -3181,56 +3181,76 @@
 </ol>
 <h3 id="can-can1-1mbps">CAN通信仕様 (すべて CAN1, 1Mbps)</h3>
 <h4 id="a-ros2-mdd">A. パラメータ設定 (ROS2 -&gt; MDD)</h4>
-<p>CAN ID:
-- Motor1: 0x200
-- Motor2: 0x201
-- Motor3: 0x202
-- Motor4: 0x203</p>
-<p>Payload: 8B (little-endian int16)
-- Byte0-1: Pゲイン x100
-- Byte2-3: Iゲイン x100
-- Byte4-5: Dゲイン x100
-- Byte6-7: 車輪径/出力方向</p>
-<p>Byte6-7の解釈:
-- 絶対値: 車輪径[mm]
-- 符号: PID出力方向 (正=通常, 負=反転)</p>
-<p>例:
-- 0x0064 (100) -&gt; 車輪径 100mm, 通常方向
-- 0xFF9C (-100) -&gt; 車輪径 100mm, 反転方向</p>
+<p>CAN ID:</p>
+<ul>
+<li>Motor1: 0x200</li>
+<li>Motor2: 0x201</li>
+<li>Motor3: 0x202</li>
+<li>Motor4: 0x203</li>
+</ul>
+<p>Payload: 8B (little-endian int16)</p>
+<ul>
+<li>Byte0-1: Pゲイン x100</li>
+<li>Byte2-3: Iゲイン x100</li>
+<li>Byte4-5: Dゲイン x100</li>
+<li>Byte6-7: 車輪径/出力方向</li>
+</ul>
+<p>Byte6-7の解釈:</p>
+<ul>
+<li>絶対値: 車輪径[mm]</li>
+<li>符号: PID出力方向 (正=通常, 負=反転)</li>
+</ul>
+<p>例:</p>
+<ul>
+<li>0x0064 (100) -&gt; 車輪径 100mm, 通常方向</li>
+<li>0xFF9C (-100) -&gt; 車輪径 100mm, 反転方向</li>
+</ul>
 <p>CAN ID: 0x210 (モード設定)</p>
-<p>Payload: 4B
-- Byte0: M1モード
-- Byte1: M2モード
-- Byte2: M3モード
-- Byte3: M4モード</p>
-<p>モード値:
-- 0: 速度制御
-- 1: 角度制御</p>
-<p>動作:
-- パラメータ設定完了まで、制御用の目標値は受信しません。
-- パラメータ設定が完了すると LED が点灯し、APP_MODE_CONTROL (1) に移行します。
-- 制御実行モード移行後はパラメータ設定を受信しません。変更する場合はマイコン再起動が必要です。</p>
+<p>Payload: 4B</p>
+<ul>
+<li>Byte0: M1モード</li>
+<li>Byte1: M2モード</li>
+<li>Byte2: M3モード</li>
+<li>Byte3: M4モード</li>
+</ul>
+<p>モード値:</p>
+<ul>
+<li>0: 速度制御</li>
+<li>1: 角度制御</li>
+</ul>
+<p>動作:</p>
+<ul>
+<li>パラメータ設定完了まで、制御用の目標値は受信しません。</li>
+<li>パラメータ設定が完了すると LED が点灯し、APP_MODE_CONTROL (1) に移行します。</li>
+<li>制御実行モード移行後はパラメータ設定を受信しません。変更する場合はマイコン再起動が必要です。</li>
+</ul>
 <h4 id="b-ros2-mdd">B. 目標値・モード指令 (ROS2 -&gt; MDD)</h4>
 <p>制御実行モードでのみ有効です。</p>
 <p>CAN ID: 0x220 (目標値)</p>
-<p>Payload: 8B (little-endian int16)
-- Byte0-1: M1目標 x10
-- Byte2-3: M2目標 x10
-- Byte4-5: M3目標 x10
-- Byte6-7: M4目標 x10</p>
-<p>スケール:
-- 速度モード時: 目標速度[rps] x10
-- 角度モード時: 目標角度[deg] x10</p>
+<p>Payload: 8B (little-endian int16)</p>
+<ul>
+<li>Byte0-1: M1目標 x10</li>
+<li>Byte2-3: M2目標 x10</li>
+<li>Byte4-5: M3目標 x10</li>
+<li>Byte6-7: M4目標 x10</li>
+</ul>
+<p>スケール:</p>
+<ul>
+<li>速度モード時: 目標速度[rps] x10</li>
+<li>角度モード時: 目標角度[deg] x10</li>
+</ul>
 <h4 id="c-mdd-ros2">C. ステータス返信 (MDD -&gt; ROS2)</h4>
 <p>パラメータ設定/制御実行の状態に限らず、常に送信します。</p>
 <p>CAN ID: 0x230 (リミットスイッチ + 状態)</p>
-<p>Payload: 6B
-- Byte0: Limit SW1
-- Byte1: Limit SW2
-- Byte2: Limit SW3
-- Byte3: Limit SW4
-- Byte4: エラーコード
-- Byte5: システム状態 (0=パラメータ設定, 1=制御実行)</p>
+<p>Payload: 6B</p>
+<ul>
+<li>Byte0: Limit SW1</li>
+<li>Byte1: Limit SW2</li>
+<li>Byte2: Limit SW3</li>
+<li>Byte3: Limit SW4</li>
+<li>Byte4: エラーコード</li>
+<li>Byte5: システム状態 (0=パラメータ設定, 1=制御実行)</li>
+</ul>
 <h3 id="_5">エラーコード</h3>
 <table>
 <thead>
@@ -3263,25 +3283,31 @@
 </tr>
 </tbody>
 </table>
-<p>注記:
-- エラーコードはビットフラグで、同時に複数立つ場合があります。</p>
+<p>注記:</p>
+<ul>
+<li>エラーコードはビットフラグで、同時に複数立つ場合があります。</li>
+</ul>
 <h3 id="gui-mdd_gui_ubuntupy">GUIツール (mdd_gui_ubuntu.py)</h3>
 <p>Ubuntu等の環境で動作する、CAN通信テスト・制御用のGUIツールです。モータのパラメータ設定、制御コマンドの送信、MDDからのステータス受信が行えます。（socketcan対応）</p>
-<p><strong>【依存環境の準備】</strong>
+<p><strong>【依存環境の準備】</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># tkinterのインストール (Ubuntuの場合)</span>
 sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-tk
 
 <span class="c1"># python-canのインストール</span>
 pip<span class="w"> </span>install<span class="w"> </span>python-can
-</code></pre></div></p>
-<p><strong>【使い方】</strong>
-1. スクリプトを実行します。
-   <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>MDD
+</code></pre></div>
+<p><strong>【使い方】</strong></p>
+<ol>
+<li>スクリプトを実行します。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>MDD
 python3<span class="w"> </span>mdd_gui_ubuntu.py
 </code></pre></div>
-2. <strong>接続</strong>: CANのインターフェース（例：<code>can0</code>）やビットレート（例：<code>1000000</code>）を指定して「接続」します。
-3. <strong>パラメータ設定</strong>: 各モータのPIDゲイン、車輪径、回転方向を設定して送信し、「制御実行モード」へ移行します。
-4. <strong>目標値送信</strong>: スライダーや数値入力で目標値（速度/角度）を指定し、定期送信をオンにすることで対象のモータを制御できます。</p>
+<ol>
+<li><strong>接続</strong>: CANのインターフェース（例：<code>can0</code>）やビットレート（例：<code>1000000</code>）を指定して「接続」します。</li>
+<li><strong>パラメータ設定</strong>: 各モータのPIDゲイン、車輪径、回転方向を設定して送信し、「制御実行モード」へ移行します。</li>
+<li><strong>目標値送信</strong>: スライダーや数値入力で目標値（速度/角度）を指定し、定期送信をオンにすることで対象のモータを制御できます。</li>
+</ol>
 <h2 id="servo">Servo</h2>
 <p>回路名: ALTAIR_SERVO_MODULE_V6</p>
 <p>サーボモーター用モジュール。ROS2 PC から USB to CAN を介して目標角度を送信し、STM32 が 6ch のサーボ PWM を生成する。</p>
@@ -3414,17 +3440,21 @@ python3<span class="w"> </span>mdd_gui_ubuntu.py
 </tr>
 </tbody>
 </table>
-<p>Payload (6B)
-- Byte0: Servo1角度 [0..180]
-- Byte1: Servo2角度 [0..180]
-- Byte2: Servo3角度 [0..180]
-- Byte3: Servo4角度 [0..180]
-- Byte4: Servo5角度 [0..180]
-- Byte5: Servo6角度 [0..180]</p>
-<p>注記:
-- Byte値が180を超える場合はMCU側で180にクリップします。
-- 受信ノイズ対策として、各軸にデッドバンド2degを適用します。
-- 同一候補値が3回連続したときのみ目標値へ反映します。</p>
+<p>Payload (6B)</p>
+<ul>
+<li>Byte0: Servo1角度 [0..180]</li>
+<li>Byte1: Servo2角度 [0..180]</li>
+<li>Byte2: Servo3角度 [0..180]</li>
+<li>Byte3: Servo4角度 [0..180]</li>
+<li>Byte4: Servo5角度 [0..180]</li>
+<li>Byte5: Servo6角度 [0..180]</li>
+</ul>
+<p>注記:</p>
+<ul>
+<li>Byte値が180を超える場合はMCU側で180にクリップします。</li>
+<li>受信ノイズ対策として、各軸にデッドバンド2degを適用します。</li>
+<li>同一候補値が3回連続したときのみ目標値へ反映します。</li>
+</ul>
 <h3 id="_8">通信時の動作</h3>
 <ul>
 <li>任意CANフレーム受信時: LED(PA5) をON</li>
@@ -3441,20 +3471,24 @@ python3<span class="w"> </span>mdd_gui_ubuntu.py
 </ul>
 <h3 id="gui-servo_gui_ubuntupy">GUIツール (servo_gui_ubuntu.py)</h3>
 <p>Ubuntu等の環境からUSB-to-CANデバイスを経由して、サーボの各軸（1〜6）目標角度(0〜180度)を送信するためのテスト用GUIツールです。</p>
-<p><strong>【依存環境の準備】</strong>
+<p><strong>【依存環境の準備】</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># tkinterのインストール (Ubuntuの場合)</span>
 sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-tk
 
 <span class="c1"># python-canのインストール</span>
 pip<span class="w"> </span>install<span class="w"> </span>python-can
-</code></pre></div></p>
-<p><strong>【使い方】</strong>
-1. スクリプトを実行します。
-   <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Servo
+</code></pre></div>
+<p><strong>【使い方】</strong></p>
+<ol>
+<li>スクリプトを実行します。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Servo
 python3<span class="w"> </span>servo_gui_ubuntu.py
 </code></pre></div>
-2. <strong>接続</strong>: 使用するインターフェース（例：<code>can0</code>）、ビットレート（例：<code>1000000</code>）を指定し、CAN通信の接続を行います。
-3. <strong>操作</strong>: GUI上のスライダーまたはエントリーでサーボ目標角度（0〜180度）を設定します。「定期送信」をオンにすると内部で 10ms 周期で自動的に <code>CAN ID: 0x100</code> または設定した標準IDとして送信されます。</p>
+<ol>
+<li><strong>接続</strong>: 使用するインターフェース（例：<code>can0</code>）、ビットレート（例：<code>1000000</code>）を指定し、CAN通信の接続を行います。</li>
+<li><strong>操作</strong>: GUI上のスライダーまたはエントリーでサーボ目標角度（0〜180度）を設定します。「定期送信」をオンにすると内部で 10ms 周期で自動的に <code>CAN ID: 0x100</code> または設定した標準IDとして送信されます。</li>
+</ol>
 <details class="note">
 <summary>Note</summary>
 <p>著者:Shion Noguchi</p>
