@@ -42,6 +42,10 @@ nav:
           - ライブラリ使い方: training_materials/講習資料/STM32CubeIDE/2/ライブラリ使い方.md
           - モジュールプログラム: training_materials/講習資料/STM32CubeIDE/4/モジュール使い方.md
           - メカナム４輪: training_materials/講習資料/STM32CubeIDE/3/メカナム４輪サンプルコード.md
+        - PlatformIO:
+          - PlatformIO環境構築: training_materials/講習資料/PlatformIO/PlatformIO環境構築/PlatformIOの環境構築.md
+          - PlatformIO使い方: training_materials/講習資料/PlatformIO/mbed使い方/mbed使い方.md
+          - ライブラリの使い方: training_materials/講習資料/PlatformIO/ライブラリ/ライブラリの使い方.md
         - SW4STM32: 
           - SystemWorkbench1: training_materials/講習資料/マイコンSW/マイコン1.md
           - SystemWorkbench2: training_materials/講習資料/マイコンSW/マイコン2.md
