@@ -29,7 +29,7 @@
 が追加されていたら成功．
 
 ### データ作成
- ![my image](\img\animation.gif)
+ ![my image](img\animation.gif)
 &uarr; データ作成の流れ．この操作の解説を行う．
 
  1. clear\_dftを開いて,切削したい板のパーツデータをドラフト上にドラッグする．このとき,尺度を1:1にする．
