@@ -12,7 +12,7 @@
 # マシニングデータ作成
 ## NCVCのインストール
   講習フォルダ&rarr;マシニング&rarr;ncvc415\_install64をインストール<br>
-  (32bitの場合は\url{https://k-magara.github.io/}からダウンロードする)
+  (32bitの場合は[https://k-magara.github.io/](https://k-magara.github.io/)からダウンロードする)
 
 ## Solidedge側のデータ作成 (ドラフト)
 ### テンプレートの導入
