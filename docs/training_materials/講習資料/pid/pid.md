@@ -9,6 +9,7 @@ PID制御は、フィードバック制御の一種であり、目標値（Set P
 $$u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt}$$
 
 ここで：
+
 * $K_p$: 比例ゲイン (Proportional Gain)
 * $K_i$: 積分ゲイン (Integral Gain)
 * $K_d$: 微分ゲイン (Derivative Gain)
