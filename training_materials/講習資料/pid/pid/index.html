@@ -2872,10 +2872,12 @@
 <p>PID制御は、フィードバック制御の一種であり、目標値（Set Point: <span class="arithmatex">\(r(t)\)</span>）と現在値（Process Variable: <span class="arithmatex">\(y(t)\)</span>）の差である<strong>偏差 <span class="arithmatex">\(e(t) = r(t) - y(t)\)</span></strong> に基づいて操作量を決定します。</p>
 <p>連続時間系における操作量 <span class="arithmatex">\(u(t)\)</span> は、以下の式で定義されます。</p>
 <div class="arithmatex">\[u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt}\]</div>
-<p>ここで：
-* <span class="arithmatex">\(K_p\)</span>: 比例ゲイン (Proportional Gain)
-* <span class="arithmatex">\(K_i\)</span>: 積分ゲイン (Integral Gain)
-* <span class="arithmatex">\(K_d\)</span>: 微分ゲイン (Derivative Gain)</p>
+<p>ここで：</p>
+<ul>
+<li><span class="arithmatex">\(K_p\)</span>: 比例ゲイン (Proportional Gain)</li>
+<li><span class="arithmatex">\(K_i\)</span>: 積分ゲイン (Integral Gain)</li>
+<li><span class="arithmatex">\(K_d\)</span>: 微分ゲイン (Derivative Gain)</li>
+</ul>
 <p><img alt="alt text" src="../image.png" /></p>
 <h2 id="2">2. 各要素の役割とシステムへの影響</h2>
 <p>PIDの各項を調整した際、システムの応答（ステップ応答）がどのように変化するかを理解することが重要です。</p>
