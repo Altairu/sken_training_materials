@@ -2283,7 +2283,7 @@
   <a href="#1-pid" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. PID制御とは
+        1. PID制御の数学的定義
       
     </span>
   </a>
@@ -2291,10 +2291,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-pid" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. PIDの要素
+        2. 各要素の役割とシステムへの影響
       
     </span>
   </a>
@@ -2302,13 +2302,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-pid" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. PIDコントローラの実装
+        3. ゲイン調整（チューニング）の手法
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3. ゲイン調整（チューニング）の手法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        限界感度法（ジグラー・ニコルス法）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ステップ応答法（CHR法）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2316,7 +2344,18 @@
   <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. コード例の解説
+        4. デジタル実装における離散化
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-anti-windup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 実践的な注意点：アンチワインドアップ (Anti-windup)
       
     </span>
   </a>
@@ -2729,7 +2768,7 @@
   <a href="#1-pid" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. PID制御とは
+        1. PID制御の数学的定義
       
     </span>
   </a>
@@ -2737,10 +2776,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-pid" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. PIDの要素
+        2. 各要素の役割とシステムへの影響
       
     </span>
   </a>
@@ -2748,13 +2787,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-pid" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. PIDコントローラの実装
+        3. ゲイン調整（チューニング）の手法
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3. ゲイン調整（チューニング）の手法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        限界感度法（ジグラー・ニコルス法）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ステップ応答法（CHR法）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2762,7 +2829,18 @@
   <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. コード例の解説
+        4. デジタル実装における離散化
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-anti-windup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 実践的な注意点：アンチワインドアップ (Anti-windup)
       
     </span>
   </a>
@@ -2789,66 +2867,95 @@
   
 
 
-<h1 id="pid">PID制御の説明</h1>
-<h2 id="1-pid">1. PID制御とは</h2>
-<ul>
-<li>PID制御は、Proportional-Integral-Derivative（比例-積分-微分）制御の略です。</li>
-<li>この制御アルゴリズムは、制御対象の状態を目標値に維持するために使用されます。</li>
-</ul>
-<h2 id="2-pid">2. PIDの要素</h2>
-<p>PID制御には3つの要素があります。</p>
+<h1 id="pid">PID制御の理論と実践</h1>
+<h2 id="1-pid">1. PID制御の数学的定義</h2>
+<p>PID制御は、フィードバック制御の一種であり、目標値（Set Point: <span class="arithmatex">\(r(t)\)</span>）と現在値（Process Variable: <span class="arithmatex">\(y(t)\)</span>）の差である<strong>偏差 <span class="arithmatex">\(e(t) = r(t) - y(t)\)</span></strong> に基づいて操作量を決定します。</p>
+<p>連続時間系における操作量 <span class="arithmatex">\(u(t)\)</span> は、以下の式で定義されます。</p>
+<div class="arithmatex">\[u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt}\]</div>
+<p>ここで：
+* <span class="arithmatex">\(K_p\)</span>: 比例ゲイン (Proportional Gain)
+* <span class="arithmatex">\(K_i\)</span>: 積分ゲイン (Integral Gain)
+* <span class="arithmatex">\(K_d\)</span>: 微分ゲイン (Derivative Gain)</p>
+<p><img alt="alt text" src="../image.png" /></p>
+<h2 id="2">2. 各要素の役割とシステムへの影響</h2>
+<p>PIDの各項を調整した際、システムの応答（ステップ応答）がどのように変化するかを理解することが重要です。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">項</th>
+<th style="text-align: left;">名称</th>
+<th style="text-align: left;">主な役割</th>
+<th style="text-align: left;">ゲインを上げた際の影響</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>P</strong></td>
+<td style="text-align: left;"><strong>比例</strong></td>
+<td style="text-align: left;">現在の誤差に反応</td>
+<td style="text-align: left;">立ち上がり時間が短くなるが、<strong>残留偏差（オフセット）</strong>が残る。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>I</strong></td>
+<td style="text-align: left;"><strong>積分</strong></td>
+<td style="text-align: left;">過去の誤差を累積</td>
+<td style="text-align: left;"><strong>残留偏差をゼロにする</strong>。ただし、上げすぎるとオーバーシュートや振動を招く。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>D</strong></td>
+<td style="text-align: left;"><strong>微分</strong></td>
+<td style="text-align: left;">将来の誤差を予測</td>
+<td style="text-align: left;">応答の振れ（オーバーシュート）を抑え、<strong>速やかに収束させる</strong>。ノイズに弱い。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3">3. ゲイン調整（チューニング）の手法</h2>
+<p>実際にロボットや回路を動かす際、最適なゲインを見つけるのは容易ではありません。代表的な手法を紹介します。</p>
+<h3 id="_1">限界感度法（ジグラー・ニコルス法）</h3>
 <ol>
-<li><strong>P（比例）制御</strong>: 現在の誤差を使って制御信号を調整します。</li>
-<li><strong>I（積分）制御</strong>: 過去の誤差の累積を使って制御信号を調整します。</li>
-<li><strong>D（微分）制御</strong>: 誤差の変化率を使って制御信号を調整します。</li>
+<li>最初に <span class="arithmatex">\(K_i=0, K_d=0\)</span> とします。</li>
+<li><span class="arithmatex">\(K_p\)</span> を徐々に上げていき、出力が一定の振幅で振動し始める（限界安定状態）ゲイン <span class="arithmatex">\(K_u\)</span> と、その時の振動周期 <span class="arithmatex">\(T_u\)</span> を測定します。</li>
+<li>以下の表に基づいてゲインを決定します。</li>
 </ol>
-<h2 id="3-pid">3. PIDコントローラの実装</h2>
-<ul>
-<li>PID制御は一般的に以下の式で表されます：</li>
-</ul>
-<div class="highlight"><pre><span></span><code>Control Signal = Kp * P + Ki * I + Kd * D
-</code></pre></div>
-<ul>
-<li>ここで、Kp、Ki、およびKdは制御アルゴリズムのパラメータで、P、I、およびDはそれぞれ比例、積分、および微分項です。</li>
-</ul>
-<h2 id="4">4. コード例の解説</h2>
-<p>以下は、Arduinoコードの一部を使用してPID制御を実装する例です。</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;motor.h&quot;</span>
-
-<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">encoderPinA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// A相</span>
-<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">encoderPinB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">  </span><span class="c1">// B相</span>
-<span class="k">volatile</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">encoderCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// エンコーダーのカウンター</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">degrees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w">  </span><span class="c1">// エンコーダーの角度</span>
-
-<span class="kt">double</span><span class="w"> </span><span class="n">Kp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
-<span class="kt">double</span><span class="w"> </span><span class="n">Ki</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.01</span><span class="p">;</span><span class="w"> </span>
-<span class="kt">double</span><span class="w"> </span><span class="n">Kd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-
-<span class="c1">// ...（他のコード）</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">pid</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 前回の誤差</span>
-<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">integral</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 積分項</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">degrees</span><span class="p">;</span><span class="w"> </span><span class="c1">// 現在の誤差</span>
-
-<span class="w">  </span><span class="c1">// P制御</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// I制御（積分項）</span>
-<span class="w">  </span><span class="n">integral</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">error</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ki</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">integral</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// D制御（微分項）</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">derivative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">previousError</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kd</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">derivative</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// PID制御の計算</span>
-<span class="w">  </span><span class="n">speed1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">D</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// 誤差と積分項を更新</span>
-<span class="w">  </span><span class="n">previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">error</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">制御の種類</th>
+<th style="text-align: left;"><span class="arithmatex">\(K_p\)</span></th>
+<th style="text-align: left;"><span class="arithmatex">\(K_i\)</span></th>
+<th style="text-align: left;"><span class="arithmatex">\(K_d\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>P制御</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.5 K_u\)</span></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PI制御</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.45 K_u\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(1.2 K_p / T_u\)</span></td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PID制御</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.6 K_u\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(2 K_p / T_u\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(K_p T_u / 8\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chr">ステップ応答法（CHR法）</h3>
+<p>制御対象にステップ入力を与え、その応答波形の最大傾斜や無駄時間から計算で求める手法です。</p>
+<h2 id="4">4. デジタル実装における離散化</h2>
+<p>マイコン（SpresenseやSTM32など）で実装する場合、連続的な数式をサンプリング周期 <span class="arithmatex">\(\Delta t\)</span> で離散化する必要があります。</p>
+<div class="arithmatex">\[u_n = K_p e_n + K_i \sum_{k=0}^{n} e_k \Delta t + K_d \frac{e_n - e_{n-1}}{\Delta t}\]</div>
+<p>プログラム上では、積分項は「過去の誤差の累積変数」、微分項は「前回誤差との差分」として保持します。</p>
+<h2 id="5-anti-windup">5. 実践的な注意点：アンチワインドアップ (Anti-windup)</h2>
+<p>実際のシステムには、モータの電圧限界などの「飽和（サチュレーション）」が存在します。
+偏差が長時間残ると、積分項が肥大化し続け、目標値を通り過ぎても制御が止まらなくなる現象（積分飽和）が起こります。これを防ぐために、<strong>操作量が上限に達した際は積算を停止する</strong>等の処理が実用上不可欠です。</p>
 <details class="note">
 <summary>Note</summary>
 <p>著者:Shion Noguchi</p>
