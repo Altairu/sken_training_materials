@@ -7,10 +7,12 @@ nav:
       - SolidEdge: 
           - SolidEdgeのインストール: training_materials/機械班/SolidEdge1.md
           - SolidEdge2025: training_materials/機械班/SE2025.md
-          - SolidEdgeの基本操作1: training_materials/機械班/SE2.md
+          - SolidEdgeの基本操作: training_materials/機械班/SE2.md
           - SolidEdgeでギヤ設計: training_materials/機械班/SE_gear.md
       - マシニングセンタ:
           - NVX5060: training_materials/機械班/マシニングセンタ/NVX5060.md
+          - MCデータ(NCVC)の作り方: training_materials/機械班/NCVC/MCデータ(NCVC)の作り方.md
+          
   - 電気班:
     
     - ROS 2:

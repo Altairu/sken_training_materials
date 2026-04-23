@@ -1,0 +1,31 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
+  <diagram name="ページ1" id="Og1IxNzOIigCR2E7-GYk">
+    <mxGraphModel dx="741" dy="496" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t_e5o5_ynP8Ui6o2SJZP-8" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="419.76" y="280" as="sourcePoint" />
+            <mxPoint x="419.76" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_e5o5_ynP8Ui6o2SJZP-1" value="加工開始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="380" y="40" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="t_e5o5_ynP8Ui6o2SJZP-3" value="CAM1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="381.25" y="110" width="77.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_e5o5_ynP8Ui6o2SJZP-5" value="CAM2" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="381.25" y="160" width="77.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_e5o5_ynP8Ui6o2SJZP-6" value="CAM3" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="381.25" y="210" width="77.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_e5o5_ynP8Ui6o2SJZP-7" value="加工終了" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="380" y="270" width="80" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

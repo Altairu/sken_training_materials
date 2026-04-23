@@ -1,0 +1,3925 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../%E3%83%9E%E3%82%B7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%B3%E3%82%BF/NVX5060/">
+      
+      
+        <link rel="next" href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_%E4%BA%8B%E5%A7%8B/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../images/sken.jpeg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>MCデータ(NCVC)の作り方 - Sken 技術資料</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,300i,400,400i,700,700i%7CInconsolata:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans JP";--md-code-font:"Inconsolata"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Sken 技術資料" class="md-header__button md-logo" aria-label="Sken 技術資料" data-md-component="logo">
+      
+  <img src="../../../../images/sken.jpeg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sken 技術資料
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MCデータ(NCVC)の作り方
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Altairu/sken_training_materials" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Altairu/sken_training_materials
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Sken 技術資料" class="md-nav__button md-logo" aria-label="Sken 技術資料" data-md-component="logo">
+      
+  <img src="../../../../images/sken.jpeg" alt="logo">
+
+    </a>
+    Sken 技術資料
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Altairu/sken_training_materials" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Altairu/sken_training_materials
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ホーム画面
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    機械班
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    機械班
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SolidEdge
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SolidEdge
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SolidEdge1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SolidEdgeのインストール
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SE2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SolidEdge2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SE2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SolidEdgeの基本操作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SE_gear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SolidEdgeでギヤ設計
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    マシニングセンタ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    マシニングセンタ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E3%83%9E%E3%82%B7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%B3%E3%82%BF/NVX5060/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NVX5060
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCデータ(NCVC)の作り方
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCデータ(NCVC)の作り方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ncvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NCVCのインストール
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solidedge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solidedge側のデータ作成 (ドラフト)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solidedge側のデータ作成 (ドラフト)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        テンプレートの導入
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        データ作成
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ncvc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NCVCでのデータ作成
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        まとめ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        おまけ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="おまけ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCはデータをどう処理するの？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        稀によく見るバグ（）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcgcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCのコマンド集(Gcode)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MCのコマンド集(Gcode)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        よく出てくる記号など
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gコード：準備機能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mコード：補助機能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tコード：工具番号を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sコード：主軸回転数を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fコード：送り速度を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hコード：工具長補正番号を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dコード：工具径補正番号を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oコード：プログラム番号を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nコード：シーケンス番号を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cv-500a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        パレット交換のプログラム(CV-500Aのみ)(操作パネル上で実行)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具交換のプログラム
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一般的な切削準備のプログラム
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本的な切削のプログラム
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        固定サイクル(穴開け関連の加工を行うコード)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        切削や固定サイクル後，工具交換の前に入れるプログラム
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気班
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    電気班
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ROS 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_%E4%BA%8B%E5%A7%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS2環境構築
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS2講習1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS2講習2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS2講習3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS2講習ロボコン1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ROS%202/ROS2_%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS2講習ロボコン2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    python3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/python3/python3_%E4%BA%8B%E5%A7%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python3環境構築
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/python3/python3%E8%AC%9B%E7%BF%921/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python3_1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/python3/python3%E8%AC%9B%E7%BF%922/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python3_2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/python3/python3%E8%AC%9B%E7%BF%923/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python3_3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/python3/python3%E8%AC%9B%E7%BF%924/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python3_4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/python3/python3%E8%AC%9B%E7%BF%925/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python3_5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    回路
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    回路
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    モジュール
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kicad環境構築
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%920/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kicad使い方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%921%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    回路講習1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%922%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    回路講習2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%924/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    回路講習3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E5%9B%9E%E8%B7%AF/%E5%9B%9E%E8%B7%AF%E8%AC%9B%E7%BF%925/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    回路講習4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    マイコン
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    マイコン
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    STM32CubeIDE
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    STM32CubeIDE
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/STM32CubeIDE/1/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    環境構築
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/STM32CubeIDE/2/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E4%BD%BF%E3%81%84%E6%96%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ライブラリ使い方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/STM32CubeIDE/4/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E4%BD%BF%E3%81%84%E6%96%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    モジュールプログラム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/STM32CubeIDE/3/%E3%83%A1%E3%82%AB%E3%83%8A%E3%83%A0%EF%BC%94%E8%BC%AA%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    メカナム４輪
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PlatformIO
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PlatformIO
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/PlatformIO/PlatformIO%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/PlatformIO%E3%81%AE%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PlatformIO環境構築
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/PlatformIO/mbed%E4%BD%BF%E3%81%84%E6%96%B9/mbed%E4%BD%BF%E3%81%84%E6%96%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PlatformIO使い方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/PlatformIO/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ライブラリの使い方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SW4STM32
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SW4STM32
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3SW/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SystemWorkbench1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3SW/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SystemWorkbench2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3SW/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B33/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SystemWorkbench3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3SW/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SystemWorkbench4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_4" id="__nav_3_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ESP32
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ESP32
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3esp/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ESP32_1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3esp/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ESP32_2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_5" id="__nav_3_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CH552
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CH552
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/CH552/CH552_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CH552_1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/CH552/CH552_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CH552_2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIコーディング
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIコーディング
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/AI%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    バイブコーディング
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/AI%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/Gemini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gemini
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/1%E5%B9%B4%E4%BD%93%E9%A8%93%E5%85%A5%E9%83%A8/S-ken%E4%BD%93%E9%A8%93%E5%85%A5%E9%83%A8%E5%88%B6%E5%BE%A1%E7%8F%ADL%E3%81%A1%E3%81%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1年体験入部
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/pid/pid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/ubuntu/ubuntu1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    講習課題
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    講習課題
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%89%B9%E8%A8%93%E8%AA%B2%E9%A1%8C/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python課題
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/code/python%E7%AD%94%E3%81%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python課題答え
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%89%B9%E8%A8%93%E8%AA%B2%E9%A1%8C/%E5%9B%9E%E8%B7%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    回路課題
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    共通資料
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    共通資料
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%85%B1%E6%9C%89/wiki_readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    wiki使い方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E6%9B%B8%E3%81%8D%E6%96%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    マークダウン書き方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ライセンス
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AC%9B%E7%BF%92%E8%B3%87%E6%96%99/github/github1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../my/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    管理者連絡先
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ncvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NCVCのインストール
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solidedge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solidedge側のデータ作成 (ドラフト)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solidedge側のデータ作成 (ドラフト)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        テンプレートの導入
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        データ作成
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ncvc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NCVCでのデータ作成
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        まとめ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        おまけ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="おまけ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCはデータをどう処理するの？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        稀によく見るバグ（）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcgcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCのコマンド集(Gcode)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MCのコマンド集(Gcode)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        よく出てくる記号など
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gコード：準備機能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mコード：補助機能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tコード：工具番号を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sコード：主軸回転数を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fコード：送り速度を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hコード：工具長補正番号を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dコード：工具径補正番号を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oコード：プログラム番号を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nコード：シーケンス番号を指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cv-500a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        パレット交換のプログラム(CV-500Aのみ)(操作パネル上で実行)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具交換のプログラム
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一般的な切削準備のプログラム
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本的な切削のプログラム
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        固定サイクル(穴開け関連の加工を行うコード)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        切削や固定サイクル後，工具交換の前に入れるプログラム
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+ tex2jax: {
+ inlineMath: [['$', '$'] ],
+ displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+ }
+ });
+</script>
+
+<h1 id="_1">マシニングデータ作成</h1>
+<h2 id="ncvc">NCVCのインストール</h2>
+<p>講習フォルダ&rarr;マシニング&rarr;ncvc415_install64をインストール<br>
+  (32bitの場合は\url{https://k-magara.github.io/}からダウンロードする)</p>
+<h2 id="solidedge">Solidedge側のデータ作成 (ドラフト)</h2>
+<h3 id="_2">テンプレートの導入</h3>
+<ol>
+<li>マシニングフォルダ内にある「clear」 (もしくは「jis metric draft _mine」 )
+という名前のファイルをコピーする．</li>
+<li>エクスプローラーを開き，テンプレートが入っている JIS Metric というフォルダを開く．<br>
+そのフォルダはPC&rarr;OS(C:)&rarr;Program Files&rarr;Siemens&rarr;Solid Edge 20XX (20XXは使用しているSolidedgeのバージョン)&rarr;Template&rarr;JIS Metricにある．<br>
+その中にコピーしたファイルをペーストする．<br></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>ファイルパスは C:\Program Files\Siemens\Solid Edge 20XX\Template\JIS Metric である.<br></p>
+</div>
+<ol>
+<li>Solidedgeを開いて新規作成の中にclear_dft (もしくは「jis metric draft _mine_dft」 )
+が追加されていたら成功．</li>
+</ol>
+<h3 id="_3">データ作成</h3>
+<p><img alt="my image" src="\img\animation.gif" />
+&uarr; データ作成の流れ．この操作の解説を行う．</p>
+<ol>
+<li>
+<p>clear_dftを開いて,切削したい板のパーツデータをドラフト上にドラッグする．このとき,尺度を1:1にする．
+ <img alt="my image" src="../img/partsyakudo.jpg" /></p>
+</li>
+<li>
+<p>レイヤに線を引いていく．ここで描いた点や線をMCがなぞる．そのため，<strong>ここで間違えるとドリルやエンドミルを折る可能性があるため注意</strong>．以下の順に描いていく．</p>
+<p>(1)  レイヤのCAM1をダブルクリックで選択する．これで「CAM1」というレイヤに線を描くことができる．
+ <img alt="my image" src="../img/rayer1.jpg" /><br><br></p>
+<p>(2) 「スケッチ」の「線分」の下の小さな三角を押してから出てくる「点」を選び,ネジ穴をあける円の<strong>中心に</strong>点を描く．稀にずれるので注意．
+ <img alt="my image" src="../img/sketch.jpg" /><br><br></p>
+<p>(3) <font color="red"><strong>CAM2を選択する</strong></font>．<strong>ここで選択するのを忘れるとドリルを折るため注意！</strong><br>
+スケッチの「オフセット」を選び,距離を1.47(または1.475 or 1.48 etc.)にしてパーツの<font color="red">外周以外の肉抜き部分を内側に描く</font>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>外側の線を先に書くと加工する際に板が吹き飛んでエンドミルを折る可能性がある．そのため，<font color="red"><strong>線は必ず内側から書くこと</strong></font>．</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>このオフセットの値には様々な流派がある．このオフセットの値を大きくすると（例えば1.485）加工後の板に開いた穴が小さくなり，逆に小さくすると（例えば1.47）穴が大きくなる．そのため，ベアリングをはめる場合などに値が大きすぎるとはまらなくなり，逆に値が小さすぎるとがばがばになる．ちょうどいい値を探そう！</p>
+</div>
+<p>(4) <strong>CAM3を選択し</strong>，オフセットでパーツの<strong>外周を</strong>外側に描く．</p>
+<p>(5) 「補助線」を選択し，元のパーツのビューを消す．<br></p>
+<ul>
+<li>オフセットは左クリックでオフセットしたい箇所を選択&rarr;右クリック&rarr;内側か外側を選んで左クリック&rarr;右クリックで完了とすると早い．左！右！左！右！</li>
+<li>レイヤ ( 「レイヤ」，「CAM1」，「CAM2」など)にカーソルを合わせて右クリックすると「非表示」や「選択のみ表示」，「レイヤをすべて表示」などがあるので，それを利用してレイヤの確認を行うことができる．</li>
+</ul>
+<p><br></p>
+</li>
+<li>
+<p>複数パーツある場合はなるべくパーツ間の隙間が空かないように（外周の線は重なっても良いがトリムで消すのを推奨）並べ(下図),dxfファイルに変換する</p>
+</li>
+</ol>
+<p><img alt="my image" src="../img/retsuexam.jpg" /></p>
+<h2 id="ncvc_1">NCVCでのデータ作成</h2>
+<ol>
+<li>
+<p>NCVCを開き，NCVCで先ほど作成したdxfファイルを開く．dxfファイルからNCVCを開いてもOK．</p>
+</li>
+<li>
+<p>エラーが出るがOKを押す
+ <img alt="my image" src="../img/error.jpg" /></p>
+</li>
+<li>
+<p>左上の「編集」の「原点調整」から左上に設定する．OKを押すと左上に赤いプラスが表示される．
+ <img alt="my image" src="../img/genten.jpg" /></p>
+</li>
+<li>
+<p>下図のボタンを押す</p>
+</li>
+</ol>
+<p><img alt="my image" src="../img/osubotan.jpg" /></p>
+<ol>
+<li>
+<p>「次へ」を押すと下図の画面が出てくる．この<strong>CAM1</strong>をダブルクリックする．
+ <img alt="my image" src="../img/choice1.jpg" /></p>
+</li>
+<li>
+<p>切削条件ファイル名欄の「参照」を押す
+ <img alt="my image" src="../img/choice2.jpg" /></p>
+</li>
+<li>
+<p>マシニングフォルダ内にあるNC切削条件ファイルの中からアルミt2(非貫通)(CNC&rarr;MCセット&rarr;Drill)を選び(切削する板の厚さが何mmでも基本これで大丈夫)，OKを押す</p>
+</li>
+<li>
+<p><strong>CAM2</strong>をダブルクリックし，「参照」を押す．その後アルミt2(NC切削条件ファイル&rarr;CNC&rarr;MCセット&rarr;Mill3)を選ぶ(t3の場合はアルミt3,t5の場合はアルミt5)</p>
+</li>
+<li>
+<p>編集を押すとステータスが確認できるので,不安であれば主軸回転数が5000,切削送りが250であることを確認する．<br>
+これ以降に「コピー」を押す．
+終わるとレイヤ詳細の画面に戻ってくるので<span style="background-color:gold"><font color="red"><strong>最深Z座標が切削する板の厚さを超えていないことを確認する．</strong></font></span><strong>確認を怠ると定盤を掘る可能性が高まるため必ずやること！</strong><br></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>CAM1で選択したファイルをもう一回探すのが面倒だと感じるならば，設定をいじるとよい．<br>
+  (1) NCVCを開き，「オプション」を押す．押すと現れる「切削パラメータの設定」を選択する．
+   <img alt="my image" src="../img/setting.jpg" />
+  (2) 使用したい切削条件ファイル(.nciファイル)を選択する．<br>
+  (3) 下図のような切削条件ファイルの詳細が表示される．下の「OK」を押すと，デフォルトで先ほど選択したファイルが開かれるようになる．<br>
+         <img alt="my image" src="../img/setting2.jpg" /></p>
+</div>
+<ol>
+<li>
+<p>メモ帳マークを押すと，メモ帳上でncdファイルが開かれる．
+ <img alt="my image" src="../img/notepad.jpg" />
+ <br></p>
+</li>
+<li>
+<p>以下のような，%の下にある２行を消す(<strong>%は絶対に消さないこと</strong>！)．MCは全角文字を処理できないため，消す必要がある．
+<div class="highlight"><pre><span></span><code><span class="k">(</span><span class="m">2025</span><span class="k">/</span><span class="m">05</span><span class="k">/</span><span class="m">01</span><span class="k"> </span><span class="m">13</span><span class="k">:</span><span class="m">43</span>)
+(Maizuru_Tarou MADE T3_PWMIII.ncd FROM T3_PWMIII.dxf AND アルミ t2(非貫通).nci)
+</code></pre></div>
+<br></p>
+</li>
+<li>
+<p>その下のG91~Z30.まで(Layer="CAM1" startの前まで)をコピーする．
+<div class="highlight"><pre><span></span><code>G91G30Z0M192
+<span class="k">T</span><span class="m">18</span>
+<span class="nb">M06</span>
+G90G54
+G00X0Y0
+G43Z100.0H18
+<span class="k">S</span><span class="m">5000</span>M03
+<span class="nb">M08</span>
+<span class="k">Z</span><span class="m">30</span>.
+</code></pre></div>
+<br></p>
+</li>
+<li>
+<p>(Layer="CAM2" start)とその上のG80との間(G80の下)にM05,M09を入力し，13.でコピーした内容をペーストする．M05とM09は改行すること．(括弧内はコメントアウトなので消すこと)
+<div class="highlight"><pre><span></span><code><span class="nb">G80 </span>(ここまでがCAM1)
+
+<span class="nb">M05</span>
+<span class="nb">M09</span>
+G91G30Z0M192
+<span class="k">T</span><span class="m">18</span>
+<span class="nb">M06</span>
+G90G54
+G00X0Y0
+G43Z100.0H18
+<span class="k">S</span><span class="m">5000</span>M03
+<span class="nb">M08</span>
+<span class="k">Z</span><span class="m">30</span>.
+
+(Layer=&quot;CAM2&quot; start) (ここからがCAM2)
+</code></pre></div>
+<br></p>
+</li>
+<li>
+<p>CAM1の前のG91~Z30.の間の<span style="background-color:gold"><font color="red"><strong>T18およびH18をT20,0H20に変える．これを忘れるとドリルやエンドミルを折るため注意！</strong></span></font></p>
+</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code>%
+G91G30Z0M192
+<span class="k">T</span><span class="m">20</span><span class="w"> </span>(ここ)
+<span class="nb">M06</span>
+G90G54
+G00X0Y0
+G43Z100.0H20 (ここ)
+<span class="k">S</span><span class="m">5000</span>M03
+<span class="nb">M08</span>
+<span class="k">Z</span><span class="m">30</span>.
+
+(Layer=&quot;CAM1&quot; start)
+</code></pre></div>
+16. ncdファイルを閉じると「再読み込みしますか？」と出てくるので「はい」を押す．<br>
+その後，ncdファイルをUSBに保存し，MCに持って行って加工を行う．MCで加工する場合，<strong>慣れないうちは先輩についてきてもらうこと</strong>．先輩をこき使おう！</p>
+<h2 id="_4">まとめ</h2>
+<p>データを作成する手順は
+1. Solidedge上で .par ファイルを2次元データとして読み込む
+2. CAM1に点を打つ
+3. CAM2に切り替え，肉抜きの線のオフセットをとる(無ければ外形の線を描く)
+4. CAM3に切り替え，外形の線のオフセットをとる
+5. 作成したファイルを .dxf ファイルに変換する
+6. NCVCで .dxf ファイルを読み込む
+7. 原点を設定する
+8. レイヤごとの切削条件ファイルを選択する
+9. NCVCが .ncd ファイルを作成する
+10. 最後にプログラムをちょっといじる</p>
+<p>である．わからなかったら先輩に聞こう！</p>
+<h2 id="_5">おまけ</h2>
+<h3 id="mc">MCはデータをどう処理するの？</h3>
+<p>ここではMCに送るデータの意味を解説する．
+上記の文字面だけではわからない部分について解説する．</p>
+<ul>
+<li>MCは板を 「どう」 加工するのか<br>
+以下に加工手順を示す．</li>
+<li>原点が決まる(x, y, z)<ul>
+<li>x,yの原点調整と高さ合わせで決定</li>
+</ul>
+</li>
+<li>工具をドリルに交換する<ul>
+<li>T20がドリルを固定しているホルダーの番号</li>
+<li>点を打った場所にドリリングする</li>
+</ul>
+</li>
+<li>穴を開ける場所にドリルを移動</li>
+<li>ドリルで穴を開けていく</li>
+<li>工具をエンドミルに交換<ul>
+<li>エンドミルは工具の底と側面の両方で削ることができる工具</li>
+<li>T18がエンドミルを固定しているホルダーの番号</li>
+</ul>
+</li>
+<li>側面を少しずつ削る<ul>
+<li>線を引いた場所を少しずつ切削していく(深さ0.5[mm]以下ずつ)</li>
+</ul>
+</li>
+<li>
+<p>機械原点に戻り，終了</p>
+</li>
+<li>
+<p>CAMってなんぞや<br>
+簡単に言うと，CAMとはMCに与える命令の中の一節である．
+フローチャートを見ればわかりやすいだろう．
+MCは下図のように命令を実行していく．</p>
+</li>
+</ul>
+<p><img alt="my image" src="../img/flow.jpg" /></p>
+<ul>
+<li>なぜ線を描くときにオフセットをとるのか<br>
+線を使うのはエンドミルで加工する時である．MCは，ドラフトで描いた線の通りにエンドミルを動かしていく．エンドミルの中心を線の中心に合わせるため，エンドミルの半径分だけオフセットをとる必要があるのだ．<br>
+ここで，なぜオフセットの値が1.5ではないかという疑問が湧いた人もいるだろう．その理由は，工具の摩耗にある．いくら工具が硬い材料で作られていようと，使い続けると包丁のように摩耗し切れ味が悪くなっていく．その摩耗した分を考慮した数字が1.47付近なのである．</li>
+</ul>
+<p><img alt="my image" src="../img/endmill1.jpg" />
+<img alt="my image" src="../img/endmill2.jpg" /></p>
+<h3 id="_6">稀によく見るバグ（）</h3>
+<p>NCVCでncdデータを作った際，下図のようなバグがたまに発生する．
+なお，図のバグは筆者が即席で作った．<br></p>
+<p><img alt="my image" src="../img/bug.jpg" /></p>
+<p>これはデータを生成する際に起こる．
+CAM1からCAM2へ移行した時など，別のレイヤに切り替わる時にきちんとX，Y座標がリセットされていないために起こると考えられる．
+そのため，生成されたコード内のX，Y座標をいじると直る．<br>
+ただし，最初のうちは自分で直さず<strong>先輩に聞くこと</strong>．
+慣れていないと更なるバグが生まれる可能性があるため注意．</p>
+<h3 id="mcgcode">MCのコマンド集(Gcode)</h3>
+<p>以下のサンプルコードには読みやすくするためにスペースを入れているが，実際は不要である．
+詳しくは制御科の2年の実験レジュメに記載されているため，そちらを参照されたし．</p>
+<h4 id="_7">よく出てくる記号など</h4>
+<div class="highlight"><pre><span></span><code><span class="c">; (End of block（EOB）,ブロックの終わり)</span>
+
+(comment) (括弧の中はコメントである．日本語を入力するとバグるので消すこと！)
+</code></pre></div>
+<h4 id="g">Gコード：準備機能</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">G90 </span>(アブソリュート指令)
+<span class="nb">G91 </span>(インクリメンタル指令)
+
+<span class="nb">G00 </span>(早送り)
+<span class="nb">G01 </span>(直線補間)
+<span class="nb">G02 </span>(円形補間 CW (Clockwise，時計回り))
+<span class="nb">G03 </span>(円弧補間 CCW (Counterclockwise，反時計回り))
+
+<span class="nb">G28 </span>(原点復帰)
+<span class="nb">G30 </span>(第二原点復帰)
+G54～G59 (ワーク座標系 1～6 (基本G54のみ使用すること！))
+<span class="nb">G53 </span>(機械座標系)
+
+<span class="nb">G43 </span>(工具長補正)
+<span class="nb">G49 </span>(工具長補正キャンセル)
+
+(G17) (XY平面(電源投入時からすでに設定済み))
+<span class="nb">G40 </span>(工具径補正キャンセル)
+<span class="nb">G41 </span>(工具径補正左)
+<span class="nb">G42 </span>(工具径補正右)
+<span class="nb">G80 </span>(固定サイクルキャンセル)
+<span class="nb">G81 </span>(スポットドリリングサイクル)
+<span class="nb">G83 </span>(深穴ドリリングサイクル)
+<span class="nb">G84 </span>(タッピングサイクル)
+
+<span class="nb">G98 </span>(イニシャル点レベル復帰)
+<span class="nb">G99 </span>(R点レベル復帰)
+</code></pre></div>
+<h4 id="m">Mコード：補助機能</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">M03 </span>(主軸正転)
+<span class="nb">M05 </span>(主軸停止)
+<span class="nb">M08 </span>(切削油（クーラント）ON)
+<span class="nb">M09 </span>(切削油（クーラント）OFF)
+<span class="nb">M30 </span>(プログラム終了(M02も同じ機能))
+
+<span class="nb">M06 </span>(工具交換)
+
+<span class="nb">M60 </span>(パレット交換(MELDASのみ))
+<span class="nb">M192 </span>(工具交換モードON(MELDASのみ))
+
+<span class="nb">M98 </span>(サブプログラム呼び出し)
+<span class="nb">M99 </span>(サブプログラム終了)
+</code></pre></div>
+<h4 id="t">Tコード：工具番号を指令</h4>
+<div class="highlight"><pre><span></span><code>T[工具番号]; (例えばT18)
+</code></pre></div>
+<h4 id="s">Sコード：主軸回転数を指令</h4>
+<p><div class="highlight"><pre><span></span><code>S[主軸回転数];
+</code></pre></div>
+主軸回転数<span class="arithmatex">\(N\)</span>は以下の式で与えられる．
+$$
+N = \frac{1000 \times V}{\pi \times D}
+$$
+<span class="arithmatex">\(N\)</span>：主軸回転数[min <span class="arithmatex">\(^{-1}\)</span>]<br>
+<span class="arithmatex">\(V\)</span>：切削速度[m/min]<br>
+<span class="arithmatex">\(\pi\)</span>：円周率(約3.14)<br>
+<span class="arithmatex">\(D\)</span>：工具の直径[mm]<br></p>
+<h4 id="f">Fコード：送り速度を指令</h4>
+<p><div class="highlight"><pre><span></span><code>F[送り速度];
+</code></pre></div>
+送り速度<span class="arithmatex">\(F\)</span>は以下の式で与えられる．
+$$
+F = fZN
+$$
+<span class="arithmatex">\(F\)</span>：送り速度[mm/min]<br>
+<span class="arithmatex">\(f\)</span>：1刃あたりの送り量[mm/刃]<br>
+<span class="arithmatex">\(Z\)</span>：工具の刃数<br>
+<span class="arithmatex">\(N\)</span>：主軸回転数[mm]<br></p>
+<h4 id="h">Hコード：工具長補正番号を指令<br></h4>
+<p>G43と同時に指令する．(確認のため，以下のように実行する)
+<div class="highlight"><pre><span></span><code>(G90) G00 G43 Z100.0 H[工具長補正番号];
+</code></pre></div></p>
+<h4 id="d">Dコード：工具径補正番号を指令</h4>
+<p>G41(またはG42)と同時に指令する．</p>
+<h4 id="o">Oコード：プログラム番号を指令</h4>
+<p><div class="highlight"><pre><span></span><code>O[プログラム番号];
+</code></pre></div>
+プログラム冒頭につける．パソコン等からデータを送りながら実行する場合はつける必要がないが，MC(マシニングセンタ)内のメモリにプログラムを登録する際には必須である．</p>
+<h4 id="n">Nコード：シーケンス番号を指令</h4>
+<p><div class="highlight"><pre><span></span><code>N[シーケンス番号];
+</code></pre></div>
+各行の頭に，プログラムをわかりやすくするためにつける．無くてもよいが各工程の始まりの行などにつけるのが望ましい．</p>
+<h4 id="cv-500a">パレット交換のプログラム(CV-500Aのみ)(操作パネル上で実行)</h4>
+<p>XYZ軸が全て原点復帰状態(Z軸は第二原点復帰状態でも可)で入力
+<div class="highlight"><pre><span></span><code>M60;
+</code></pre></div></p>
+<h4 id="_8">工具交換のプログラム</h4>
+<p>機械班は気がついたら暗記している．頑張って覚えよう！
+- CV-500Aの場合
+<div class="highlight"><pre><span></span><code><span class="nb">G91 </span>G30 Z0 M192; (Z軸第二原点復帰)
+T[工具番号]; (工具呼び出し)
+M06; (工具交換)
+</code></pre></div>
+- NVX-5060の場合
+<div class="highlight"><pre><span></span><code><span class="nb">G91 </span>G28 Z0; (Z軸原点復帰)
+T[工具番号]; (工具呼び出し)
+M06; (工具交換)
+</code></pre></div></p>
+<h4 id="_9">一般的な切削準備のプログラム</h4>
+<p>NCVCで最後にいじるプログラムの意味はここを参照されたし．
+<div class="highlight"><pre><span></span><code><span class="nb">G90 </span>G54; (アブソリュート指令＋ワーク座標系呼び出し)
+<span class="nb">G00 </span>G43 Z100.0 H[工具番号]; (工具長補正＋Z100.0に早送り)
+<span class="nb">G00 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Y</span><span class="m">0</span><span class="c">; (ワーク座標系のX，Y原点に早送り)</span>
+
+S[主軸回転数]; (主軸回転数を設定)
+M03; (主軸正転)
+M08; (クーラントON)
+<span class="nb">G00 </span><span class="k">Z</span><span class="m">10.0</span><span class="c">; (Z10.0まで早送りで近づける)</span>
+</code></pre></div></p>
+<h4 id="_10">基本的な切削のプログラム</h4>
+<ul>
+<li>
+<p>直線補間
+<div class="highlight"><pre><span></span><code><span class="nb">G01 </span>X[終点のX座標(＊)] Y[終点のX座標(＊)] F[送り速度];
+<span class="nb">G01 </span>Z[終点のZ座標(＊)] (＊アブソリュート指令の場合)
+</code></pre></div></p>
+</li>
+<li>
+<p>円弧補間その1(ＩＪ指令)
+<div class="highlight"><pre><span></span><code>G02(G03) X[円弧終点のX座標] Y[円弧終点のY座標] I[＊1] J[＊2] F[送り速度];
+(＊1：円弧開始点から見た円弧中心までのX軸方向の相対座標)
+(＊2：円弧開始点から見た円弧中心までのY軸方向の相対座標)
+</code></pre></div></p>
+</li>
+<li>
+<p>円弧補間その2(Ｒ指令)
+<div class="highlight"><pre><span></span><code>G02(G03) X[円弧終点のX座標] Y[円弧終点のY座標] R[円弧半径(＊)] F[送り速度];
+(＊：円弧半径の値数値がプラスの場合は中心角180度以下の側の円弧，マイナスの場合は中心角180度以上の側の円弧を通る)
+</code></pre></div></p>
+</li>
+</ul>
+<h4 id="_11">固定サイクル(穴開け関連の加工を行うコード)</h4>
+<ul>
+<li>スポットドリリングサイクル(基本的な穴開け)
+<div class="highlight"><pre><span></span><code>G98(G99) G81  X[穴位置のX座標] Y[穴位置のY座標] Z[穴位置のZ座標] R[R点のZ座標] F[送り速度];
+</code></pre></div></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>R点とは，加工前に早送りで工作物に接近させるための位置(Z高さ)である．<br>
+  G98：加工後，プログラム実行前のZ高さまで戻る(イニシャル点高さに復帰)<br>
+  G99：加工後，R点のZ高さまで戻る(R点高さへの復帰)</p>
+</div>
+<ul>
+<li>深穴ドリリングサイクル(深い穴を段階的に，切りくずを排出しながら開ける)
+<div class="highlight"><pre><span></span><code>G98(G99) G83  X[穴位置のX座標] Y[穴位置のY座標] Z[穴位置のZ座標] Q[一回当たりの切り込み量] R[R点のZ座標] F[送り速度];
+</code></pre></div></li>
+<li>固定サイクルの使い方
+複数個所に同じ深さの穴を開けたい場合，一度固定サイクルの命令を実行した後，次のブロックは<strong>X，Y座標のみのプログラムでよい</strong>．<br>
+例えば &#9312; (X,Y) <span class="arithmatex">\(=\)</span> (<span class="arithmatex">\(-\)</span> 30.0,30.0) と &#9313; (X,Y) <span class="arithmatex">\(=\)</span> (10.0,15.0)の2カ所にZ <span class="arithmatex">\(=-\)</span> 20.0の深さの穴をR点高さZ10.0，送り速度150[mm/min]でスポットドリリングサイクルの加工を行うプログラムは以下のようになる．
+<div class="highlight"><pre><span></span><code><span class="nb">G98 </span>G81 X-30.0 Y30.0 Z-20.0 R10.0 F150; (1カ所目の加工)
+<span class="k">X</span><span class="m">10.0</span><span class="w"> </span><span class="k">Y</span><span class="m">15.0</span><span class="c">; (2カ所目)</span>
+G80; (固定サイクルのキャンセル)
+</code></pre></div>
+このように，固定サイクルは一度実行すると前回の加工内容が自動で記憶されるため，2行目は2カ所目のX，Y座標のみ指定すればよい．<br>
+なお，G80は固定サイクル使用後に加工内容の記憶をリセットするために実行する．</li>
+</ul>
+<h4 id="_12">切削や固定サイクル後，工具交換の前に入れるプログラム</h4>
+<div class="highlight"><pre><span></span><code>(G80;) (固定サイクルを使用した場合，それをキャンセルする)
+(G40;) (工具径補正を使用した場合，それをキャンセルする)
+<span class="nb">G00 </span><span class="k">Z</span><span class="m">100.0</span><span class="c">; (Z100.0まで主軸を逃がす)</span>
+M05; (主軸の回転を停止)
+M09: (クーラントOFF，切削油を出している場合は止める)
+
+(次の工程へ移る前に「工具交換のプログラム」と「一般的な切削準備のプログラム」を挿入)
+
+(最後の工程の場合)
+M30; (プログラム終了，プログラムの最後に必ず実行する)
+%
+</code></pre></div>
+<details class="note">
+<summary>Note</summary>
+<p>著者:Iritani Yoshinari
+    :Kosuga Makito</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 -Altair-
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://x.com/Flying___eagle" target="_blank" rel="noopener" title="mebiusbox2 on Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm297.1 84L257.3 234.6 379.4 396h-95.6L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5 78.2-89.5zm-37.8 251.6L153.4 142.9h-28.3l171.8 224.7z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Altairu" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4></h4>
+<p></p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
