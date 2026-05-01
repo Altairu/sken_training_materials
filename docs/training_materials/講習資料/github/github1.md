@@ -126,7 +126,7 @@
 
 
 
-## SkenGitHubへの登録
+## SkenGitHubへの登録(管理者用)
 
 　SkenGitHubは部内で共有しているOrganizationアカウントです. これに登録することで講習資料や過去のロボコンデータなどを閲覧することができます.
 
