@@ -132,7 +132,7 @@
 
 ### 登録手順
 
-1. 創造技術研究会のgoogleアカウントからGitHubにログイン（GitHubパスワード：sken-souzou-github）
+1. 創造技術研究会のgoogleアカウントからGitHubにログイン
 2. 「Organizations」->「SkenGitHub」をクリック
 3. 「People」->「Invite member」をクリック
 4. GitHubアカウントのアカウント名、もしくは登録しているメールアドレスを入力し「Invite」をクリック
