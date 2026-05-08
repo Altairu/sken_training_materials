@@ -12,6 +12,7 @@ nav:
       - マシニングセンタ:
           - NVX5060: training_materials/機械班/マシニングセンタ/NVX5060.md
           - MCデータ(NCVC)の作り方: training_materials/機械班/NCVC/MCデータ(NCVC)の作り方.md
+      - 伝達講習: training_materials/機械班/伝達講習/伝達.md
           
   - 電気班:
     
