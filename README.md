@@ -68,12 +68,12 @@ mkdocs gh-deploy
    mkdocs serve
    ```
 
-4. **変更をコミットしてデプロイする**  
-   変更を Git にコミットし、以下のコマンドでデプロイします。
+4. **変更をコミットしてプッシュする**  
+   変更を Git にコミットして GitHub にプッシュすると、GitHub Actions により自動的にデプロイ（`mkdocs gh-deploy`）が行われます。
    ```bash
    git add .
    git commit -m "新しい資料を追加"
-   mkdocs gh-deploy
+   git push origin main
    ```
 
 5. **公開されたサイトを確認する**  
