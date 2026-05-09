@@ -16,6 +16,7 @@ nav:
       - 軸締結: training_materials/機械班/軸締結/軸締結.md
       - 歯車講習: training_materials/機械班/歯車講習/歯車.md
       - 材料講習: training_materials/機械班/材料講習/材料.md
+      - リンク講習: training_materials/機械班/リンク講習/リンク.md    
   - 電気班:
     
     - ROS 2:
