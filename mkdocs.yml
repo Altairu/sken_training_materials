@@ -36,6 +36,7 @@ nav:
     - 回路:
         - 旧モジュール: 
           - AltairCANShieldV1: training_materials/講習資料/回路/旧モジュール/ALTAIR_CAN_SHIELD _V1/ALTAIR_CAN_SHIELD _V1.md
+          - AltairMDDV2: training_materials/講習資料/回路/旧モジュール/ALTAIR_MDD_V2/ALTAIR_MDD_V2.md
         - 新モジュール:
           - AltairMDDV3: training_materials/講習資料/回路/新モジュール/ALTAIR_MDD_V3/ALTAIR_MDD_V3.md
           - AltairServoModuleV6: training_materials/講習資料/回路/新モジュール/ALTAIR_SERVO_MODULE_V6/ALTAIR_SERVO_MODULE_V6.md
