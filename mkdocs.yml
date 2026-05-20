@@ -39,6 +39,9 @@ nav:
           - AltairMDDV2: training_materials/講習資料/回路/旧モジュール/ALTAIR_MDD_V2/ALTAIR_MDD_V2.md
           - AltairServoModuleV5: training_materials/講習資料/回路/旧モジュール/ALTAIR_SERVO_MODULE_V5/ALTAIR_SERVO_MODULE_V5.md
           - AltairMD_V7: training_materials/講習資料/回路/旧モジュール/AltairMD_V7/AltairMD_V7.md
+          - 電源モジュール: training_materials/講習資料/回路/旧モジュール/電源モジュール/電源モジュール.md
+          - センサモジュール: training_materials/講習資料/回路/旧モジュール/センサモジュール/センサモジュール.md
+          - 電磁弁モジュール: training_materials/講習資料/回路/旧モジュール/電磁弁モジュール/電磁弁モジュール.md
         - 新モジュール:
           - AltairMDDV3: training_materials/講習資料/回路/新モジュール/ALTAIR_MDD_V3/ALTAIR_MDD_V3.md
           - AltairServoModuleV6: training_materials/講習資料/回路/新モジュール/ALTAIR_SERVO_MODULE_V6/ALTAIR_SERVO_MODULE_V6.md
