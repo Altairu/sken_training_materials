@@ -34,7 +34,7 @@
 - **回路**  
   KiCadの環境構築や、電子回路の設計・解析に必要な知識を図解やサンプルコードを交えて解説  
 
-  - モジュール一覧
+  モジュール使い方　[README](https://github.com/Altairu/Altair_module_system/blob/main/README.md)
   - **新モジュール**
     - **[AltairMD V8](training_materials/講習資料/回路/新モジュール/AltairMD_V8/AltairMD_V8.md)**: モータドライバモジュール V8
     - **[AltairMD V9](training_materials/講習資料/回路/新モジュール/AltairMD_V9/AltairMD_V9.md)**: モータドライバモジュール V9
