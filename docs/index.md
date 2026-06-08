@@ -35,6 +35,7 @@
   KiCadの環境構築や、電子回路の設計・解析に必要な知識を図解やサンプルコードを交えて解説  
 
   新モジュール使い方　[README](https://github.com/Altairu/Altair_module_system/blob/main/README.md)
+  
   - **新モジュール**
 
     - **[AltairMD V8](training_materials/講習資料/回路/新モジュール/AltairMD_V8/AltairMD_V8.md)**: モータドライバモジュール V8
@@ -60,7 +61,7 @@
     - **[センサモジュール](training_materials/講習資料/回路/旧モジュール/センサモジュール/センサモジュール.md)**: センサモジュール
 
     - **[電源モジュール](training_materials/講習資料/回路/旧モジュール/電源モジュール/電源モジュール.md)**: 電源モジュール
-    
+
     - **[電磁弁モジュール](training_materials/講習資料/回路/旧モジュール/電磁弁モジュール/電磁弁モジュール.md)**: 電磁弁モジュール
 
 - **マイコン**  
