@@ -36,18 +36,31 @@
 
   新モジュール使い方　[README](https://github.com/Altairu/Altair_module_system/blob/main/README.md)
   - **新モジュール**
+
     - **[AltairMD V8](training_materials/講習資料/回路/新モジュール/AltairMD_V8/AltairMD_V8.md)**: モータドライバモジュール V8
+
     - **[AltairMD V9](training_materials/講習資料/回路/新モジュール/AltairMD_V9/AltairMD_V9.md)**: モータドライバモジュール V9
+
     - **[ALTAIR MDD V3](training_materials/講習資料/回路/新モジュール/ALTAIR_MDD_V3/ALTAIR_MDD_V3.md)**:  モータドライバドライバ V3
+
     - **[ALTAIR SERVO MODULE V6](training_materials/講習資料/回路/新モジュール/ALTAIR_SERVO_MODULE_V6/ALTAIR_SERVO_MODULE_V6.md)**: サーボモジュール V6
+
     - **[Altair Solenoid Valve V1](training_materials/講習資料/回路/新モジュール/Altair_solenoid_valve_V1/Altair_solenoid_valve_V1.md)**: 電磁弁モジュール V1
+
   - **旧モジュール**
+
     - **[AltairMD V7](training_materials/講習資料/回路/旧モジュール/AltairMD_V7/AltairMD_V7.md)**: モータドライバモジュール V7
+
     - **[ALTAIR MDD V2](training_materials/講習資料/回路/旧モジュール/ALTAIR_MDD_V2/ALTAIR_MDD_V2.md)**:  モータドライバドライバ V2
+
     - **[ALTAIR CAN SHIELD V1](training_materials/講習資料/回路/旧モジュール/ALTAIR_CAN_SHIELD%20_V1/ALTAIR_CAN_SHIELD%20_V1.md)**: CANシールド V1
+
     - **[ALTAIR SERVO MODULE V5](training_materials/講習資料/回路/旧モジュール/ALTAIR_SERVO_MODULE_V5/ALTAIR_SERVO_MODULE_V5.md)**: サーボモジュール V5
+
     - **[センサモジュール](training_materials/講習資料/回路/旧モジュール/センサモジュール/センサモジュール.md)**: センサモジュール
+
     - **[電源モジュール](training_materials/講習資料/回路/旧モジュール/電源モジュール/電源モジュール.md)**: 電源モジュール
+    
     - **[電磁弁モジュール](training_materials/講習資料/回路/旧モジュール/電磁弁モジュール/電磁弁モジュール.md)**: 電磁弁モジュール
 
 - **マイコン**  
