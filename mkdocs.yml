@@ -18,7 +18,7 @@ nav:
       - 材料講習: training_materials/機械班/材料講習/材料.md
       - リンク講習: training_materials/機械班/リンク講習/リンク.md    
   - 電気班:
-    
+    - 電気班README: training_materials/講習資料/電気班README/電気班README.md
     - ROS 2:
         - ROS2環境構築: training_materials/講習資料/ROS 2/ROS2_事始.md
         - ROS2講習1: training_materials/講習資料/ROS 2/ROS2_1.md
