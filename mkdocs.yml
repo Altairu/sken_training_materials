@@ -19,6 +19,12 @@ nav:
       - リンク講習: training_materials/機械班/リンク講習/リンク.md    
   - 電気班:
     - 電気班README: training_materials/講習資料/電気班README/電気班README.md
+    - Altairモジュール:
+        - モジュール事始め: training_materials/講習資料/モジュール/モジュール事始め.md
+        - システム全体概要: training_materials/講習資料/モジュール/01_システム全体概要.md
+        - 回路とハードウェア: training_materials/講習資料/モジュール/02_回路とハードウェア.md
+        - ファームウェアと通信仕様: training_materials/講習資料/モジュール/03_ファームウェアと通信仕様.md
+        - ROS2フレームワークとGUI: training_materials/講習資料/モジュール/04_ROS2フレームワークとGUI.md
     - ROS 2:
         - ROS2環境構築: training_materials/講習資料/ROS 2/ROS2_事始.md
         - ROS2講習1: training_materials/講習資料/ROS 2/ROS2_1.md
