@@ -4,10 +4,10 @@
 ロボット側のプログラムを書き換えることなくモジュールの構成を変更したり、コントローラでの操作や自律動作のプログラムを実行できます。
 
 リポジトリはこちら
-- https://github.com/Altairu/altair_framework
+- [altair_framework](https://github.com/Altairu/altair_framework)
 
 導入についてはREADMEなどを見てください
-- https://github.com/Altairu/altair_framework/blob/main/README.md
+- [README](https://github.com/Altairu/altair_framework/blob/main/README.md)
 
 中身はgithub内のwikiに書いています
-- https://github.com/Altairu/altair_framework/wiki
+- [wiki](https://github.com/Altairu/altair_framework/wiki)
