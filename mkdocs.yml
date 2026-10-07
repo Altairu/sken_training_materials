@@ -16,7 +16,8 @@ nav:
       - 軸締結: training_materials/機械班/軸締結/軸締結.md
       - 歯車講習: training_materials/機械班/歯車講習/歯車.md
       - 材料講習: training_materials/機械班/材料講習/材料.md
-      - リンク講習: training_materials/機械班/リンク講習/リンク.md    
+      - リンク講習: training_materials/機械班/リンク講習/リンク.md
+      - ベアリング講習: training_materials/機械班/ベアリング講習/bearing.md    
   - 電気班:
     - 電気班README: training_materials/講習資料/電気班README/電気班README.md
     - Altairモジュール:
