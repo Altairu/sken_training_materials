@@ -53,7 +53,7 @@
     * [Altair Solenoid Valve V1](training_materials/講習資料/回路/新モジュール/Altair_solenoid_valve_V1/Altair_solenoid_valve_V1.md): 電磁弁モジュール V1
 
 * 旧モジュール
-  * [AltairMD V7](training_materials/講習資料/回路/旧モジュール/AltairMD_V7/AltairMD_V7.md): モータドライバモジュール V7
+    * [AltairMD V7](training_materials/講習資料/回路/旧モジュール/AltairMD_V7/AltairMD_V7.md): モータドライバモジュール V7
     * [ALTAIR MDD V2](training_materials/講習資料/回路/旧モジュール/ALTAIR_MDD_V2/ALTAIR_MDD_V2.md): モータドライバドライバ V2
     * [ALTAIR CAN SHIELD V1](training_materials/講習資料/回路/旧モジュール/ALTAIR_CAN_SHIELD%20_V1/ALTAIR_CAN_SHIELD%20_V1.md): CANシールド V1
     * [ALTAIR SERVO MODULE V5](training_materials/講習資料/回路/旧モジュール/ALTAIR_SERVO_MODULE_V5/ALTAIR_SERVO_MODULE_V5.md): サーボモジュール V5
