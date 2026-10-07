@@ -101,3 +101,5 @@ Hが入力されるとハイサイド、Lが入力されるとローサイドが
 | H   | L   | L   | L   | H   | H   | H    | L    | 
 | H   | H   | H   | H   | H   | H   | L    | L    | 
 
+??? Note
+    著者:Shion Noguchi

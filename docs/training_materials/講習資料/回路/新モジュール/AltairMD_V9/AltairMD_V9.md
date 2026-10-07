@@ -48,3 +48,6 @@ PCB
 
 実装後
 ![alt text](image-2.png)
+
+??? Note
+    著者:Shion Noguchi

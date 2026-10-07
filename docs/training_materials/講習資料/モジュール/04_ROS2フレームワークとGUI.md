@@ -11,3 +11,6 @@
 
 中身はgithub内のwikiに書いています
 - [wiki](https://github.com/Altairu/altair_framework/wiki)
+
+??? Note
+    著者:Shion Noguchi

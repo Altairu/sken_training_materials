@@ -42,3 +42,6 @@
 ## 実態配線図
 
 ![alt text](image-2.png)
+
+??? Note
+    著者:Shion Noguchi
