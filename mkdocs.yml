@@ -26,6 +26,7 @@ nav:
         - 回路とハードウェア: training_materials/講習資料/モジュール/02_回路とハードウェア.md
         - ファームウェアと通信仕様: training_materials/講習資料/モジュール/03_ファームウェアと通信仕様.md
         - ROS2フレームワークとGUI: training_materials/講習資料/モジュール/04_ROS2フレームワークとGUI.md
+        - モジュールマイコンプログラム: training_materials/講習資料/STM32CubeIDE/4/モジュール使い方.md
         - 旧モジュール: 
           - AltairCANShieldV1: training_materials/講習資料/回路/旧モジュール/ALTAIR_CAN_SHIELD _V1/ALTAIR_CAN_SHIELD _V1.md
           - AltairMDDV2: training_materials/講習資料/回路/旧モジュール/ALTAIR_MDD_V2/ALTAIR_MDD_V2.md
