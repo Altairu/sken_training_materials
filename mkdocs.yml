@@ -27,6 +27,7 @@ nav:
         - ファームウェアと通信仕様: training_materials/講習資料/モジュール/03_ファームウェアと通信仕様.md
         - ROS2フレームワークとGUI: training_materials/講習資料/モジュール/04_ROS2フレームワークとGUI.md
         - モジュール使い方: training_materials/講習資料/STM32CubeIDE/4/モジュール使い方.md
+        - altair_framework使い方: training_materials/講習資料/ROS 2/モジュール制御/altair_framework.md
         - 旧モジュール: 
           - AltairCANShieldV1: training_materials/講習資料/回路/旧モジュール/ALTAIR_CAN_SHIELD _V1/ALTAIR_CAN_SHIELD _V1.md
           - AltairMDDV2: training_materials/講習資料/回路/旧モジュール/ALTAIR_MDD_V2/ALTAIR_MDD_V2.md
@@ -43,11 +44,11 @@ nav:
           - Altair_solenoid_valve_V1: training_materials/講習資料/回路/新モジュール/Altair_solenoid_valve_V1/Altair_solenoid_valve_V1.md
     - ROS 2:
         - ROS2環境構築: training_materials/講習資料/ROS 2/ROS2_事始.md
+        - altair_framework使い方: training_materials/講習資料/ROS 2/モジュール制御/altair_framework.md
         - ROS2講習1: training_materials/講習資料/ROS 2/ROS2_1.md
         - ROS2講習2: training_materials/講習資料/ROS 2/ROS2_2.md
         - ROS2講習3: training_materials/講習資料/ROS 2/ROS2_3.md
-        - ROS2講習ロボコン1: training_materials/講習資料/ROS 2/ROS2_ロボコン1.md
-        - ROS2講習ロボコン2: training_materials/講習資料/ROS 2/ROS2_ロボコン2.md
+        - ROS2ロボコン2024: training_materials/講習資料/ROS 2/ROS2_ロボコン1.md
     - python3:
         - python3環境構築: training_materials/講習資料/python3/python3_事始.md
         - python3_1: training_materials/講習資料/python3/python3講習1.md
