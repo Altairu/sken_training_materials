@@ -120,9 +120,57 @@ PC内の保存先フォルダを選択するとダウンロードが始まり、
 
 ## 実際に使っていく
 
-簡単のためにVscodeのみを使用し，解説していく．
+![alt text](image-20.png)
 
+具体的な使い方についてはREADMEを読むことをお勧めする．
 
+本パッケージは、Ubuntu 22.04 + ROS2 Humble 環境での動作を確認しています。
+
+### 依存パッケージのインストール
+物理CANフレームをROS2上で扱うための標準パッケージ can_msgs / ビルドツールをインストールします。
+```bash
+sudo apt update
+sudo apt install ros-humble-can-msgs python3-colcon-common-extensions
+```
+
+### Python依存ライブラリのインストール
+FastAPIサーバーの稼働に必要なライブラリをインストールします。
+```bash
+pip install fastapi uvicorn websockets
+```
+
+### リポジトリのビルド
+ワークスペースのトップでビルドスクリプトを実行します。
+```bash
+# 実行権限の付与
+chmod +x build.sh run_standalone.sh run_nuc.sh run_operator.sh
+chmod +x altair_can_bridge/scripts/setup_slcan.sh
+
+# キャッシュをクリーンして再ビルド
+./build.sh --clean
+```
+
+### 起動と運用コマンド PC 1台運用（推奨：ロボット搭載PCのみで全ノードを実行）
+
+制御ループと通信をロボット内部で完結させるため、ロボコン会場での無線トラブルに最も強い構成です。
+
+```mermaid
+flowchart LR
+    Browser["ブラウザ (スマホ / ノートPC)"] <-->|"WiFi"| RobotPC["ロボット搭載PC (全ノード起動)"]
+    RobotPC <-->|"有線LAN (TCP)"| Board["Ethernet-CAN 基板"]
+    Board <-->|"CANバス"| CAN["CAN モジュール群"]
+```
+
+```bash
+# Ethernet-CAN を使用する場合 (推奨 / デフォルト: 192.168.2.123:5000)
+./run_standalone.sh
+
+# 従来の USB-to-CAN を使用する場合 (非推奨)
+./run_standalone.sh --usb
+```
+
+起動後、同一WiFiネットワーク内のPCやスマートフォンのブラウザから、以下のURLにアクセスします。
+* URL: `http://<ロボットPCのIPアドレス>:8000/`
 
 ## その他ドキュメントについて
 
