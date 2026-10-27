@@ -5,7 +5,8 @@ altair_frameworkを実際に使うやり方について紹介します．
 ## 初めにGitHub上でFork＆リネームする
 
 ブラウザで元のリポジトリのページを開きます.
-[altair_framework](https://github.com/Altairu/altair_framework)
+
+[https://github.com/Altairu/altair_framework](https://github.com/Altairu/altair_framework)
 
 画面右上にある Fork ボタンをクリックします。
 
@@ -117,6 +118,12 @@ PC内の保存先フォルダを選択するとダウンロードが始まり、
 
 ![alt text](image-19.png)
 
+## 実際に使っていく
+
+簡単のためにVscodeのみを使用し，解説していく．
+
+
+
 ## その他ドキュメントについて
 
 READMEまたwikiに解説も載っています
@@ -127,3 +134,6 @@ READMEまたwikiに解説も載っています
 
 [altair_framework　wiki](https://github.com/Altairu/altair_framework/wiki)
 
+
+??? Note
+    著者:Shion Noguchi
