@@ -171,6 +171,7 @@ flowchart LR
 ```
 
 起動後、同一WiFiネットワーク内のPCやスマートフォンのブラウザから、以下のURLにアクセスします。
+
 * URL: `http://<ロボットPCのIPアドレス>:8000/`
 
 ![alt text](image-22.png)
