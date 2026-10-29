@@ -8,6 +8,8 @@ altair_frameworkを実際に使うやり方について紹介します．
 
 [https://github.com/Altairu/altair_framework](https://github.com/Altairu/altair_framework)
 
+![alt text](image.png)
+
 画面右上にある Fork ボタンをクリックします。
 
 ![alt text](image-2.png)
@@ -37,7 +39,6 @@ Copy the main branch only: 特に他のブランチが不要ならチェック�
 !!! info "名前変更について"
     (※もしForkした後に名前を変えたくなった場合でも、自分のリポジトリの Settings タブ ＞ 一番上の Repository name からいつでも変更できます)
 
-![alt text](image.png)
 
 ## ローカルにクローンして開発を始める
 
