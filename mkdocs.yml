@@ -3,7 +3,6 @@ site_name: Sken 技術資料
 
 nav:
   - ホーム画面: index.md 
-  - hoge: training_materials/講習資料/モジュール/hogehoge.md
   - 機械班:
       - SolidEdge: 
           - SolidEdgeのインストール: training_materials/機械班/SolidEdge1.md
