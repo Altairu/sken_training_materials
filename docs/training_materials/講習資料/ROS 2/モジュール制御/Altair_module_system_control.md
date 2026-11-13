@@ -82,6 +82,9 @@ cargo build --release
 * 画面左側の Connection パネルで Ethernet タブを選択します。
 * IPアドレスに `192.168.2.123`、ポート番号に `5000` が入力されていることを確認し、Connect ボタンを押します。
 
+以下は私の設定例
+![alt text](image-27.png)
+
 ### USB-to-CAN での接続
 
 * 画面左側の Connection パネルで USB タブを選択します。
