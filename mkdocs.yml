@@ -28,6 +28,7 @@ nav:
         - ファームウェアと通信仕様: training_materials/講習資料/モジュール/03_ファームウェアと通信仕様.md
         - ROS2フレームワークとGUI: training_materials/講習資料/モジュール/04_ROS2フレームワークとGUI.md
         - モジュール使い方: training_materials/講習資料/STM32CubeIDE/4/モジュール使い方.md
+        - Altair_module_system_control 導入編: training_materials/講習資料/ROS 2/モジュール制御/Altair_module_system_control.md
         - altair_framework使い方 導入編: training_materials/講習資料/ROS 2/モジュール制御/altair_framework.md
         - altair_framework使い方 実践編: training_materials/講習資料/ROS 2/モジュール制御/altair_framework2.md
         - 旧モジュール: 
